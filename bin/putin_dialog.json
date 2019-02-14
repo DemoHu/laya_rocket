@@ -1,0 +1,1 @@
+{"type":"Dialog","props":{"width":200,"height":100},"compId":2,"child":[{"type":"Label","props":{"y":35,"x":3.5,"width":193,"text":"这是dialog","height":30,"fontSize":50,"color":"#fff"},"compId":3}],"loadList":[],"loadList3D":[]}
