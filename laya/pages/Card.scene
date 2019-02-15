@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":15,
+    "selecteID":12,
     "searchKey":"View",
     "props":{"width":352,"sceneColor":"#000000","runtime":"script/Card.ts","height":440},
     "nodeParent":-1,

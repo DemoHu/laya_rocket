@@ -1,0 +1,1 @@
+{"type":"Dialog","props":{"width":500,"height":300,"centerY":0,"centerX":0},"compId":2,"child":[{"type":"Image","props":{"top":0,"skin":"comp/home/img_card.png","right":0,"left":0,"bottom":0},"compId":3}],"loadList":["comp/home/img_card.png"],"loadList3D":[]}

@@ -1,4 +1,5 @@
 import { ui } from "../ui/layaMaxUI";
+import { Toast } from "../view/Toasts";
 
 export default class Guessing extends ui.guessingUI {
 
@@ -48,7 +49,10 @@ export default class Guessing extends ui.guessingUI {
 
     /**购买 */
     private buyFunc():void {
-        alert(11123123)
+        // console.log('改变之后的数据源',this.numberList.array);
+        // let inputPwd: ui.template.InputPwdDialogUI = new ui.template.InputPwdDialogUI();
+        // inputPwd.popup();
+        Toast.show('这是提示文字这是提示文字这是提示文字这是提示文字')
     }
 
     /**

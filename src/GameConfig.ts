@@ -3,10 +3,13 @@ import Assistant from "./script/Assistant"
 import PageScript from "./publicScript/PageScript"
 import Screen from "./publicScript/Screen"
 import Card from "./script/Card"
-import Guessing from "./script/Guessing"
 import PageNavScript from "./publicScript/PageNavScript"
+import Guessing from "./script/Guessing"
 import numberListDomScript from "./template/numberListDomScript"
 import Home from "./script/Home"
+import Record from "./script/Record"
+import previousRecords from "./template/previousRecords"
+import joinRecords from "./template/joinRecords"
 /*
 * 游戏初始化配置;
 */
@@ -30,10 +33,13 @@ export default class GameConfig{
         reg("publicScript/PageScript.ts",PageScript);
         reg("publicScript/Screen.ts",Screen);
         reg("script/Card.ts",Card);
-        reg("script/Guessing.ts",Guessing);
         reg("publicScript/PageNavScript.ts",PageNavScript);
+        reg("script/Guessing.ts",Guessing);
         reg("template/numberListDomScript.ts",numberListDomScript);
         reg("script/Home.ts",Home);
+        reg("script/Record.ts",Record);
+        reg("template/previousRecords.ts",previousRecords);
+        reg("template/joinRecords.ts",joinRecords);
     }
 }
 GameConfig.init();

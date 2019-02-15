@@ -23,6 +23,13 @@ export module ui {
             this.loadScene("Card");
         }
     }
+    export class grandPrixUI extends Laya.Scene {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("grandPrix");
+        }
+    }
     export class guessingUI extends Laya.Scene {
 		public unitPrice:Laya.Label;
 		public numberList:Laya.List;
@@ -44,7 +51,7 @@ export module ui {
 		public dom_show:Laya.FrameAnimation;
 		public tuichu:Laya.Image;
 		public btnRecharge:Laya.Image;
-		public putin:Laya.Box;
+		public putin:Laya.Sprite;
 		public list:Laya.List;
         constructor(){ super()}
         createChildren():void {
@@ -53,6 +60,10 @@ export module ui {
         }
     }
     export class recordUI extends Laya.Scene {
+		public canyu:Laya.Image;
+		public wangqi:Laya.Image;
+		public previoousList:Laya.List;
+		public joinList:Laya.List;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -69,6 +80,23 @@ export module ui {
     }
 }
 export module ui.template {
+    export class InputPwdDialogUI extends Laya.Dialog {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/InputPwdDialog");
+        }
+    }
+    export class joinRecordsUI extends Laya.View {
+		public noPrize:Laya.Label;
+		public prize:Laya.Image;
+		public prize_number:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/joinRecords");
+        }
+    }
     export class numberListDOMUI extends Laya.View {
 		public bgImg:Laya.Image;
 		public index:Laya.Label;
@@ -76,6 +104,24 @@ export module ui.template {
         createChildren():void {
             super.createChildren();
             this.loadScene("template/numberListDOM");
+        }
+    }
+    export class previousRecordsUI extends Laya.View {
+		public number:Laya.Label;
+		public lotteryType:Laya.Label;
+		public hash:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/previousRecords");
+        }
+    }
+    export class ToastUI extends Laya.View {
+		public text_label:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/Toast");
         }
     }
 }

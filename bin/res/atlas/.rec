@@ -1,18 +1,24 @@
 D .
 D comp
+P 88A185C3 img_dialog.png
 P E4B70C0C img_return.png
 P C2DF3147 progress$bar.png
 P 9C6DF160 progress.png
 D comp/guessing
+R 2E178E88 img_banner.png
 P 480F0668 img_buy.png
+P F5448DB3 img_icon.png
 P 53982E36 img_kexuan_select.png
 P E81FD6C1 img_kexuan_select20.png
 P 724CE42E img_no_select.png
 P 121C2633 img_no_select20.png
 P 64B242B1 img_ok_select.png
 P 2515918B img_ok_select20.png
+P B7F9DB23 img_prize.png
 P AE5C585B img_semicircle_left.png
 P 22694920 img_semicircle_right.png
+P 4E1A6D60 img_tab.png
+P 78B5A0E4 img_tab_active.png
 P 44919A88 img_yixuan_select.png
 P 79ACE726 img_yixuan_select20.png
 D comp/home

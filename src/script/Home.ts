@@ -1,4 +1,5 @@
 import { ui } from "../ui/layaMaxUI";
+import { Toast } from "../view/Toasts";
 
 export default class Home extends ui.homeUI {
     constructor(){

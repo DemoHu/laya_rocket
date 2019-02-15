@@ -8,8 +8,8 @@
 
 
 export default class Screen extends Laya.Script {
-    /** @prop {name:bgColor,tips:'背景颜色','type:String,default:'#09083c'} */
-    public bgColor:string = '#09083c'
+    /** @prop {name:bgColor,tips:'背景颜色','type:String,default:'#0a0738'} */
+    public bgColor:string = '#0a0738'
 
     constructor(){super();}
 
@@ -23,8 +23,10 @@ export default class Screen extends Laya.Script {
     }
 
     private onResize():void {
-        (this.owner as Laya.Sprite).width = Laya.stage.width;
-        (this.owner as Laya.Sprite).height = Laya.stage.height;
-        (this.owner as Laya.Sprite).graphics.drawRect(0,0,Laya.stage.width,Laya.stage.height,this.bgColor);
+        const _that = (this.owner as Laya.Sprite);
+        _that.width = Laya.stage.width;
+        _that.height = Laya.stage.height;
+        _that.graphics.drawRect(0,0,Laya.stage.width,Laya.stage.height,this.bgColor);
+       
     }
 }
