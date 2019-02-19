@@ -1,3 +1,10 @@
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:49:08
+ * @modify date 2019-02-19 17:49:08
+ * @desc 往期记录脚本
+ */
 import { ui } from '../ui/layaMaxUI'
 
 export default class previousRecord extends ui.template.previousRecordsUI {

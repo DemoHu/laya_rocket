@@ -1,3 +1,10 @@
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:45:28
+ * @modify date 2019-02-19 17:45:28
+ * @desc 工具函数集合
+ */
 export default {
 
     /**

@@ -1,3 +1,10 @@
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:48:28
+ * @modify date 2019-02-19 17:48:28
+ * @desc 记录页面脚本
+ */
 import { ui } from '../ui/layaMaxUI'
 
 export default class Record extends ui.recordUI {
@@ -7,10 +14,7 @@ export default class Record extends ui.recordUI {
         this.canyu.on(Laya.Event.CLICK,this,this.tabSwitch,[1])
         this.wangqi.on(Laya.Event.CLICK,this,this.tabSwitch,[2])
         this.on(Laya.Event.RESIZE,this,this.onResize)
-        
     }
-
-   
 
     onEnable():void{
         /**参与记录数据源 */

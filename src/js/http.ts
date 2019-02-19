@@ -1,3 +1,10 @@
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:45:06
+ * @modify date 2019-02-19 17:45:06
+ * @desc axios网络请求封装
+ */
 import axios from "axios";
 
 axios.defaults.timeout = 10000;

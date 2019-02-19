@@ -1,3 +1,10 @@
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:49:23
+ * @modify date 2019-02-19 17:49:23
+ * @desc 交易密码输入弹窗脚本
+ */
 import { ui } from '../ui/layaMaxUI'
 import { post } from '../js/http';
 import TipsDiaLog from './tipDialog';

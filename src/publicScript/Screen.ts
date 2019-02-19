@@ -1,12 +1,10 @@
-/*
- * @Author: Siwen 
- * @Date: 2019-02-14 10:41:37 
- * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-02-14 11:01:19
- * 屏幕自适应脚本
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:46:30
+ * @modify date 2019-02-19 17:46:30
+ * @desc 屏幕自适应脚本
  */
-
-
 export default class Screen extends Laya.Script {
     /** @prop {name:bgColor,tips:'背景颜色','type:String,default:'#0a0738'} */
     public bgColor:string = '#0a0738'

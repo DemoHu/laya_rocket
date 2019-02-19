@@ -1,3 +1,10 @@
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:47:11
+ * @modify date 2019-02-19 17:47:11
+ * @desc 首页商品卡脚本
+ */
 import { ui } from "../ui/layaMaxUI";
 import { Tabbar } from "../view/Tabbar";
 

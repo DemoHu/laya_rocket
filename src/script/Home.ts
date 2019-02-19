@@ -1,3 +1,10 @@
+/**
+ * @author [Siwen]
+ * @email [623746556@qq.com]
+ * @create date 2019-02-19 17:48:16
+ * @modify date 2019-02-19 17:48:16
+ * @desc 首页脚本
+ */
 import { ui } from "../ui/layaMaxUI";
 import { Toast } from "../view/Toasts";
 
