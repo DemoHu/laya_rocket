@@ -1,7 +1,11 @@
 D .
 D comp
+P 2BA0DD7F img_close.png
+P 52737D50 img_continue.png
 P 88A185C3 img_dialog.png
+R 420DF97B img_payment_bg.png
 P E4B70C0C img_return.png
+P C54A3BD3 img_view_record.png
 P C2DF3147 progress$bar.png
 P 9C6DF160 progress.png
 D comp/guessing

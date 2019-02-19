@@ -1,15 +1,26 @@
 import { ui } from "../ui/layaMaxUI";
 import { Toast } from "../view/Toasts";
 
+
+
 import { get } from '../js/http'
+import utils from '../js/utils'
+import IptPswDom from "../template/pswInput";
 
 export default class Guessing extends ui.guessingUI {
 
     private goodsId:string = '';//商品ID
+    private selectNumber:number = 0; //选中个数
+    private unitPrice:number = 0; //单价
+    private totalPrice:number = 0; //总价
+    private myAmount:number = 0; //总资产
     private numberArr:number[] = []; //未选中的数据
     private halfArr:number[] = []; //一半的未选中数据
     private rawDataArr_new:any[] = [];//镜像数组
     private rawDataArr:any[] = [];//原始数据
+
+    private inputPwd: IptPswDom; //密码输入框
+    private codeList:string = ''; //购买号码
 
     constructor(){
         super()
@@ -26,18 +37,27 @@ export default class Guessing extends ui.guessingUI {
     onEnable():void {
         console.log('进入页面');
         this.balance.text = `${localStorage.getItem('myAmount')} USDT`;
+        this.myAmount = +`${localStorage.getItem('myAmount')}`;
     }
     onOpened(goodsId:any){
         this.goodsId = goodsId;
-        this.getGoodsDetails(this.goodsId)
+        this.getGoodsDetails(this.goodsId);
     }
 
     /**购买 */
     private buyFunc():void {
-        // console.log('改变之后的数据源',this.numberList.array);
-        // let inputPwd: ui.template.InputPwdDialogUI = new ui.template.InputPwdDialogUI();
-        // inputPwd.popup();
-        Toast.show('这是提示文字这是提示文字这是提示文字这是提示文字')
+        if (this.getSelectNumber() <= 0) {
+            Toast.show('请选择购买号码')
+        }else if(this.totalPrice > this.myAmount){
+            Toast.show('余额不足')
+        }else{
+            this.inputPwd = new IptPswDom()
+            this.inputPwd.popup();
+            this.inputPwd.setData({
+                period:this.period.text,
+                codeList:this.codeList
+            })
+        }
     }
 
     /**
@@ -96,7 +116,8 @@ export default class Guessing extends ui.guessingUI {
                 })
             })
         }
-        this.numberList.array = this.rawDataArr_new
+        this.numberList.array = this.rawDataArr_new;
+        this.getSelectNumber()
     }
 
 
@@ -108,8 +129,41 @@ export default class Guessing extends ui.guessingUI {
             this.progressSpeed.value = +`${res.soldNum/res.totalNum}`;
             this.soldNum_soldNum.text = `${res.soldNum}/${res.totalNum}`;
             this.period.text = res.period;
+            this.unitPrice = +res.price;
             this.rawDataArr = res.codeList;
             this.numberList.array = this.rawDataArr; //号码列表
+
+            this.random_one.visible = true;
+            if (this.numberList.array.length > 2) {
+                this.random_after.visible = true;
+                this.random_before.visible = true;
+                this.random_all.visible = true;
+            }else{
+                this.random_one.width = 300;
+                this.random_one.centerX = 0;
+            }
+            this.numberList.repeatX = 5;
+            this.numberList.repeatY = 4;
+            this.numberList.cells.forEach((item: Laya.Sprite) => {
+                item.on("GetItem", this, this.getSelectNumber)
+            })
         })
+    }
+
+    /**监听统计列表数据选中个数 */
+    private getSelectNumber(){
+        this.selectNumber = 0;
+        this.codeList = '';
+        this.numberList.array.forEach(item=>{
+            if (item.buyerId === '2') {
+                this.selectNumber = this.selectNumber + 1;
+                let codeString:string = `${this.codeList}${this.codeList.length > 0 ? ',':''}${item.code}`;
+                this.codeList =  codeString;
+            }
+        })
+        this.total.text = utils.toDecimal((this.unitPrice * this.selectNumber),2) + ' USDT';
+        this.totalPrice = +utils.toDecimal((this.unitPrice * this.selectNumber),2);
+
+        return this.selectNumber;
     }
 }

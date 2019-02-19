@@ -34,9 +34,9 @@ export default class Home extends ui.homeUI {
             get('/user/getInfo',{}).then((res:any)=>{
                 if (!res.code) {
                     this.nickName.text = res.userInfo.nickName
-                    this.myAmount.text = res.userInfo.money
+                    this.myAmount.text =`${utils.toDecimal(res.userInfo.money,2)}`
                     this.avatar.skin = res.userInfo.avatar
-                    localStorage.setItem('myAmount',res.userInfo.money)
+                    localStorage.setItem('myAmount',this.myAmount.text)
                     localStorage.setItem('userId',res.userInfo.userId)
                 }else{
                     console.log(res.message);

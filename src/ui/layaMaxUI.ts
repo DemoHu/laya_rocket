@@ -38,6 +38,7 @@ export module ui {
 		public soldNum_soldNum:Laya.Label;
 		public period:Laya.Label;
 		public numberList:Laya.List;
+		public total:Laya.Label;
 		public balance:Laya.Label;
 		public btn_buy:Laya.Image;
 		public btn_select:Laya.View;
@@ -98,6 +99,10 @@ export module ui {
 }
 export module ui.template {
     export class InputPwdDialogUI extends Laya.Dialog {
+		public title:Laya.Label;
+		public btnClose:Laya.Box;
+		public IptPsw:Laya.TextInput;
+		public forgetPassword:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -131,6 +136,16 @@ export module ui.template {
         createChildren():void {
             super.createChildren();
             this.loadScene("template/previousRecords");
+        }
+    }
+    export class TipsDialogUI extends Laya.Dialog {
+		public title:Laya.Label;
+		public btnViewRecord:Laya.Image;
+		public btnContinue:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/TipsDialog");
         }
     }
     export class ToastUI extends Laya.View {

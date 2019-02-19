@@ -24,13 +24,17 @@ export class Toast extends ui.template.ToastUI {
     }
 
     static show(content:string){
+        let timer;
         this.toast = this.createToast()
         Laya.stage.addChild(this.toast);
-        
+        if (this.toast.text) {
+            this.toast.removeSelf();
+        }
+        clearTimeout(timer)
         this.toast.text = content;
-        
-        setTimeout(()=>{
-            this.toast.removeSelf()
-        },3000)
+         timer = setTimeout(()=>{
+            this.toast.text = '';
+            this.toast.removeSelf();
+        },2000)
     }
 }

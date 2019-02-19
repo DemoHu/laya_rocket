@@ -1,4 +1,5 @@
 import { ui } from "../ui/layaMaxUI";
+import { Toast } from "../view/Toasts";
 
 
 export default class numberListDOM extends ui.template.numberListDOMUI {
@@ -6,7 +7,6 @@ export default class numberListDOM extends ui.template.numberListDOMUI {
     constructor(){
         super()
         this.on(Laya.Event.CLICK,this,this.clickNumber)
-
     }
     set dataSource(item: any) {
         this._dataSource = item;
@@ -22,6 +22,7 @@ export default class numberListDOM extends ui.template.numberListDOMUI {
      */
     private clickNumber(item:any):void {
         if (+this._dataSource.buyerId > 10) { //用户id必大于10，作为判断依据
+            Toast.show('该号码已被购买')
             return;
         }else if(this._dataSource.buyerId === '0'){
             this.bgImg.skin = this.returnStatusImg('2')
@@ -30,6 +31,7 @@ export default class numberListDOM extends ui.template.numberListDOMUI {
             this.bgImg.skin = this.returnStatusImg('0')
             this._dataSource.buyerId = '0';
         }
+        this.event("GetItem");
     }
 
 

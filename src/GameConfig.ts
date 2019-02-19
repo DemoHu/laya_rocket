@@ -10,6 +10,8 @@ import Home from "./script/Home"
 import Record from "./script/Record"
 import previousRecords from "./template/previousRecords"
 import joinRecords from "./template/joinRecords"
+import pswInput from "./template/pswInput"
+import tipDialog from "./template/tipDialog"
 /*
 * 游戏初始化配置;
 */
@@ -40,6 +42,8 @@ export default class GameConfig{
         reg("script/Record.ts",Record);
         reg("template/previousRecords.ts",previousRecords);
         reg("template/joinRecords.ts",joinRecords);
+        reg("template/pswInput.ts",pswInput);
+        reg("template/tipDialog.ts",tipDialog);
     }
 }
 GameConfig.init();
