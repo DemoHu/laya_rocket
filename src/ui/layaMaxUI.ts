@@ -14,9 +14,10 @@ export module ui {
 		public ani1:Laya.FrameAnimation;
 		public cardItem:Laya.Image;
 		public sceneImg:Laya.Image;
-		public amount_label:Laya.Label;
-		public current:Laya.Label;
-		public speed:Laya.Label;
+		public goodsName:Laya.Label;
+		public award:Laya.Label;
+		public progress:Laya.ProgressBar;
+		public soldNum_totalNum:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -31,8 +32,13 @@ export module ui {
         }
     }
     export class guessingUI extends Laya.Scene {
-		public unitPrice:Laya.Label;
+		public price:Laya.Label;
+		public goodsValue:Laya.Label;
+		public progressSpeed:Laya.ProgressBar;
+		public soldNum_soldNum:Laya.Label;
+		public period:Laya.Label;
 		public numberList:Laya.List;
+		public balance:Laya.Label;
 		public btn_buy:Laya.Image;
 		public btn_select:Laya.View;
 		public random_one:Laya.Label;
@@ -49,9 +55,20 @@ export module ui {
 		public put_in:Laya.FrameAnimation;
 		public rocket_show:Laya.FrameAnimation;
 		public dom_show:Laya.FrameAnimation;
+		public bg_ani:Laya.FrameAnimation;
+		public bg_animation:Laya.Sprite;
 		public tuichu:Laya.Image;
+		public AccountBox:Laya.Image;
+		public avatar:Laya.Image;
+		public nickName:Laya.Label;
+		public rechargeBox:Laya.Image;
 		public btnRecharge:Laya.Image;
+		public myAmount:Laya.Label;
 		public putin:Laya.Sprite;
+		public rockerBox:Laya.Sprite;
+		public countDown:Laya.Sprite;
+		public rocketAmount:Laya.Label;
+		public rocketCountDown:Laya.Label;
 		public list:Laya.List;
         constructor(){ super()}
         createChildren():void {
@@ -99,7 +116,7 @@ export module ui.template {
     }
     export class numberListDOMUI extends Laya.View {
 		public bgImg:Laya.Image;
-		public index:Laya.Label;
+		public code:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();

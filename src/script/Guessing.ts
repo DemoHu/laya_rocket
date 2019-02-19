@@ -1,30 +1,15 @@
 import { ui } from "../ui/layaMaxUI";
 import { Toast } from "../view/Toasts";
 
+import { get } from '../js/http'
+
 export default class Guessing extends ui.guessingUI {
 
+    private goodsId:string = '';//商品ID
     private numberArr:number[] = []; //未选中的数据
     private halfArr:number[] = []; //一半的未选中数据
     private rawDataArr_new:any[] = [];//镜像数组
-    private rawDataArr:any[] = [ //原始数据
-        {index:1,status:1},
-        {index:2,status:3},
-        {index:3,status:1},
-        {index:4,status:1},
-        {index:5,status:4},
-        {index:6,status:1},
-        {index:7,status:1},
-        {index:8,status:1},
-        {index:9,status:4},
-        {index:10,status:1},
-        {index:11,status:3},
-        {index:12,status:4},
-        {index:13,status:1},
-        {index:14,status:1},
-        {index:15,status:3},
-        {index:16,status:1},
-        {index:17,status:1},
-    ]
+    private rawDataArr:any[] = [];//原始数据
 
     constructor(){
         super()
@@ -40,11 +25,11 @@ export default class Guessing extends ui.guessingUI {
 
     onEnable():void {
         console.log('进入页面');
-        // 选项卡
-        this.numberList.array = this.rawDataArr;
+        this.balance.text = `${localStorage.getItem('myAmount')} USDT`;
     }
-    onOpened(data:any){
-        console.log(data,'首页传递的card数据');
+    onOpened(goodsId:any){
+        this.goodsId = goodsId;
+        this.getGoodsDetails(this.goodsId)
     }
 
     /**购买 */
@@ -65,11 +50,11 @@ export default class Guessing extends ui.guessingUI {
         this.halfArr = [];//初始化数组
 
         this.rawDataArr_new.forEach(item=>{
-            if (item.status === 2) {
-                item.status = 1;
+            if (item.buyerId === '2') {
+                item.buyerId = '0';
             }
-            if (item.status <= 2) {
-                this.numberArr.push(item.index)
+            if (item.buyerId <= 2) {
+                this.numberArr.push(item.code)
             }
         })
 
@@ -91,12 +76,12 @@ export default class Guessing extends ui.guessingUI {
     private randomNumber(arr:number[],type?:number){
         const rand:number = Math.floor((Math.random() * arr.length)); //随一
         
-        const index = arr[rand];
+        const code = arr[rand];
         
         if (type === 1) {
             this.rawDataArr_new.forEach(item => {
-                if (item.index === index) {
-                    item.status = 2;
+                if (item.code === code) {
+                    item.buyerId = '2';
                 }
                 
             })
@@ -104,13 +89,27 @@ export default class Guessing extends ui.guessingUI {
         if (type === 2) {
             arr.forEach(el => {
                 this.rawDataArr_new.forEach(item => {
-                    if (el === item.index) {
-                        item.status = 2
+                    if (el === item.code) {
+                        item.buyerId = '2';
                     }
                     
                 })
             })
         }
         this.numberList.array = this.rawDataArr_new
+    }
+
+
+    /**获取商品详情 */
+    private getGoodsDetails(goodsId:string) {
+        get('/goods/get',{ goodsId }).then((res:any)=>{
+            this.price.text = `${+res.price}`;
+            this.goodsValue.text = `${+res.goodsValue} USDT`;
+            this.progressSpeed.value = +`${res.soldNum/res.totalNum}`;
+            this.soldNum_soldNum.text = `${res.soldNum}/${res.totalNum}`;
+            this.period.text = res.period;
+            this.rawDataArr = res.codeList;
+            this.numberList.array = this.rawDataArr; //号码列表
+        })
     }
 }

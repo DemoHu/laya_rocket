@@ -1,6 +1,8 @@
 import { ui } from "../ui/layaMaxUI";
 import { Tabbar } from "../view/Tabbar";
 
+import utils from '../js/utils'
+
 export default class Card extends ui.CardUI {
     constructor(){
         super()
@@ -9,16 +11,23 @@ export default class Card extends ui.CardUI {
     set dataSource(item: any) {
         this._dataSource = item;
         if (item) {
-            this.cardItem.skin = item.bgImg;
-            this.sceneImg.skin = item.sceneImg;
-            this.amount_label.text = `${item.amount} ${item.coinType}`
-            this.current.text = `${item.amount/2} ${item.coinType}`
-            this.speed.text = `${item.speed/2}/${item.speed}`
+            //金币图片,  1-400金币图标1;   501-1000金币图标2;  1001以上金币图标3
+            if (+item.goodsValue <= 400 ) {
+                this.cardItem.skin = `comp/home/img_jinbi_2.png`
+            }else if(+item.goodsValue <= 1000){
+                this.cardItem.skin = `comp/home/img_jinbi_4.png`
+            }else if(+item.goodsValue >= 1001) {
+                this.cardItem.skin = `comp/home/img_jinbi_20.png`
+            }
+            this.sceneImg.skin = `comp/home/img_scene_${item.totalNum}.png`
+            this.goodsName.text = `${+item.goodsValue} USDT`
+            this.award.text = `${utils.toDecimal(item.award,2)}  USDT`
+            this.soldNum_totalNum.text = `${item.soldNum}/${item.totalNum}`
+            this.progress.value = +`${item.soldNum/item.totalNum}`
         }
     }
 
     private clickItem():void {
-        // window.localStorage.setItem('index',this._dataSource.index)
-        Tabbar.getInstance().openScene("guessing.scene", this._dataSource);
+        Tabbar.getInstance().openScene("guessing.scene", this._dataSource.goodsId);
     }
 }
