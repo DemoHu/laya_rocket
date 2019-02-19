@@ -32,33 +32,11 @@ const gameCenter = ['/user/login','/user/getInfo']
 axios.interceptors.request.use(
   config => {
     //设置AHost
-    // for (let index = 0; index < gameCenter.length; index++) {
-    //   const element = gameCenter[index];
-    //   if (config.url === element) {
-    //     config.headers['AHost'] = 'gameCenter'
-    //   }else{
-    //     config.headers['AHost'] = 'starRocket';
-    //   }
-    // }
-
-    
     if (config.url.indexOf('/user/') >= 0 ) {
       config.headers['AHost'] = 'gameCenter'
     }else{
       config.headers['AHost'] = 'starRocket';
     }
-    // gameCenter.forEach(v => {
-    //   // console.log(v);
-    //   // console.log(config.url === v);
-      
-      
-    //   if (config.url === v) {
-    //     config.headers['AHost'] = 'gameCenter'
-    //   }else{
-    //     config.headers['AHost'] = 'starRocket';
-    //   }
-    // });
-
 
     if (config.method == 'post') {
       config.data = formDataFunc({
