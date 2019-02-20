@@ -96,6 +96,26 @@ export default {
             );
         });
     },
+    /**
+   * 将时间戳转换成格式化日期
+   * @param {string} timeStamp 时间戳
+   */
+    formatDateTime(timeStamp) {
+        var date = new Date();
+        date.setTime(timeStamp * 1000);
+        var y = date.getFullYear();
+        var m:string | number = date.getMonth() + 1;
+        m = m < 10 ? ('0' + m) : m;
+        var d:string | number = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        var h:string | number = date.getHours();
+        h = h < 10 ? ('0' + h) : h;
+        var minute:string | number = date.getMinutes();
+        var second:string | number = date.getSeconds();
+        minute = minute < 10 ? ('0' + minute) : minute;
+        second = second < 10 ? ('0' + second) : second;
+        return y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second;
+    },
 
     /**
      * 保留n位小数  

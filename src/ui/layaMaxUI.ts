@@ -25,6 +25,16 @@ export module ui {
         }
     }
     export class grandPrixUI extends Laya.Scene {
+		public CountDown:Laya.Label;
+		public bonus:Laya.Label;
+		public rankPrizeHelp:Laya.Sprite;
+		public myRankBox:Laya.Image;
+		public myranking:Laya.Label;
+		public avatar:Laya.Image;
+		public nickName:Laya.Label;
+		public uid:Laya.Label;
+		public volumeTitle:Laya.Label;
+		public volume:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -38,7 +48,9 @@ export module ui {
 		public soldNum_soldNum:Laya.Label;
 		public period:Laya.Label;
 		public numberList:Laya.List;
+		public estimate:Laya.Sprite;
 		public total:Laya.Label;
+		public balanceBox:Laya.Sprite;
 		public balance:Laya.Label;
 		public btn_buy:Laya.Image;
 		public btn_select:Laya.View;
@@ -66,6 +78,7 @@ export module ui {
 		public btnRecharge:Laya.Image;
 		public myAmount:Laya.Label;
 		public putin:Laya.Sprite;
+		public buyHelp:Laya.Sprite;
 		public rockerBox:Laya.Sprite;
 		public countDown:Laya.Sprite;
 		public rocketAmount:Laya.Label;
@@ -110,9 +123,14 @@ export module ui.template {
         }
     }
     export class joinRecordsUI extends Laya.View {
+		public period:Laya.Label;
 		public noPrize:Laya.Label;
 		public prize:Laya.Image;
-		public prize_number:Laya.Label;
+		public goodsValue:Laya.Label;
+		public openTime:Laya.Label;
+		public hitCode:Laya.Label;
+		public codeList:Laya.Label;
+		public award:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -129,9 +147,13 @@ export module ui.template {
         }
     }
     export class previousRecordsUI extends Laya.View {
-		public number:Laya.Label;
-		public lotteryType:Laya.Label;
-		public hash:Laya.Label;
+		public period:Laya.Label;
+		public requestType:Laya.Label;
+		public goodsName:Laya.Label;
+		public txHash:Laya.Label;
+		public hitCode:Laya.Label;
+		public openTime:Laya.Label;
+		public joinedNum:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();

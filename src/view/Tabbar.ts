@@ -9,7 +9,7 @@ import { ui } from '../ui/layaMaxUI'
 
 
 const tabbarArr:string[] = ['home.scene','record.scene','assistant.scene'] //tabbar的页面
-const pageArr:string[] = ['guessing.scene','grandPrix.scene'] //非tabbar页面
+// const pageArr:string[] = ['guessing.scene','grandPrix.scene'] //非tabbar页面
 
 export class Tabbar extends ui.TabbarUI {
     /**页面传递的参数 */
@@ -17,7 +17,7 @@ export class Tabbar extends ui.TabbarUI {
     /**选中的tabbar */
     static _tabbar:Tabbar;
     /**页面数组 */
-    static readonly SCENES:string[] = [...tabbarArr,...pageArr]
+    static readonly SCENES:string[] = tabbarArr;
 
     static getInstance():Tabbar {
         if(!this._tabbar){
@@ -45,7 +45,8 @@ export class Tabbar extends ui.TabbarUI {
     /**监视tabbar改变 */
     createView(view:any){
         super.createView(view)
-        this.tab.on(Laya.Event.CHANGE,this,this.onClickTab)
+        this.tab.on(Laya.Event.CHANGE,this,this.onClickTab);
+        this.onClickTab();
     }
 
     /**点击tabbar事件 */
@@ -53,5 +54,14 @@ export class Tabbar extends ui.TabbarUI {
         let scene:string = Tabbar.SCENES[this.tab.selectedIndex]
         Laya.Scene.open(scene, true, this._openSceneParam);
         this._openSceneParam = null;
+
+        for (let index = 0; index < this.tab.items.length; index++) {
+            const element: Laya.Button = this.tab.items[index] as Laya.Button;
+            const _imgBtn: Laya.Button = element.getChildAt(0) as Laya.Button;
+            _imgBtn.selected = false;
+        }
+        const tabBtn: Laya.Button = this.tab.selection as Laya.Button;
+        const imgBtn: Laya.Button = tabBtn.getChildAt(0) as Laya.Button;
+        imgBtn.selected = true;
     }
 }

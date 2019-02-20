@@ -7,25 +7,24 @@
  */
 import { ui } from "../ui/layaMaxUI";
 import { Toast } from "../view/Toasts";
-
-import { get,post } from '../js/http';
-
+import { GameModel } from "../js/GameModel";
 import utils from '../js/utils'
+import api from "../js/api";
 
-let obj1:Object = {a:1}
-let obj2:Object = {c:1}
+import { post } from '../js/http';
+
 
 export default class Home extends ui.homeUI {
     constructor(){
         super()
-        this.btnRecharge.on(Laya.Event.CLICK,this,this.btnRechargeFunc) 
+        this.btnRecharge.on(Laya.Event.CLICK,this,this.btnRechargeFunc);
+        this.buyHelp.on(Laya.Event.CLICK,this,this.openBuyHelp)
     }
     onEnable():void{
         this.getUserInfo()
         this.rankToday()
         this.getGoodsList()
     }
-
 
     /**充值 */
     private btnRechargeFunc():void {
@@ -38,36 +37,45 @@ export default class Home extends ui.homeUI {
             orgId:1,
             account:'18900000003'
         }).then((res:any)=>{
-            get('/user/getInfo',{}).then((res:any)=>{
-                if (!res.code) {
-                    this.nickName.text = res.userInfo.nickName
-                    this.myAmount.text =`${utils.toDecimal(res.userInfo.money,2)}`
-                    this.avatar.skin = res.userInfo.avatar
-                    localStorage.setItem('myAmount',this.myAmount.text)
-                    localStorage.setItem('userId',res.userInfo.userId)
-                }else{
-                    console.log(res.message);
-                }
+            api.getUserInfo().then((res:any)=>{
+                this.nickName.text = res.userInfo.nickName
+                this.myAmount.text =`${utils.toDecimal(res.userInfo.money,2)}`
+                this.avatar.skin = res.userInfo.avatar;
+                // 保存用户信息
+                GameModel.getInstance().setUserInfo(res.userInfo)
+            }).catch((err:any)=>{
+                console.log(err.message);
+                // 获取信息失败更新信息
+                GameModel.getInstance().setUserInfo({
+                    userInfo:{}
+                })
             })
         })
     }
 
     /**今日大奖池 */
     private rankToday(){
-        get('/rank/today',{}).then((res:any)=>{
+        api.getRankToday().then((res:any)=>{
             this.rocketAmount.text = `${utils.toDecimal(res.potMoney,2)}`
             utils.countDown(res.countDown,((time)=>{
                 this.rocketCountDown.text = time
             }))
+        }).catch((err:any)=>{
+            console.log(err.message);
         })
     }
 
     /**获取首页商品列表 */
     private getGoodsList(){
-        get('/goods/index',{}).then((res:any)=>{
-            console.log(res);
+        api.getGoodsList().then((res:any)=>{
             this.list.array = res.list
-            
+        }).catch((err:any)=>{
+            console.log(err.message);
         })
+    }
+
+    /**玩法介绍 */
+    private openBuyHelp(){
+        window.location.href = 'https://m.xyhj.io/buyHelp.html';
     }
 }

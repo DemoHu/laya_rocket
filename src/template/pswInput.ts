@@ -6,9 +6,10 @@
  * @desc 交易密码输入弹窗脚本
  */
 import { ui } from '../ui/layaMaxUI'
-import { post } from '../js/http';
 import TipsDiaLog from './tipDialog';
 import { Toast } from '../view/Toasts';
+import Guessing from '../script/Guessing';
+import api from '../js/api';
 
 export default class IptPswDom extends ui.template.InputPwdDialogUI {
 
@@ -39,28 +40,24 @@ export default class IptPswDom extends ui.template.InputPwdDialogUI {
         }
     }
 
-
     /**购买 */
     private tradeBuy(){
         this.isEnter = true;
-        post('/trade/buy',{
-            period:this.period,
-            codeList:this.codeList,
-            exchangePwd:this.IptPsw.text
-        }).then((res:any)=>{
+        api.postTradeBuy(this.period,this.codeList,this.IptPsw.text).then((res:any)=>{
             this.isEnter = false;
-            this.closeFunc()
-            if (!res.code) {
-                // 购买成功弹出对话框
-                let tipsDialog:TipsDiaLog = new TipsDiaLog()
-                tipsDialog.popup()
-            }else {
-                Toast.show(res.message)
-            }
-            
+            this.closeFunc();
+
+            this.event("refreshData");//刷新数据列表
+            // 购买成功弹出对话框
+            let tipsDialog:TipsDiaLog = new TipsDiaLog()
+            tipsDialog.popup()
+        }).catch((err:any)=>{
+            this.isEnter = false;
+            this.closeFunc();
+
+            Toast.show(err.message)
         })
     }
-
 
     /**关闭密码框 */
     private closeFunc(){

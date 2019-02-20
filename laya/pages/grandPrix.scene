@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":7,
+    "selecteID":21,
     "searchKey":"Scene",
-    "props":{"width":750,"sceneColor":"#09083c","height":1334},
+    "props":{"width":750,"sceneColor":"#fff","runtime":"script/grandPrix.ts","height":1334},
     "nodeParent":-1,
-    "maxID":9,
+    "maxID":40,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -21,7 +21,7 @@
             "source":"src/publicScript/Screen.ts",
             "searchKey":"Script,Screen",
             "removeAble":true,
-            "props":{},
+            "props":{"bgColor":"#fff"},
             "nodeParent":2,
             "label":"Screen",
             "isDirectory":false,
@@ -50,19 +50,170 @@
         },
         {
             "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"y":0,"x":0,"skin":"comp/grandPrix/img_rank.png"},
+            "nodeParent":2,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":9,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":173,"x":137,"width":162,"skin":"comp/grandPrix/img_rocket_prix_title.png","pivotY":18,"pivotX":81,"height":36},
+                    "nodeParent":9,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":10,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":173,"x":267,"width":48,"pivotY":13,"pivotX":24,"height":25},
+                    "nodeParent":9,
+                    "label":"Sprite",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":11,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":13,"x":12,"width":23,"skin":"comp/grandPrix/img_rocket_time.png","pivotY":13,"pivotX":12,"height":25},
+                            "nodeParent":11,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":12,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label,CountDown",
+                            "props":{"y":12,"x":90,"width":125,"var":"CountDown","text":"--:--:--","pivotY":16,"pivotX":62,"height":32,"fontSize":32,"color":"#ff871d"},
+                            "nodeParent":11,
+                            "label":"CountDown",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":13,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":224,"x":58,"skin":"comp/grandPrix/img_rocket_bg.png"},
+                    "nodeParent":9,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":14,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "searchKey":"Label,bonus",
+                            "props":{"y":31,"x":40,"var":"bonus","text":"---","fontSize":34,"color":"#fff","bold":true},
+                            "nodeParent":14,
+                            "label":"bonus",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":15,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":37,"x":160,"text":"USDT","fontSize":28,"color":"#FFF"},
+                            "nodeParent":14,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":16,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":367,"x":58,"width":200,"height":50},
+                    "nodeParent":9,
+                    "label":"Sprite",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":18,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":11,"x":44,"text":"历史记录","fontSize":28,"color":"#fff"},
+                            "nodeParent":18,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":17,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Rect",
+                            "searchKey":"Rect",
+                            "props":{"width":200,"lineWidth":1,"height":50,"fillColor":"#241f7b"},
+                            "nodeParent":18,
+                            "label":"Rect",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":19,
+                            "child":[
+                                ]
+                        }]
+                }]
+        },
+        {
+            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":8,"x":13,"width":50,"height":50},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":8,"x":16,"skin":"comp/img_return.png"},
@@ -76,7 +227,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/publicScript/PageNavScript.ts",
@@ -91,6 +241,230 @@
                     "compId":8,
                     "child":[
                         ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite,rankPrizeHelp",
+            "props":{"y":24,"x":633,"width":100,"var":"rankPrizeHelp","height":50},
+            "nodeParent":2,
+            "label":"rankPrizeHelp",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":21,
+            "child":[
+                {
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"y":11,"x":22,"text":"说明","fontSize":28,"color":"#fff"},
+                    "nodeParent":21,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":22,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"x":19.5,"top":450,"skin":"comp/grandPrix/img_ranklist_bg.png","bottom":0},
+            "nodeParent":2,
+            "label":"Image",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":23,
+            "child":[
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":40,"x":157,"skin":"comp/grandPrix/img_rank_title.png"},
+                    "nodeParent":23,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":27,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":236,"x":211.5,"skin":"comp/img_nodata1.png"},
+                    "nodeParent":23,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":24,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":306,"x":92,"text":"暂无数据","fontSize":26,"color":"#535cf1"},
+                            "nodeParent":24,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":26,
+                            "child":[
+                                ]
+                        }]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,myRankBox",
+            "props":{"x":9,"visible":false,"var":"myRankBox","skin":"comp/grandPrix/img_myrank.png","bottom":0},
+            "nodeParent":2,
+            "label":"myRankBox",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":28,
+            "child":[
+                {
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"y":33,"x":21,"text":"我的排名","fontSize":24,"color":"#535cf1"},
+                    "nodeParent":28,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":29,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":112,"x":32},
+                    "nodeParent":28,
+                    "label":"Sprite",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":31,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "searchKey":"Label,myranking",
+                            "props":{"y":2,"var":"myranking","text":"---","fontSize":22,"color":"#535cf1"},
+                            "nodeParent":31,
+                            "label":"myranking",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":32,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,avatar",
+                            "props":{"y":-11,"x":51,"width":44,"var":"avatar","skin":"comp/home/img_avatar.png","height":44},
+                            "nodeParent":31,
+                            "label":"avatar",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":33,
+                            "child":[
+                                {
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"renderType":"mask"},
+                                    "nodeParent":33,
+                                    "label":"Sprite",
+                                    "isOpen":true,
+                                    "isDirectory":true,
+                                    "isAniNode":true,
+                                    "hasChild":true,
+                                    "compId":34,
+                                    "child":[
+                                        {
+                                            "type":"Circle",
+                                            "searchKey":"Circle",
+                                            "props":{"y":22,"x":22,"radius":22,"lineWidth":1,"fillColor":"#ff0000"},
+                                            "nodeParent":34,
+                                            "label":"Circle",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":35,
+                                            "child":[
+                                                ]
+                                        }]
+                                }]
+                        },
+                        {
+                            "type":"Label",
+                            "searchKey":"Label,nickName",
+                            "props":{"y":-12,"x":120,"width":24,"var":"nickName","text":"---","height":12,"fontSize":20,"color":"#711197"},
+                            "nodeParent":31,
+                            "label":"nickName",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":36,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Label",
+                            "searchKey":"Label,uid",
+                            "props":{"y":16.5,"x":120,"var":"uid","text":"UID: ","fontSize":20,"color":"#711197"},
+                            "nodeParent":31,
+                            "label":"uid",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":37,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Label",
+                            "searchKey":"Label,volumeTitle",
+                            "props":{"y":-17,"x":573,"var":"volumeTitle","text":"今日交易额","fontSize":20,"color":"#711197"},
+                            "nodeParent":31,
+                            "label":"volumeTitle",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":38,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Label",
+                            "searchKey":"Label,volume",
+                            "props":{"y":16.5,"x":601.876953125,"var":"volume","text":"0 USDT","fontSize":20,"color":"#711197","align":"right"},
+                            "nodeParent":31,
+                            "label":"volume",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":39,
+                            "child":[
+                                ]
+                        }]
                 }]
         }],
     "animations":[

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":64,
-    "selecteID":67,
+    "selectedBox":47,
+    "selecteID":49,
     "searchKey":"Scene,guessing,guessing",
     "props":{"width":750,"var":"guessing","sceneColor":"#0a0635","runtime":"script/Guessing.ts","name":"guessing","height":1334},
     "nodeParent":-1,
@@ -490,13 +490,14 @@
             "props":{"right":0,"left":1,"height":160,"bottom":0},
             "nodeParent":2,
             "label":"View",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":47,
             "child":[
                 {
+                    "x":30,
                     "type":"Rect",
                     "searchKey":"Rect",
                     "props":{"width":750,"lineWidth":1,"height":160,"fillColor":"#060427"},
@@ -510,12 +511,13 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":42,"x":22},
+                    "searchKey":"Sprite,estimate",
+                    "props":{"y":42,"x":22,"var":"estimate"},
                     "nodeParent":47,
-                    "label":"Sprite",
-                    "isOpen":true,
+                    "label":"estimate",
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -549,12 +551,13 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":91,"x":22},
+                    "searchKey":"Sprite,balanceBox",
+                    "props":{"y":91,"x":22,"var":"balanceBox"},
                     "nodeParent":47,
-                    "label":"Sprite",
-                    "isOpen":true,
+                    "label":"balanceBox",
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -588,6 +591,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,btn_buy",
                     "props":{"y":44,"x":466,"var":"btn_buy","skin":"comp/guessing/img_buy.png"},

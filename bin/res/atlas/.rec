@@ -3,11 +3,21 @@ D comp
 P 2BA0DD7F img_close.png
 P 52737D50 img_continue.png
 P 88A185C3 img_dialog.png
+P 0B7095A0 img_nodata1.png
+P 5B2C3298 img_nodata2.png
 R 420DF97B img_payment_bg.png
 P E4B70C0C img_return.png
 P C54A3BD3 img_view_record.png
 P C2DF3147 progress$bar.png
 P 9C6DF160 progress.png
+D comp/grandPrix
+R 796F7D03 img_myrank.png
+R 9F956D07 img_rank.png
+P ACE928DC img_rank_title.png
+R ED202777 img_ranklist_bg.png
+P F9033F2E img_rocket_bg.png
+P 255EB733 img_rocket_prix_title.png
+P 258608B2 img_rocket_time.png
 D comp/guessing
 R 2E178E88 img_banner.png
 P 480F0668 img_buy.png
@@ -29,10 +39,8 @@ D comp/home
 P 3E7DF310 img_avatar.png
 P 36E91B78 img_card.png
 P FE282724 img_count_down.png
-P 541A2951 img_home.png
-P 397A2F6C img_home_active.png
-P F174AE1F img_jilu.png
-P 4E5A8B7C img_jilu_active.png
+P 81318CFA img_home.png
+P 9FFCF0DB img_jilu.png
 P 4EE00BDC img_jinbi_2.png
 P 0327D305 img_jinbi_20.png
 P 9D8754AA img_jinbi_4.png
@@ -52,9 +60,9 @@ P 7579CD3E img_star2.png
 P 0A72E52C img_star3.png
 P 1886EB6C img_star4.png
 P 13418A93 img_star5.png
+R 9D77D21E img_star_bg.png
 P 0E122DC5 img_usdt.png
-P 0BE494E4 img_zhushou.png
-P 64566505 img_zhushou_active.png
+P 324690B0 img_zhushou.png
 D comp/home/fire
 P BF0752F5 1.png
 P 409CD573 10.png

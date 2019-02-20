@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":3,
-    "selecteID":8,
+    "selectedBox":2,
+    "selecteID":3,
     "searchKey":"View",
     "props":{"width":750,"sceneColor":"#000000","right":0,"left":0,"height":100,"centerX":0,"bottom":0},
     "nodeParent":-1,
-    "maxID":13,
+    "maxID":16,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -31,44 +31,86 @@
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,item0",
-                    "props":{"y":0,"x":0,"width":250,"renderType":"render","name":"item0","labelSize":28,"labelColors":"#fff","label":"首页","height":100},
+                    "props":{"y":0,"width":250,"stateNum":"2","skin":" ","renderType":"render","name":"item0","left":60,"labelSize":28,"labelPadding":"25","labelColors":"#fff,#0366d6,#0366d6,#fff","label":"首页","height":100},
                     "nodeParent":3,
                     "label":"item0",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":8,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Button",
+                            "searchKey":"Button",
+                            "props":{"y":10,"x":105,"width":40,"stateNum":"2","skin":"comp/home/img_home.png","height":41},
+                            "nodeParent":8,
+                            "label":"Button",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":13,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,item1",
-                    "props":{"x":250,"width":250,"renderType":"render","name":"item1","labelSize":28,"labelColors":"#Fff","label":"抽奖记录","height":100},
+                    "props":{"width":250,"stateNum":"2","skin":" ","right":60,"renderType":"render","name":"item1","labelSize":28,"labelPadding":"25","labelColors":"#fff,#0366d6,#0366d6,#fff","label":"抽奖记录","height":100},
                     "nodeParent":3,
                     "label":"item1",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":9,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Button",
+                            "searchKey":"Button",
+                            "props":{"y":10,"x":108,"stateNum":"2","skin":"comp/home/img_jilu.png"},
+                            "nodeParent":9,
+                            "label":"Button",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":14,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,item2",
-                    "props":{"x":500,"width":250,"renderType":"render","name":"item2","labelSize":28,"labelColors":"#fff","label":"购买助手","height":100},
+                    "props":{"x":500,"width":250,"visible":false,"stateNum":"2","skin":" ","renderType":"render","name":"item2","labelSize":28,"labelPadding":"25","labelColors":"#fff,#0366d6,#0366d6,#fff","label":"购买助手","height":100},
                     "nodeParent":3,
                     "label":"item2",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":10,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Button",
+                            "searchKey":"Button",
+                            "props":{"y":10,"x":104,"stateNum":"2","skin":"comp/home/img_zhushou.png"},
+                            "nodeParent":10,
+                            "label":"Button",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":15,
+                            "child":[
+                                ]
+                        }],
+                    "$HIDDEN":true
                 }]
         },
         {

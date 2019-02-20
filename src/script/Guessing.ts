@@ -7,9 +7,10 @@
  */
 import { ui } from "../ui/layaMaxUI";
 import { Toast } from "../view/Toasts";
-import { get } from '../js/http'
 import utils from '../js/utils'
 import IptPswDom from "../template/pswInput";
+import { GameModel } from "../js/GameModel";
+import api from "../js/api";
 
 export default class Guessing extends ui.guessingUI {
 
@@ -40,8 +41,23 @@ export default class Guessing extends ui.guessingUI {
 
     onEnable():void {
         console.log('进入页面');
-        this.balance.text = `${localStorage.getItem('myAmount')} USDT`;
-        this.myAmount = +`${localStorage.getItem('myAmount')}`;
+
+        //获取用户资产
+        const userInfo:any = GameModel.getInstance().userInfo;
+        this.balance.text = `${utils.toDecimal(userInfo.money,2)} USDT`;
+        this.myAmount = +`${utils.toDecimal(userInfo.money,2)}`;
+        if (!userInfo.userId) { //未登录不显示我的余额
+            this.balanceBox.visible = false;
+            this.estimate.y = 80;
+        }else{
+            this.balanceBox.visible = true;
+            this.estimate.y = 42;
+        }
+        // 监视资产变动
+        GameModel.getInstance().on('getUserInfo',this,((userInfo:any)=>{
+            this.balance.text = `${utils.toDecimal(userInfo.money,2)} USDT`;
+            this.myAmount = +`${utils.toDecimal(userInfo.money,2)}`;
+        }))
     }
     onOpened(goodsId:any){
         this.goodsId = goodsId;
@@ -57,9 +73,14 @@ export default class Guessing extends ui.guessingUI {
         }else{
             this.inputPwd = new IptPswDom()
             this.inputPwd.popup();
-            this.inputPwd.setData({
+            this.inputPwd.setData({ //发送数据
                 period:this.period.text,
                 codeList:this.codeList
+            })
+            // 监听输入框组件事件
+            this.inputPwd.on('refreshData',this,()=>{
+                this.getGoodsDetails(this.goodsId);
+                this.total.text = '0 USDT';
             })
         }
     }
@@ -96,7 +117,10 @@ export default class Guessing extends ui.guessingUI {
         }
     }
 
-    /**从数组中随机取一个数 */
+    /**从数组中随机取一个数
+     * @param arr 数据列表
+     * @param type [可选] 随机类型
+     */
     private randomNumber(arr:number[],type?:number){
         const rand:number = Math.floor((Math.random() * arr.length)); //随一
         
@@ -124,10 +148,11 @@ export default class Guessing extends ui.guessingUI {
         this.getSelectNumber()
     }
 
-
-    /**获取商品详情 */
+    /**获取商品详情
+     * @param goodsId 商品id
+     */
     private getGoodsDetails(goodsId:string) {
-        get('/goods/get',{ goodsId }).then((res:any)=>{
+        api.getGoodsDetails(goodsId).then((res:any)=>{
             this.price.text = `${+res.price}`;
             this.goodsValue.text = `${+res.goodsValue} USDT`;
             this.progressSpeed.value = +`${res.soldNum/res.totalNum}`;
@@ -136,7 +161,6 @@ export default class Guessing extends ui.guessingUI {
             this.unitPrice = +res.price;
             this.rawDataArr = res.codeList;
             this.numberList.array = this.rawDataArr; //号码列表
-
             this.random_one.visible = true;
             if (this.numberList.array.length > 2) {
                 this.random_after.visible = true;
@@ -151,6 +175,8 @@ export default class Guessing extends ui.guessingUI {
             this.numberList.cells.forEach((item: Laya.Sprite) => {
                 item.on("GetItem", this, this.getSelectNumber)
             })
+        }).catch((err:any)=>{
+            console.log(err.message);
         })
     }
 

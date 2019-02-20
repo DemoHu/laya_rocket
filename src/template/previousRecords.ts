@@ -6,24 +6,28 @@
  * @desc 往期记录脚本
  */
 import { ui } from '../ui/layaMaxUI'
+import utils from '../js/utils';
 
 export default class previousRecord extends ui.template.previousRecordsUI {
     constructor(){
         super()
-        this.hash.on(Laya.Event.CLICK,this,this.seeHash)
+        this.txHash.on(Laya.Event.CLICK,this,this.seeHash)
     }
     set dataSource(item: any) {
         this._dataSource = item;
-        console.log(item,'数据列表');
-        
         if (item) {
-            this.number.text = item.number;
-            this.lotteryType.text = item.lotteryType;
+            this.period.text = item.period;
+            this.requestType.text = item.requestType;
+            this.goodsName.text = item.goodsName;
+            this.txHash.text = item.txHash;
+            this.hitCode.text = item.hitCode;
+            this.openTime.text = utils.formatDateTime(item.openTime);
+            this.joinedNum.text = item.joinedNum;
         }
     }
 
     /**查看哈希 */
     seeHash():void {
-        console.log(this._dataSource.lotteryType);
+        console.log(this._dataSource.txHash);
     }
 }

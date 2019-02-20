@@ -7,10 +7,12 @@
  */
 import { ui } from "../ui/layaMaxUI";
 import { Toast } from "../view/Toasts";
+import { GameModel } from "../js/GameModel";
 
 
 export default class numberListDOM extends ui.template.numberListDOMUI {
-    private userId:string = localStorage.getItem('userId');
+    private userId:string = '';
+
     constructor(){
         super()
         this.on(Laya.Event.CLICK,this,this.clickNumber)
@@ -21,6 +23,12 @@ export default class numberListDOM extends ui.template.numberListDOMUI {
             this.code.text = item.code;
             this.bgImg.skin = this.returnStatusImg(item.buyerId)
         }
+    }
+
+    onEnable(){
+        //获取用户资产
+        const userInfo:any = GameModel.getInstance().userInfo;
+        this.userId = userInfo.userId;
     }
 
     /**

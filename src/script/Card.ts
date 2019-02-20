@@ -35,6 +35,6 @@ export default class Card extends ui.CardUI {
     }
 
     private clickItem():void {
-        Tabbar.getInstance().openScene("guessing.scene", this._dataSource.goodsId);
+        Laya.Scene.open("guessing.scene", true,this._dataSource.goodsId)
     }
 }
