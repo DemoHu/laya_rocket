@@ -5,4 +5,5 @@
    <item name="comp/home/jinbi_4.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
    <item name="comp/grandPrix/img_ranklist_bg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=296,0,0,0" picType="0" scale="0"/>
    <item name="comp/home/img_home.png" type="Image" compress="0" pack="0" quality="80" props="label= @@!@@" picType="0" scale="0"/>
+   <item name="comp/img_toast_bg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=0,82,0,105" picType="0" scale="0"/>
 </res>

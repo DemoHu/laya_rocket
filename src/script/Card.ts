@@ -18,7 +18,7 @@ export default class Card extends ui.CardUI {
     set dataSource(item: any) {
         this._dataSource = item;
         if (item) {
-            //金币图片,  1-400金币图标1;   501-1000金币图标2;  1001以上金币图标3
+            //金币图片,  1-400金币图标2;   501-1000金币图标4;  1001以上金币图标20
             if (+item.goodsValue <= 400 ) {
                 this.cardItem.skin = `comp/home/img_jinbi_2.png`
             }else if(+item.goodsValue <= 1000){
@@ -35,6 +35,6 @@ export default class Card extends ui.CardUI {
     }
 
     private clickItem():void {
-        Laya.Scene.open("guessing.scene", true,this._dataSource.goodsId)
+        Tabbar.getInstance().openScene('guessing.scene',this._dataSource.goodsId)
     }
 }

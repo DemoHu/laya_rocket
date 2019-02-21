@@ -17,18 +17,9 @@ export default class Record extends ui.recordUI {
         this.on(Laya.Event.RESIZE,this,this.onResize)
     }
 
-    onEnable():void{  
-        /**参与记录数据源 */
+    onEnable():void{
         this.getMyOrders();
-        /**往期记录数据源 */
         this.getGoodsHistory();
-    }
-
-    /**监视屏幕大小变化 */
-    onResize(){
-        //列表高度适配 = 屏幕高度 - (banner + tabbar)
-        this.joinList.height = this.height - 430;
-        this.previoousList.height = this.height - 430;
     }
 
     /**获取参与记录 */
@@ -37,10 +28,10 @@ export default class Record extends ui.recordUI {
             this.joinList.array = res;
             this.joinList.visible = true;
         }).catch((err:any)=>{
+            this.noData.visible = true;
             console.log(err.message);
         })
     }
-
     /**获取往期记录 */
     private getGoodsHistory(page?:number){
         api.getGoodsHistory(page).then((res:any)=>{
@@ -58,15 +49,34 @@ export default class Record extends ui.recordUI {
         if (type === 1) {
             this.canyu.skin = 'comp/guessing/img_tab_active.png';
             this.wangqi.skin = 'comp/guessing/img_tab.png';
-            this.joinList.visible = true;
+            this.getMyOrders()
+            if (this.joinList.array === null || this.joinList.array.length === 0) {
+                this.noData.visible = true;
+            }else {
+                this.noData.visible = false;
+                this.joinList.visible = true;
+            }
             this.previoousList.scrollTo(0)
             this.previoousList.visible = false;
         }else{
             this.wangqi.skin = 'comp/guessing/img_tab_active.png';
             this.canyu.skin = 'comp/guessing/img_tab.png';
-            this.previoousList.visible = true;
+            this.getGoodsHistory();
+            if (this.previoousList.array === null || this.previoousList.array.length === 0) {
+                this.noData.visible = true;
+            }else {
+                this.noData.visible = false;
+                this.previoousList.visible = true;
+            }
             this.joinList.scrollTo(0);
             this.joinList.visible = false;
         }
+    }
+
+    /**监视屏幕大小变化 */
+    onResize(){
+        //列表高度适配 = 屏幕高度 - (banner + tabbar)
+        this.joinList.height = this.height - 430;
+        this.previoousList.height = this.height - 430;
     }
 }

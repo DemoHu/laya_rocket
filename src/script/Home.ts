@@ -6,7 +6,7 @@
  * @desc 首页脚本
  */
 import { ui } from "../ui/layaMaxUI";
-import { Toast } from "../view/Toasts";
+import { Toast } from "../view/Toast";
 import { GameModel } from "../js/GameModel";
 import utils from '../js/utils'
 import api from "../js/api";
@@ -19,6 +19,7 @@ export default class Home extends ui.homeUI {
         super()
         this.btnRecharge.on(Laya.Event.CLICK,this,this.btnRechargeFunc);
         this.buyHelp.on(Laya.Event.CLICK,this,this.openBuyHelp)
+        this.putin.on(Laya.Event.CLICK,this,this.putInFunc)
     }
     onEnable():void{
         this.getUserInfo()
@@ -28,7 +29,11 @@ export default class Home extends ui.homeUI {
 
     /**充值 */
     private btnRechargeFunc():void {
-        alert('点击充值')
+        Toast.show('点击充值')
+    }
+    /**空投 */
+    private putInFunc(){
+        Toast.show('暂未开放，敬请期待')
     }
 
     /**获取个人信息 */

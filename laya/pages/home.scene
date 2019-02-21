@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":62,
+    "selectedBox":116,
+    "selecteID":111,
     "searchKey":"Scene,home,home",
     "props":{"width":750,"var":"home","sceneColor":"#09083c","runtime":"script/Home.ts","renderType":"render","name":"home","height":1334},
     "nodeParent":-1,
-    "maxID":113,
+    "maxID":117,
     "label":"home",
     "isOpen":true,
     "isDirectory":true,
@@ -150,7 +150,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":38,"x":17},
+            "props":{"y":0,"x":0,"height":80},
             "nodeParent":2,
             "label":"Sprite",
             "isOpen":false,
@@ -160,22 +160,36 @@
             "compId":64,
             "child":[
                 {
-                    "type":"Image",
-                    "searchKey":"Image,tuichu",
-                    "props":{"y":8,"x":13,"var":"tuichu","skin":"comp/img_return.png"},
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":0,"x":0,"width":80,"height":80},
                     "nodeParent":64,
-                    "label":"tuichu",
-                    "isDirectory":false,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
-                    "compId":84,
+                    "hasChild":true,
+                    "compId":114,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,tuichu",
+                            "props":{"y":23,"x":31,"var":"tuichu","skin":"comp/img_return.png"},
+                            "nodeParent":114,
+                            "label":"tuichu",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":84,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image,AccountBox",
-                    "props":{"width":260,"var":"AccountBox","skin":"comp/home/img_region_bg.png","left":180,"height":50},
+                    "props":{"y":15,"x":180,"width":260,"var":"AccountBox","skin":"comp/home/img_region_bg.png","left":180,"height":50},
                     "nodeParent":64,
                     "label":"AccountBox",
                     "isOpen":false,
@@ -240,7 +254,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image,rechargeBox",
-                    "props":{"width":260,"var":"rechargeBox","skin":"comp/home/img_region_bg.png","left":460,"height":50},
+                    "props":{"y":15,"x":460,"width":260,"var":"rechargeBox","skin":"comp/home/img_region_bg.png","left":460,"height":50},
                     "nodeParent":64,
                     "label":"rechargeBox",
                     "isOpen":true,
@@ -293,85 +307,6 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite,putin",
-            "props":{"y":179,"x":28,"var":"putin"},
-            "nodeParent":2,
-            "label":"putin",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":28,
-            "child":[
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"skin":"comp/home/img_parachute_bg.png"},
-                    "nodeParent":28,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":26,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "searchKey":"Label",
-                            "props":{"y":50,"x":109,"width":132,"valign":"middle","text":"敬请期待","pivotY":25,"pivotX":66,"height":50,"fontSize":28,"color":"#1cbbf2","align":"center"},
-                            "nodeParent":26,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":70,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Text",
-                    "searchKey":"Text",
-                    "props":{"y":120,"x":56,"width":73,"text":"幸运空投","height":54,"fontSize":24,"color":"#fff"},
-                    "nodeParent":28,
-                    "label":"Text",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":29,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Box",
-                    "searchKey":"Box",
-                    "props":{"y":131,"x":29.5},
-                    "nodeParent":28,
-                    "label":"Box",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":74,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"y":28,"x":74,"skin":"comp/home/img_parachute.png","rotation":20,"pivotY":40,"pivotX":80,"disabled":true,"alpha":1},
-                            "nodeParent":74,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":33,
-                            "child":[
-                                ]
-                        }]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
             "searchKey":"Sprite,buyHelp",
             "props":{"y":215,"x":653,"width":96,"var":"buyHelp","height":92},
             "nodeParent":2,
@@ -385,7 +320,7 @@
                 {
                     "type":"Animation",
                     "searchKey":"Animation",
-                    "props":{"source":"comp/home/wave/1.png,comp/home/wave/10.png,comp/home/wave/2.png,comp/home/wave/3.png,comp/home/wave/4.png,comp/home/wave/5.png,comp/home/wave/6.png,comp/home/wave/7.png,comp/home/wave/8.png,comp/home/wave/9.png","interval":100,"autoPlay":true},
+                    "props":{"source":"comp/home/wave/wave0.png,comp/home/wave/wave1.png,comp/home/wave/wave2.png,comp/home/wave/wave3.png,comp/home/wave/wave4.png,comp/home/wave/wave5.png,comp/home/wave/wave6.png,comp/home/wave/wave7.png,comp/home/wave/wave8.png,comp/home/wave/wave9.png","interval":100,"autoPlay":true},
                     "nodeParent":62,
                     "label":"Animation",
                     "isDirectory":false,
@@ -403,13 +338,14 @@
             "props":{"y":268,"x":246,"var":"rockerBox"},
             "nodeParent":2,
             "label":"rockerBox",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":38,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":0,"x":5,"skin":"comp/home/img_rocket.png"},
@@ -422,6 +358,7 @@
                     "compId":37,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,countDown",
                             "props":{"y":207,"x":59,"var":"countDown"},
@@ -434,22 +371,39 @@
                             "compId":71,
                             "child":[
                                 {
-                                    "type":"Label",
-                                    "searchKey":"Label,rocketAmount",
-                                    "props":{"y":25,"x":68,"var":"rocketAmount","valign":"middle","text":"----","pivotY":14,"pivotX":61,"fontSize":28,"color":"#FFF","bold":true,"align":"center"},
+                                    "x":60,
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"y":11,"x":7},
                                     "nodeParent":71,
-                                    "label":"rocketAmount",
+                                    "label":"Sprite",
                                     "isOpen":true,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
-                                    "compId":30,
+                                    "compId":116,
                                     "child":[
                                         {
+                                            "x":75,
+                                            "type":"Label",
+                                            "searchKey":"Label,rocketAmount",
+                                            "props":{"y":14,"x":50,"var":"rocketAmount","valign":"middle","text":"----","pivotY":14,"pivotX":61,"fontSize":28,"color":"#FFF","bold":true,"align":"center"},
+                                            "nodeParent":116,
+                                            "label":"rocketAmount",
+                                            "isOpen":true,
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":30,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
                                             "props":{"y":7,"x":88,"text":"USDT","fontSize":22,"color":"#FFF"},
-                                            "nodeParent":30,
+                                            "nodeParent":116,
                                             "label":"Label",
                                             "isDirectory":false,
                                             "isAniNode":true,
@@ -460,6 +414,7 @@
                                         }]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":72,"x":21,"width":21,"skin":"comp/home/img_count_down.png","pivotY":12,"pivotX":11,"height":23},
@@ -473,6 +428,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,rocketCountDown",
                                     "props":{"y":72,"x":86.5,"width":101,"var":"rocketCountDown","text":" -- : --","pivotY":13,"pivotX":51,"height":26,"fontSize":26,"color":"#fff"},
@@ -487,6 +443,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Script",
                             "switchAble":true,
                             "source":"src/publicScript/PageNavScript.ts",
@@ -504,9 +461,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
-                    "props":{"y":401,"x":53,"source":"comp/home/fire/1.png,comp/home/fire/10.png,comp/home/fire/11.png,comp/home/fire/2.png,comp/home/fire/3.png,comp/home/fire/4.png,comp/home/fire/5.png,comp/home/fire/6.png,comp/home/fire/7.png,comp/home/fire/8.png,comp/home/fire/9.png","autoPlay":true},
+                    "props":{"y":401,"x":53,"source":"comp/home/fire/fire0.png,comp/home/fire/fire1.png,comp/home/fire/fire10.png,comp/home/fire/fire2.png,comp/home/fire/fire3.png,comp/home/fire/fire4.png,comp/home/fire/fire5.png,comp/home/fire/fire6.png,comp/home/fire/fire7.png,comp/home/fire/fire8.png,comp/home/fire/fire9.png","autoPlay":true},
                     "nodeParent":38,
                     "label":"Animation",
                     "isDirectory":false,
@@ -578,6 +536,76 @@
             "compId":83,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite,putin",
+            "props":{"y":179,"x":28,"var":"putin","mouseEnabled":true},
+            "nodeParent":2,
+            "label":"putin",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":28,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"comp/home/img_parachute_bg.png"},
+                    "nodeParent":28,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":26,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":50,"x":109,"width":132,"valign":"middle","text":"敬请期待","pivotY":25,"pivotX":66,"height":50,"fontSize":28,"color":"#1cbbf2","align":"center"},
+                            "nodeParent":26,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":70,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Text",
+                    "searchKey":"Text",
+                    "props":{"y":120,"x":56,"width":73,"text":"幸运空投","height":54,"fontSize":24,"color":"#fff"},
+                    "nodeParent":28,
+                    "label":"Text",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":29,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":159,"x":104,"skin":"comp/home/img_parachute.png","rotation":20,"pivotY":40,"pivotX":80,"disabled":true,"alpha":1},
+                    "nodeParent":28,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":33,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {
@@ -585,6 +613,15 @@
                 {
                     "target":33,
                     "keyframes":{
+                        "var":[
+                            {
+                                "value":"putin",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":33,
+                                "key":"var",
+                                "index":0
+                            }],
                         "rotation":[
                             {
                                 "value":20,
@@ -608,6 +645,31 @@
                                 "tween":true,
                                 "target":33,
                                 "key":"rotation",
+                                "index":120
+                            }],
+                        "disabled":[
+                            {
+                                "value":false,
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":33,
+                                "key":"disabled",
+                                "index":0
+                            },
+                            {
+                                "value":false,
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":33,
+                                "key":"disabled",
+                                "index":60
+                            },
+                            {
+                                "value":false,
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":33,
+                                "key":"disabled",
                                 "index":120
                             }]
                     }
@@ -637,7 +699,7 @@
                                 "tween":true,
                                 "target":38,
                                 "key":"y",
-                                "index":27
+                                "index":25
                             }]
                     }
                 }],
@@ -653,7 +715,7 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":-50,
+                                "value":-70,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":64,
@@ -661,12 +723,12 @@
                                 "index":0
                             },
                             {
-                                "value":-50,
+                                "value":-70,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":64,
                                 "key":"y",
-                                "index":27
+                                "index":25
                             },
                             {
                                 "value":20,
@@ -713,7 +775,7 @@
                                 "tween":true,
                                 "target":28,
                                 "key":"x",
-                                "index":27
+                                "index":25
                             },
                             {
                                 "value":28,
@@ -743,7 +805,7 @@
                                 "tween":true,
                                 "target":62,
                                 "key":"x",
-                                "index":27
+                                "index":25
                             },
                             {
                                 "value":653,
@@ -773,7 +835,7 @@
                                 "tween":true,
                                 "target":59,
                                 "key":"bottom",
-                                "index":27
+                                "index":25
                             },
                             {
                                 "value":100,

@@ -6,7 +6,7 @@
  * @desc 购买页面脚本
  */
 import { ui } from "../ui/layaMaxUI";
-import { Toast } from "../view/Toasts";
+import { Toast } from "../view/Toast";
 import utils from '../js/utils'
 import IptPswDom from "../template/pswInput";
 import { GameModel } from "../js/GameModel";

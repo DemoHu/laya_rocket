@@ -4,6 +4,13 @@ import Dialog=Laya.Dialog;
 import Scene=Laya.Scene;
 export module ui {
     export class assistantUI extends Laya.Scene {
+		public btn_trend:Laya.Image;
+		public btn_prebuy:Laya.Image;
+		public cateTabList:Laya.List;
+		public listTitle:Laya.Sprite;
+		public trendList:Laya.List;
+		public prebuy:Laya.List;
+		public noData:Laya.Image;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -77,13 +84,13 @@ export module ui {
 		public rechargeBox:Laya.Image;
 		public btnRecharge:Laya.Image;
 		public myAmount:Laya.Label;
-		public putin:Laya.Sprite;
 		public buyHelp:Laya.Sprite;
 		public rockerBox:Laya.Sprite;
 		public countDown:Laya.Sprite;
 		public rocketAmount:Laya.Label;
 		public rocketCountDown:Laya.Label;
 		public list:Laya.List;
+		public putin:Laya.Sprite;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -93,8 +100,9 @@ export module ui {
     export class recordUI extends Laya.Scene {
 		public canyu:Laya.Image;
 		public wangqi:Laya.Image;
-		public previoousList:Laya.List;
 		public joinList:Laya.List;
+		public previoousList:Laya.List;
+		public noData:Laya.Image;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -170,12 +178,16 @@ export module ui.template {
             this.loadScene("template/TipsDialog");
         }
     }
-    export class ToastUI extends Laya.View {
-		public text_label:Laya.Label;
+    export class trendListUI extends Laya.Scene {
+		public period:Laya.Label;
+		public hitCode:Laya.Label;
+		public btnBuy:Laya.Image;
+		public odd_even:Laya.Label;
+		public isBig:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.loadScene("template/Toast");
+            this.loadScene("template/trendList");
         }
     }
 }

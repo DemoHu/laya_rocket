@@ -28,6 +28,6 @@ export default class previousRecord extends ui.template.previousRecordsUI {
 
     /**查看哈希 */
     seeHash():void {
-        console.log(this._dataSource.txHash);
+        alert(`前往hash地址：${this._dataSource.txHash}`)
     }
 }

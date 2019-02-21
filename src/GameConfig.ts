@@ -2,6 +2,8 @@
 import Assistant from "./script/Assistant"
 import PageScript from "./publicScript/PageScript"
 import Screen from "./publicScript/Screen"
+import trendList from "./template/trendList"
+import previousRecords from "./template/previousRecords"
 import Card from "./script/Card"
 import grandPrix from "./script/grandPrix"
 import PageNavScript from "./publicScript/PageNavScript"
@@ -9,7 +11,6 @@ import Guessing from "./script/Guessing"
 import numberListDomScript from "./template/numberListDomScript"
 import Home from "./script/Home"
 import Record from "./script/Record"
-import previousRecords from "./template/previousRecords"
 import joinRecords from "./template/joinRecords"
 import pswInput from "./template/pswInput"
 import tipDialog from "./template/tipDialog"
@@ -35,6 +36,8 @@ export default class GameConfig{
         reg("script/Assistant.ts",Assistant);
         reg("publicScript/PageScript.ts",PageScript);
         reg("publicScript/Screen.ts",Screen);
+        reg("template/trendList.ts",trendList);
+        reg("template/previousRecords.ts",previousRecords);
         reg("script/Card.ts",Card);
         reg("script/grandPrix.ts",grandPrix);
         reg("publicScript/PageNavScript.ts",PageNavScript);
@@ -42,7 +45,6 @@ export default class GameConfig{
         reg("template/numberListDomScript.ts",numberListDomScript);
         reg("script/Home.ts",Home);
         reg("script/Record.ts",Record);
-        reg("template/previousRecords.ts",previousRecords);
         reg("template/joinRecords.ts",joinRecords);
         reg("template/pswInput.ts",pswInput);
         reg("template/tipDialog.ts",tipDialog);

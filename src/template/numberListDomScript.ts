@@ -6,7 +6,7 @@
  * @desc 购买页面号码列表脚本
  */
 import { ui } from "../ui/layaMaxUI";
-import { Toast } from "../view/Toasts";
+import { Toast } from "../view/Toast";
 import { GameModel } from "../js/GameModel";
 
 

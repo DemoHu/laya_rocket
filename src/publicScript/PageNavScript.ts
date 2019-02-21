@@ -14,6 +14,6 @@ export default class PageNavScript extends Laya.Script {
     constructor(){super()}
 
     onClick():void {
-        Laya.Scene.open(this.navPageScript)        
+        Tabbar.getInstance().openScene(this.navPageScript)
     }
 }

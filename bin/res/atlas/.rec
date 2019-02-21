@@ -7,9 +7,14 @@ P 0B7095A0 img_nodata1.png
 P 5B2C3298 img_nodata2.png
 R 420DF97B img_payment_bg.png
 P E4B70C0C img_return.png
+P A60331B9 img_toast_bg.png
 P C54A3BD3 img_view_record.png
 P C2DF3147 progress$bar.png
 P 9C6DF160 progress.png
+D comp/assistant
+P B3432AEE img_btn_trend.png
+P 57053743 img_buy.png
+R F9756BC7 img_trend_banner.png
 D comp/grandPrix
 R 796F7D03 img_myrank.png
 R 9F956D07 img_rank.png
@@ -64,25 +69,25 @@ R 9D77D21E img_star_bg.png
 P 0E122DC5 img_usdt.png
 P 324690B0 img_zhushou.png
 D comp/home/fire
-P BF0752F5 1.png
-P 409CD573 10.png
-P 037D8BA1 11.png
-P 0189B8F5 2.png
-P 2644A94E 3.png
-P 7F392B69 4.png
-P 9DB6A85A 5.png
-P 913495AB 6.png
-P 45872DD4 7.png
-P 86008B07 8.png
-P 6AA92CB3 9.png
+P BF0752F5 fire0.png
+P 0189B8F5 fire1.png
+P 037D8BA1 fire10.png
+P 2644A94E fire2.png
+P 7F392B69 fire3.png
+P 9DB6A85A fire4.png
+P 913495AB fire5.png
+P 45872DD4 fire6.png
+P 86008B07 fire7.png
+P 6AA92CB3 fire8.png
+P 409CD573 fire9.png
 D comp/home/wave
-P 59E3D0F0 1.png
-P 3520E096 10.png
-P 80594B77 2.png
-P 9D5759D0 3.png
-P E57CAFAB 4.png
-P 9BBA1353 5.png
-P C9D6FD89 6.png
-P 1DEB48F5 7.png
-P 77D75A37 8.png
-P 6CAADA0A 9.png
+P 59E3D0F0 wave0.png
+P 80594B77 wave1.png
+P 9D5759D0 wave2.png
+P E57CAFAB wave3.png
+P 9BBA1353 wave4.png
+P C9D6FD89 wave5.png
+P 1DEB48F5 wave6.png
+P 77D75A37 wave7.png
+P 6CAADA0A wave8.png
+P 3520E096 wave9.png

@@ -88,9 +88,39 @@ export default {
      * @param countTime [选填] 查询时间
      * @param searchKey [选填] 查询期号
      */
-    getGoodsHistory(page:number = 1,pageSize:number = 20,countTime:string = '20190220',searchKey?:string){
+    getGoodsHistory(page:number = 1,pageSize:number = 20,countTime?:string,searchKey?:string){
         return new Promise((resolve,reject) => {
             get('/goods/history',{page,pageSize,countTime,searchKey}).then((res:any)=>{
+                if (!res.code) {
+                    resolve(res)
+                } else {
+                    reject(res)
+                }
+            })
+        })
+    },
+
+    /**获取商品类型 */
+    getGoodsCateList(){
+        return new Promise((resolve,reject)=>{
+            get('/goods/cateList',{}).then((res:any)=>{
+                if (!res.code) {
+                    resolve(res)
+                } else {
+                    reject(res)
+                }
+            })
+        })
+    },
+
+    /**获取走势
+     * @param goodsType 商品类型
+     * @param page [选填] 页码1
+     * @param pageSize [选填] 分页数 默认20
+     */
+    getGoodsTrend(goodsType:string,page:number = 1,pageSize:number = 20){
+        return new Promise((resolve,reject)=>{
+            get('/goods/trend',{goodsType,page,pageSize}).then((res:any)=>{
                 if (!res.code) {
                     resolve(res)
                 } else {

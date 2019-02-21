@@ -7,7 +7,7 @@
  */
 import { ui } from '../ui/layaMaxUI'
 import TipsDiaLog from './tipDialog';
-import { Toast } from '../view/Toasts';
+import { Toast } from '../view/Toast';
 import Guessing from '../script/Guessing';
 import api from '../js/api';
 
