@@ -9,8 +9,6 @@
 export class GameModel extends Laya.EventDispatcher {
     private static _gameModelInstance: GameModel;
 
-    userInfo:object = {}; //用户信息
-
     static getInstance(): GameModel {
         if (!this._gameModelInstance) {
             this._gameModelInstance = new GameModel();
@@ -18,11 +16,18 @@ export class GameModel extends Laya.EventDispatcher {
         return this._gameModelInstance;
     }
 
-    
-
+    userInfo:object = {}; //用户信息
     /**保存用户信息 */
     setUserInfo(userInfo:object){
         this.userInfo = userInfo;
         this.event('getUserInfo',this.userInfo)
     }
+
+    buyGoodsArr:any = []; //被购买号码
+    /**保存被购买号码 */
+    setGoodsArr(goodsArr:any) {
+        this.buyGoodsArr = goodsArr;
+        this.event('getbuyGoodsArr',[this.buyGoodsArr])
+    }
+    
 }

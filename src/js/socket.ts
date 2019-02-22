@@ -1,3 +1,5 @@
+import { GameModel } from "./GameModel";
+
 /**
  * @author [Siwen]
  * @email [623746556@qq.com]
@@ -45,7 +47,7 @@ export class Socket extends Laya.UIComponent {
             payload = redata.payload;
             // 购买号码下发
             if (payload.type === 'purchased') {
-                console.log(payload);
+                GameModel.getInstance().setGoodsArr(payload.goods)
                 
             }
         }

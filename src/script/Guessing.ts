@@ -59,6 +59,20 @@ export default class Guessing extends ui.guessingUI {
             this.balance.text = `${utils.toDecimal(userInfo.money,2)} USDT`;
             this.myAmount = +`${utils.toDecimal(userInfo.money,2)}`;
         }))
+
+        // 号码被购买变动
+        GameModel.getInstance().on('getbuyGoodsArr',this,(goodsArr:any)=>{
+            this.rawDataArr.forEach((item:any)=>{
+                goodsArr.forEach((v:any)=>{
+                    if (item.code === v.code) {
+                        item.userId = v.userId;
+                        item.buyerId = v.userId;
+                    }
+                })
+            })
+            this.numberList.array = this.rawDataArr; //号码列表
+            console.log(this.numberList.array);
+        })
     }
     onOpened(goodsId:any){
         this.goodsId = goodsId;
