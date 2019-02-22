@@ -11,7 +11,7 @@ export class Toast extends Laya.UIComponent {
     static FONT_SIZE: number = 26;
     static COLOR: string = "#ffffff";
     static BG_IMG_URL: string = "comp/img_toast_bg.png";
-    static DURATION: number = 3000;
+    static DURATION: number = 2500;
 
     private static instance: Toast;
     private static storeTextList: any[] = [];
