@@ -18,6 +18,8 @@ export class GameModel extends Laya.EventDispatcher {
         return this._gameModelInstance;
     }
 
+    
+
     /**保存用户信息 */
     setUserInfo(userInfo:object){
         this.userInfo = userInfo;

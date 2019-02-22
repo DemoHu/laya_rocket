@@ -11,6 +11,7 @@ import utils from '../js/utils'
 import IptPswDom from "../template/pswInput";
 import { GameModel } from "../js/GameModel";
 import api from "../js/api";
+import { Socket } from "../js/socket";
 
 export default class Guessing extends ui.guessingUI {
 
@@ -154,6 +155,9 @@ export default class Guessing extends ui.guessingUI {
      */
     private getGoodsDetails(goodsId:string) {
         api.getGoodsDetails(goodsId).then((res:any)=>{
+
+            Socket.sendWSPush(`buy_${res.period}`)
+
             this.price.text = `${+res.price}`;
             this.goodsValue.text = `${+res.goodsValue} USDT`;
             this.progressSpeed.value = +`${res.soldNum/res.totalNum}`;

@@ -12,6 +12,7 @@ import utils from '../js/utils'
 import api from "../js/api";
 
 import { post } from '../js/http';
+import { Socket } from "../js/socket";
 
 
 export default class Home extends ui.homeUI {
@@ -25,6 +26,7 @@ export default class Home extends ui.homeUI {
         this.getUserInfo()
         this.rankToday()
         this.getGoodsList()
+        Socket.createSocket()
     }
 
     /**充值 */

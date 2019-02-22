@@ -46,7 +46,7 @@ export class Tabbar extends ui.TabbarUI {
     createView(view:any){
         super.createView(view)
         this.tab.on(Laya.Event.CHANGE,this,this.onClickTab);
-        this.onClickTab();
+        // this.onClickTab();
     }
 
     /**点击tabbar事件 */
