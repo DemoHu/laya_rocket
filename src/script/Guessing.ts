@@ -144,6 +144,7 @@ export default class Guessing extends ui.guessingUI {
                 })
             })
         }
+        // this.numberList.repeatY = this.rawDataArr_new.length;
         this.numberList.array = this.rawDataArr_new;
         this.getSelectNumber()
     }

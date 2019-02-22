@@ -18,31 +18,29 @@ export default class joinRecord extends ui.template.joinRecordsUI {
         if (item) {
             this.period.text = item.period;
             this.goodsValue.text = `${+utils.toDecimal(item.goodsValue,2)}`;
-            this.openTime.text = utils.formatDateTime(item.openTime);
-            this.hitCode.text = item.hitCode;
             this.codeList.text = item.codeList;
+
             if (item.status === '0') {
                 this.noPrize.visible = true;
-                this.prize.visible = false;
                 this.noPrize.text = '未开奖';
-                this.openTime.text = '---';
-                this.hitCode.text = '---';
+                this.openTime.text = '-';
+                this.hitCode.text = '-';
             }else if(item.status === '1'){
                 this.noPrize.visible = true;
-                this.prize.visible = false;
                 this.noPrize.text = '开奖中';
-                this.openTime.text = '---';
-                this.hitCode.text = '---';
-            }else if(item.status === '2' && item.hit === 0){
+                this.openTime.text = '-';
+                this.hitCode.text = '-';
+            }else if(item.status === '2' && !item.hit){
                 this.noPrize.visible = true;
-                this.prize.visible = false;
                 this.noPrize.text = '未中奖';
-                this.award.visible = false;
-            }else if(item.status === '2' && item.hit === 1){
+                this.openTime.text = utils.formatDateTime(item.openTime);
+                this.hitCode.text = item.hitCode;
+            }else if(item.status === '2' && item.hit){
                 this.prize.visible = true;
-                this.noPrize.visible = false;
-                this.award.text = `${+utils.toDecimal(item.goodsValue,2)} USDT`;
+                this.openTime.text = utils.formatDateTime(item.openTime);
+                this.hitCode.text = item.hitCode;
                 this.award.visible = true;
+                this.award.text = `${+utils.toDecimal(item.award,2)} USDT`;
             }
         }
     }

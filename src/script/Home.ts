@@ -73,7 +73,8 @@ export default class Home extends ui.homeUI {
     /**获取首页商品列表 */
     private getGoodsList(){
         api.getGoodsList().then((res:any)=>{
-            this.list.array = res.list
+            this.list.repeatX = res.list.length;
+            this.list.array = res.list;
         }).catch((err:any)=>{
             console.log(err.message);
         })

@@ -37,7 +37,20 @@ export default {
             })
         })
     },
-
+    /**获取大奖池历史记录
+     * @param countTime [选填] 日期
+     */
+    getRankHistory(countTime?:string){
+        return new Promise((resolve, reject) => {
+            get('/rank/history', {countTime}).then((res: any) => {
+                if (!res.code) {
+                    resolve(res)
+                } else {
+                    reject(res)
+                }
+            })
+        })
+    },
     /**获取首页商品列表 */
     getGoodsList() {
         return new Promise((resolve, reject) => {

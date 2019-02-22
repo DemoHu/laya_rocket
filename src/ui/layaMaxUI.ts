@@ -34,7 +34,21 @@ export module ui {
     export class grandPrixUI extends Laya.Scene {
 		public CountDown:Laya.Label;
 		public bonus:Laya.Label;
+		public btn_history:Laya.Sprite;
 		public rankPrizeHelp:Laya.Sprite;
+		public box1:Laya.Sprite;
+		public alone1:Laya.Label;
+		public Proportion1:Laya.Label;
+		public prixList1:Laya.List;
+		public box2:Laya.Sprite;
+		public alone2:Laya.Label;
+		public Proportion2:Laya.Label;
+		public prixList2:Laya.List;
+		public box3:Laya.Sprite;
+		public alone3:Laya.Label;
+		public Proportion3:Laya.Label;
+		public prixList3:Laya.List;
+		public noData:Laya.Image;
 		public myRankBox:Laya.Image;
 		public myranking:Laya.Label;
 		public avatar:Laya.Image;
@@ -90,11 +104,32 @@ export module ui {
 		public rocketAmount:Laya.Label;
 		public rocketCountDown:Laya.Label;
 		public list:Laya.List;
-		public putin:Laya.Sprite;
+		public putin:Laya.Image;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
             this.loadScene("home");
+        }
+    }
+    export class priHistorySceneUI extends Laya.Scene {
+		public total:Laya.Label;
+		public box1:Laya.Sprite;
+		public alone1:Laya.Label;
+		public Proportion1:Laya.Label;
+		public prixList1:Laya.List;
+		public box2:Laya.Sprite;
+		public alone2:Laya.Label;
+		public Proportion2:Laya.Label;
+		public prixList2:Laya.List;
+		public box3:Laya.Sprite;
+		public alone3:Laya.Label;
+		public Proportion3:Laya.Label;
+		public prixList3:Laya.List;
+		public noData:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("priHistoryScene");
         }
     }
     export class recordUI extends Laya.Scene {
@@ -166,6 +201,31 @@ export module ui.template {
         createChildren():void {
             super.createChildren();
             this.loadScene("template/previousRecords");
+        }
+    }
+    export class priHistoryUI extends Laya.Scene {
+		public rankNo:Laya.Label;
+		public nickName:Laya.Label;
+		public UID:Laya.Label;
+		public Volume:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/priHistory");
+        }
+    }
+    export class prixListUI extends Laya.Scene {
+		public no1:Laya.Image;
+		public rankNo:Laya.Label;
+		public avatar:Laya.Image;
+		public nickName:Laya.Label;
+		public UID:Laya.Label;
+		public todayVolumeTitle:Laya.Label;
+		public todayVolume:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/prixList");
         }
     }
     export class TipsDialogUI extends Laya.Dialog {

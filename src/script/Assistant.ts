@@ -35,8 +35,8 @@ export default class Assistant extends ui.assistantUI {
             res.forEach((item:any)=>{
                 GoodsNameArr.push(item.goodsName)
             })
-            this.cateTabList.array = GoodsNameArr;
             this.cateTabList.repeatX = GoodsNameArr.length;
+            this.cateTabList.array = GoodsNameArr;
             this.cateTabList.selectedIndex = 0;
         }).catch((err:any)=>{
             console.log(err.message);
@@ -61,7 +61,7 @@ export default class Assistant extends ui.assistantUI {
      */
     private tabSwitch(type:number){
         if (type === 2) {
-            Toast.show('暂未开放，敬请期待暂未开放，敬请期待暂未开放，敬请期待暂未开放，敬请期待')
+            Toast.show('暂未开放，敬请期待')
         }
         // this.tabType = type;
         // this.cateTabList.selectedIndex = 0;

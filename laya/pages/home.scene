@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":116,
-    "selecteID":111,
+    "selectedBox":28,
+    "selecteID":33,
     "searchKey":"Scene,home,home",
     "props":{"width":750,"var":"home","sceneColor":"#09083c","runtime":"script/Home.ts","renderType":"render","name":"home","height":1334},
     "nodeParent":-1,
@@ -153,13 +153,14 @@
             "props":{"y":0,"x":0,"height":80},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":64,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":0,"x":0,"width":80,"height":80},
@@ -187,18 +188,20 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,AccountBox",
                     "props":{"y":15,"x":180,"width":260,"var":"AccountBox","skin":"comp/home/img_region_bg.png","left":180,"height":50},
                     "nodeParent":64,
                     "label":"AccountBox",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":17,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,avatar",
                             "props":{"y":3,"width":44,"var":"avatar","skin":"comp/home/img_avatar.png","left":15,"height":44},
@@ -211,6 +214,7 @@
                             "compId":89,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":0,"x":0,"width":44,"renderType":"mask","height":44},
@@ -223,6 +227,7 @@
                                     "compId":92,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Circle",
                                             "searchKey":"Circle",
                                             "props":{"y":22,"x":22,"radius":22,"lineWidth":1,"fillColor":"#ff0000"},
@@ -238,9 +243,10 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,nickName",
-                            "props":{"var":"nickName","valign":"middle","text":"请先登录","left":80,"fontSize":24,"color":"#fff","centerY":0,"align":"center"},
+                            "props":{"var":"nickName","valign":"middle","text":"请先登录","left":80,"fontSize":24,"color":"#fefeff","centerY":0,"align":"center"},
                             "nodeParent":17,
                             "label":"nickName",
                             "isDirectory":false,
@@ -252,6 +258,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,rechargeBox",
                     "props":{"y":15,"x":460,"width":260,"var":"rechargeBox","skin":"comp/home/img_region_bg.png","left":460,"height":50},
@@ -264,6 +271,7 @@
                     "compId":19,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"comp/home/img_usdt.png","left":15,"centerY":0},
@@ -277,6 +285,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,btnRecharge",
                             "props":{"var":"btnRecharge","skin":"comp/home/img_plus.png","right":15,"centerY":0},
@@ -290,9 +299,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,myAmount",
-                            "props":{"y":14,"var":"myAmount","valign":"middle","text":"---","left":50,"fontSize":24,"color":"#fff","align":"center"},
+                            "props":{"y":14,"var":"myAmount","valign":"middle","text":"---","left":50,"fontSize":24,"color":"#fefeff","align":"center"},
                             "nodeParent":19,
                             "label":"myAmount",
                             "isDirectory":false,
@@ -387,7 +397,7 @@
                                             "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,rocketAmount",
-                                            "props":{"y":14,"x":50,"var":"rocketAmount","valign":"middle","text":"----","pivotY":14,"pivotX":61,"fontSize":28,"color":"#FFF","bold":true,"align":"center"},
+                                            "props":{"y":14,"x":50,"var":"rocketAmount","valign":"middle","text":"----","pivotY":14,"pivotX":61,"fontSize":28,"color":"#feffff","bold":true,"align":"center"},
                                             "nodeParent":116,
                                             "label":"rocketAmount",
                                             "isOpen":true,
@@ -402,7 +412,7 @@
                                             "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"y":7,"x":88,"text":"USDT","fontSize":22,"color":"#FFF"},
+                                            "props":{"y":7,"x":88,"text":"USDT","fontSize":22,"color":"#feffff"},
                                             "nodeParent":116,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -431,7 +441,7 @@
                                     "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,rocketCountDown",
-                                    "props":{"y":72,"x":86.5,"width":101,"var":"rocketCountDown","text":" -- : --","pivotY":13,"pivotX":51,"height":26,"fontSize":26,"color":"#fff"},
+                                    "props":{"y":72,"x":86.5,"width":101,"var":"rocketCountDown","text":" -- : --","pivotY":13,"pivotX":51,"height":26,"fontSize":26,"color":"#feffff"},
                                     "nodeParent":71,
                                     "label":"rocketCountDown",
                                     "isDirectory":false,
@@ -540,10 +550,10 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite,putin",
-            "props":{"y":179,"x":28,"var":"putin","mouseEnabled":true},
+            "searchKey":"Sprite",
+            "props":{"y":179,"x":28,"mouseEnabled":true},
             "nodeParent":2,
-            "label":"putin",
+            "label":"Sprite",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
@@ -557,16 +567,17 @@
                     "props":{"skin":"comp/home/img_parachute_bg.png"},
                     "nodeParent":28,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":26,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":50,"x":109,"width":132,"valign":"middle","text":"敬请期待","pivotY":25,"pivotX":66,"height":50,"fontSize":28,"color":"#1cbbf2","align":"center"},
+                            "props":{"y":50,"x":109,"width":132,"valign":"middle","text":"敬请期待","pivotY":25,"pivotX":66,"height":50,"fontSize":28,"color":"#1dc7ff","align":"center"},
                             "nodeParent":26,
                             "label":"Label",
                             "isDirectory":false,
@@ -594,10 +605,10 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":159,"x":104,"skin":"comp/home/img_parachute.png","rotation":20,"pivotY":40,"pivotX":80,"disabled":true,"alpha":1},
+                    "searchKey":"Image,putin",
+                    "props":{"y":159,"x":104,"var":"putin","skin":"comp/home/img_parachute.png","rotation":20,"pivotY":40,"pivotX":80,"gray":true,"disabled":false,"alpha":1},
                     "nodeParent":28,
-                    "label":"Image",
+                    "label":"putin",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,

@@ -25,6 +25,7 @@ export default class Record extends ui.recordUI {
     /**获取参与记录 */
     private getMyOrders(page?:number){
         api.getMyOrders(page).then((res:any)=>{
+            this.joinList.repeatY = res.length;
             this.joinList.array = res;
             this.joinList.visible = true;
         }).catch((err:any)=>{
@@ -35,6 +36,7 @@ export default class Record extends ui.recordUI {
     /**获取往期记录 */
     private getGoodsHistory(page?:number){
         api.getGoodsHistory(page).then((res:any)=>{
+            this.previoousList.repeatY = res.length;
             this.previoousList.array = res;
         }).catch((err:any)=>{
             console.log(err.message);

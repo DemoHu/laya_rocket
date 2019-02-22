@@ -7,9 +7,12 @@ import previousRecords from "./template/previousRecords"
 import Card from "./script/Card"
 import grandPrix from "./script/grandPrix"
 import PageNavScript from "./publicScript/PageNavScript"
+import prixList from "./template/prixList"
 import Guessing from "./script/Guessing"
 import numberListDomScript from "./template/numberListDomScript"
 import Home from "./script/Home"
+import priHistoryScene from "./script/priHistoryScene"
+import priHistory from "./template/priHistory"
 import Record from "./script/Record"
 import joinRecords from "./template/joinRecords"
 import pswInput from "./template/pswInput"
@@ -41,9 +44,12 @@ export default class GameConfig{
         reg("script/Card.ts",Card);
         reg("script/grandPrix.ts",grandPrix);
         reg("publicScript/PageNavScript.ts",PageNavScript);
+        reg("template/prixList.ts",prixList);
         reg("script/Guessing.ts",Guessing);
         reg("template/numberListDomScript.ts",numberListDomScript);
         reg("script/Home.ts",Home);
+        reg("script/priHistoryScene.ts",priHistoryScene);
+        reg("template/priHistory.ts",priHistory);
         reg("script/Record.ts",Record);
         reg("template/joinRecords.ts",joinRecords);
         reg("template/pswInput.ts",pswInput);
