@@ -29,5 +29,22 @@ export class GameModel extends Laya.EventDispatcher {
         this.buyGoodsArr = goodsArr;
         this.event('getbuyGoodsArr',[this.buyGoodsArr])
     }
+
+    rocketData:Object = {};//火箭数据
+    /**保存火箭数据 */
+    setRocketData(data:object){
+        this.rocketData = data;
+        this.event('getRocketData',this.rocketData)
+    }
+
+    /**是否开奖了 */
+    isToggle(status:boolean){
+        this.event('isToggle',status)
+    }
+
+    /**通知中奖 */
+    noticeFunc(status:boolean){
+        this.event('getNotice',status)
+    }
     
 }

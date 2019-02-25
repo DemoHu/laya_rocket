@@ -6,6 +6,7 @@
  * @desc 底部导航Tabbar脚本
  */
 import { ui } from '../ui/layaMaxUI'
+import { GameModel } from '../js/GameModel';
 
 
 const tabbarArr:string[] = ['home.scene','record.scene','assistant.scene'] //tabbar的页面
@@ -36,6 +37,17 @@ export class Tabbar extends ui.TabbarUI {
         }
     }
 
+
+    onEnable(){
+        GameModel.getInstance().on('getNotice',this,(res:any)=>{
+            if (res) {
+                this.notice.visible = true;
+            }else{
+                this.notice.visible = false;
+            }
+        })
+    }
+
     /**非tabbar跳转页面,可携带参数 */
     openScene(scene: string, param?: any) {
         this._openSceneParam = param;
@@ -48,6 +60,7 @@ export class Tabbar extends ui.TabbarUI {
         this.tab.on(Laya.Event.CHANGE,this,this.onClickTab);
         // this.onClickTab();
     }
+    
 
     /**点击tabbar事件 */
     onClickTab() {
@@ -67,6 +80,11 @@ export class Tabbar extends ui.TabbarUI {
                 imgBtn.selected = true;
             }
         })
+
+        //关闭小红点
+        if (scene === 'record.scene') {
+            GameModel.getInstance().noticeFunc(false)
+        }
         
     }
 }

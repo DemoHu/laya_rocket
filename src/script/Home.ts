@@ -26,7 +26,19 @@ export default class Home extends ui.homeUI {
         this.getUserInfo()
         this.rankToday()
         this.getGoodsList()
-        Socket.createSocket()
+
+        // 监视火箭数据变动
+        GameModel.getInstance().on('getRocketData',this,(res:any) => {
+            this.rocketAmount.text = `${utils.toDecimal(res.potMoney,2)}`
+            utils.countDown(res.countDown,((time)=>{
+                this.rocketCountDown.text = time
+            }))
+        })
+        // 是否开奖了，开奖刷新商品列表
+        GameModel.getInstance().on('isToggle',this,(res:any) => {
+            this.getGoodsList()
+        })
+        
     }
 
     /**充值 */
@@ -40,21 +52,27 @@ export default class Home extends ui.homeUI {
 
     /**获取个人信息 */
     private getUserInfo() {
-        post('/user/login',{
-            orgId:1,
-            account:'18900000003'
-        }).then((res:any)=>{
-            api.getUserInfo().then((res:any)=>{
-                this.nickName.text = res.userInfo.nickName
-                this.myAmount.text =`${utils.toDecimal(res.userInfo.money,2)}`
-                this.avatar.skin = res.userInfo.avatar;
-                // 保存用户信息
-                GameModel.getInstance().setUserInfo(res.userInfo)
-            }).catch((err:any)=>{
-                console.log(err.message);
-                // 获取信息失败更新信息
-                GameModel.getInstance().setUserInfo({
-                    userInfo:{}
+        return new Promise((resolve,reject) => {
+            post('/user/login',{
+                orgId:1,
+                account:'18900000003'
+            }).then((res:any)=>{
+                api.getUserInfo().then((res:any)=>{
+                    this.nickName.text = res.userInfo.nickName
+                    this.myAmount.text =`${utils.toDecimal(res.userInfo.money,2)}`
+                    this.avatar.skin = res.userInfo.avatar;
+                    // 保存用户信息
+                    GameModel.getInstance().setUserInfo(res.userInfo)
+                    // 连接websocket
+                    Socket.createSocket()
+                }).catch((err:any)=>{
+                    console.log(err.message);
+                    // 获取信息失败更新信息
+                    GameModel.getInstance().setUserInfo({
+                        userInfo:{}
+                    })
+                    // 连接websocket
+                    Socket.createSocket()
                 })
             })
         })

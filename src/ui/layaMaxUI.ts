@@ -113,6 +113,7 @@ export module ui {
     }
     export class priHistorySceneUI extends Laya.Scene {
 		public total:Laya.Label;
+		public listBox:Laya.Panel;
 		public box1:Laya.Sprite;
 		public alone1:Laya.Label;
 		public Proportion1:Laya.Label;
@@ -146,6 +147,7 @@ export module ui {
     }
     export class TabbarUI extends Laya.View {
 		public tab:Laya.Tab;
+		public notice:Laya.Sprite;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();

@@ -22,13 +22,14 @@ import { Tabbar } from "../view/Tabbar";
      /**获取大奖信息 */
     private getRankHistory(){
         api.getRankHistory().then((res:any)=>{
-            console.log(res);
             this.total.text = `总奖金:${utils.toDecimal(res.potMoney,2)} USDT`
-            if (res.list.length === 0) {
+            if (res.list.list1.data.length === 0 && res.list.list2.data.length === 0 && res.list.list3.data.length === 0) {
+                this.listBox.visible = false;
                 this.noData.visible = true;
             }
             //第一名
-            if (res.list.list1.data.length > 0) {
+            if (res.list.list1.data.length > 0) {  
+                this.listBox.visible = true;
                 this.box1.visible = true;
                 this.alone1.text = `独得 ${utils.toDecimal(res.list.list1.dividmoney,2)} USDT`
                 this.Proportion1.text = `占奖池${res.list.list1.percent}`
@@ -36,6 +37,7 @@ import { Tabbar } from "../view/Tabbar";
             }
             // 2-5名
             if (res.list.list2.data.length > 0) {
+                this.listBox.visible = true;
                 this.box2.visible = true;
                 this.alone2.text = `每人 ${utils.toDecimal(res.list.list2.dividmoney/4,2)} USDT`
                 this.Proportion2.text = `占奖池${res.list.list2.percent}`
@@ -43,6 +45,7 @@ import { Tabbar } from "../view/Tabbar";
             }
              // 5-15名
              if (res.list.list3.data.length > 0) {
+                this.listBox.visible = true;
                 this.box3.visible = true;
                 this.alone3.text = `每人 ${utils.toDecimal(res.list.list3.dividmoney/10,2)} USDT`
                 this.Proportion3.text = `占奖池${res.list.list3.percent}`

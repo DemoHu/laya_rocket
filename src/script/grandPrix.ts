@@ -10,6 +10,7 @@ import { get } from "../js/http";
 import utils from "../js/utils";
 import api from "../js/api";
 import { Tabbar } from "../view/Tabbar";
+import { GameModel } from "../js/GameModel";
 
  export default class grandPrix extends ui.grandPrixUI {
      constructor(){
@@ -20,6 +21,13 @@ import { Tabbar } from "../view/Tabbar";
 
      onEnable(){
         this.getRankToday()
+        // 监视火箭数据变动
+        GameModel.getInstance().on('getRocketData',this,(res:any) => {
+            this.bonus.text = `${utils.toDecimal(res.potMoney,2)}` 
+            utils.countDown(res.countDown,((time)=>{
+                this.CountDown.text = time
+            }))
+        })
      }
 
      /**获取大奖信息 */

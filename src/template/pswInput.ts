@@ -16,6 +16,7 @@ export default class IptPswDom extends ui.template.InputPwdDialogUI {
     private period:string = '';//期号
     private codeList:string = '';//购买号码
     private isEnter:boolean = false; //函数节流
+    private AllCodeList:any = [];//所有号码列表
 
     constructor() {
         super()
@@ -31,6 +32,7 @@ export default class IptPswDom extends ui.template.InputPwdDialogUI {
     setData(data:any) {
         this.period = data.period;
         this.codeList = data.codeList;
+        this.AllCodeList = data.AllCodeList;
     }
 
     /**输入内容改变 */
@@ -51,6 +53,9 @@ export default class IptPswDom extends ui.template.InputPwdDialogUI {
             // 购买成功弹出对话框
             let tipsDialog:TipsDiaLog = new TipsDiaLog()
             tipsDialog.popup()
+            tipsDialog.setData({
+                AllCodeList:this.AllCodeList
+            })
         }).catch((err:any)=>{
             this.isEnter = false;
             this.closeFunc();

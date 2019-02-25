@@ -9,6 +9,7 @@ import { ui } from "../ui/layaMaxUI";
 import { Tabbar } from "../view/Tabbar";
 
 export default class TipsDiaLog extends ui.template.TipsDialogUI {
+    private AllCodeList:object[] = [];//号码列表
     constructor() {
         super()
     }
@@ -18,10 +19,28 @@ export default class TipsDiaLog extends ui.template.TipsDialogUI {
         
     }
 
+    /**获取传递的参数 */
+    setData(data:any) {
+        this.AllCodeList = data.AllCodeList;
+    }
+
     /**关闭密码框 */
     private closeFunc(){
+
         this.close();
+        // 若全部被购买，则回到首页重新选择购买期号
+        let count:number = 0;
+        this.AllCodeList.forEach((v:any) => {
+            if (v.buyerId !== '0') {
+                count = count + 1;
+            }
+        });
+        if (count === 20) {
+            Tabbar.getInstance().openScene('home.scene')
+        }
     }
+
+    // 查看记录
     private viewRecordFunc(){
         this.close();
         Tabbar.getInstance().openScene('record.scene')

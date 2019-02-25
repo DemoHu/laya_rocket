@@ -16,6 +16,7 @@ import { Socket } from "../js/socket";
 export default class Guessing extends ui.guessingUI {
 
     private goodsId:string = '';//商品ID
+    private _period:string = ''; //期号
     private selectNumber:number = 0; //选中个数
     private unitPrice:number = 0; //单价
     private totalPrice:number = 0; //总价
@@ -71,12 +72,15 @@ export default class Guessing extends ui.guessingUI {
                 })
             })
             this.numberList.array = this.rawDataArr; //号码列表
-            console.log(this.numberList.array);
         })
     }
     onOpened(goodsId:any){
         this.goodsId = goodsId;
         this.getGoodsDetails(this.goodsId);
+    }
+    onDisable(){
+        //  关闭websocket事件
+        Socket.sendWSPush(`buy_${this._period}`,0)
     }
 
     /**购买 */
@@ -90,7 +94,8 @@ export default class Guessing extends ui.guessingUI {
             this.inputPwd.popup();
             this.inputPwd.setData({ //发送数据
                 period:this.period.text,
-                codeList:this.codeList
+                codeList:this.codeList,
+                AllCodeList:this.numberList.array
             })
             // 监听输入框组件事件
             this.inputPwd.on('refreshData',this,()=>{
@@ -170,7 +175,9 @@ export default class Guessing extends ui.guessingUI {
     private getGoodsDetails(goodsId:string) {
         api.getGoodsDetails(goodsId).then((res:any)=>{
 
-            Socket.sendWSPush(`buy_${res.period}`)
+            //  发送websocket事件
+            this._period = res.period;
+            Socket.sendWSPush(`buy_${this._period}`)
 
             this.price.text = `${+res.price}`;
             this.goodsValue.text = `${+res.goodsValue} USDT`;

@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":3,
-    "selecteID":10,
+    "selectedBox":14,
+    "selecteID":16,
     "searchKey":"View",
     "props":{"width":750,"sceneColor":"#000000","right":0,"left":0,"height":100,"centerX":0,"bottom":0},
     "nodeParent":-1,
-    "maxID":16,
+    "maxID":18,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -75,12 +75,40 @@
                             "props":{"y":10,"x":108,"stateNum":"2","skin":"comp/home/img_jilu.png"},
                             "nodeParent":9,
                             "label":"Button",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":14,
                             "child":[
-                                ]
+                                {
+                                    "x":60,
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite,notice",
+                                    "props":{"y":8,"x":36,"width":5,"visible":false,"var":"notice","pivotY":2,"height":5},
+                                    "nodeParent":14,
+                                    "label":"notice",
+                                    "isOpen":true,
+                                    "isDirectory":true,
+                                    "isAniNode":true,
+                                    "hasChild":true,
+                                    "compId":16,
+                                    "child":[
+                                        {
+                                            "x":75,
+                                            "type":"Circle",
+                                            "searchKey":"Circle",
+                                            "props":{"y":0,"x":0,"radius":7,"lineWidth":1,"fillColor":"#ff0000"},
+                                            "nodeParent":16,
+                                            "label":"Circle",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":17,
+                                            "child":[
+                                                ]
+                                        }]
+                                }]
                         }]
                 },
                 {
