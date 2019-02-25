@@ -22,9 +22,9 @@ export module ui {
 		public cardItem:Laya.Image;
 		public sceneImg:Laya.Image;
 		public goodsName:Laya.Label;
-		public award:Laya.Label;
 		public progress:Laya.ProgressBar;
 		public soldNum_totalNum:Laya.Label;
+		public award:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -100,8 +100,8 @@ export module ui {
 		public myAmount:Laya.Label;
 		public buyHelp:Laya.Sprite;
 		public rockerBox:Laya.Sprite;
-		public countDown:Laya.Sprite;
 		public rocketAmount:Laya.Label;
+		public countDown:Laya.Sprite;
 		public rocketCountDown:Laya.Label;
 		public list:Laya.List;
 		public putin:Laya.Image;
@@ -133,6 +133,20 @@ export module ui {
             this.loadScene("priHistoryScene");
         }
     }
+    export class prixList1UI extends Laya.Scene {
+		public no1:Laya.Image;
+		public rankNo:Laya.Label;
+		public avatar:Laya.Image;
+		public nickName:Laya.Label;
+		public UID:Laya.Label;
+		public todayVolumeTitle:Laya.Label;
+		public todayVolume:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("prixList1");
+        }
+    }
     export class recordUI extends Laya.Scene {
 		public canyu:Laya.Image;
 		public wangqi:Laya.Image;
@@ -152,6 +166,16 @@ export module ui {
         createChildren():void {
             super.createChildren();
             this.loadScene("Tabbar");
+        }
+    }
+    export class xctjUI extends Laya.Scene {
+		public xctj_shuoming:Laya.Sprite;
+		public amount:Laya.Label;
+		public unit:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("xctj");
         }
     }
 }

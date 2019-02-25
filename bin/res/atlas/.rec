@@ -69,6 +69,8 @@ P 13418A93 img_star5.png
 R 9D77D21E img_star_bg.png
 P 0E122DC5 img_usdt.png
 P 324690B0 img_zhushou.png
+D comp/xctj
+R 61B16221 img_xctj_bg.png
 D comp/home/fire
 P BF0752F5 fire0.png
 P 0189B8F5 fire1.png

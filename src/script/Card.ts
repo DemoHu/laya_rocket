@@ -28,7 +28,7 @@ export default class Card extends ui.CardUI {
             }
             this.sceneImg.skin = `comp/home/img_scene_${item.totalNum}.png`
             this.goodsName.text = `${+item.goodsValue} USDT`
-            this.award.text = `${utils.toDecimal(item.award,2)}  USDT`
+            this.award.text = `${utils.toDecimal(item.award,2)}`
             this.soldNum_totalNum.text = `${item.soldNum}/${item.totalNum}`
             this.progress.value = +`${item.soldNum/item.totalNum}`
         }

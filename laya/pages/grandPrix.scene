@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":9,
-    "selecteID":18,
+    "selectedBox":14,
+    "selecteID":85,
     "searchKey":"Scene",
     "props":{"width":750,"sceneColor":"#fff","runtime":"script/grandPrix.ts","height":1334},
     "nodeParent":-1,
-    "maxID":85,
+    "maxID":86,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -132,31 +132,45 @@
                     "child":[
                         {
                             "x":45,
-                            "type":"Label",
-                            "searchKey":"Label,bonus",
-                            "props":{"y":25,"x":24,"var":"bonus","text":"---","fontSize":46,"color":"#fff","bold":true},
+                            "type":"HBox",
+                            "searchKey":"HBox",
+                            "props":{"y":19,"x":58,"space":10},
                             "nodeParent":14,
-                            "label":"bonus",
-                            "isDirectory":false,
+                            "label":"HBox",
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
-                            "compId":15,
+                            "hasChild":true,
+                            "compId":85,
                             "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Label",
-                            "searchKey":"Label",
-                            "props":{"y":37,"x":222,"text":"USDT","fontSize":28,"color":"#FFF"},
-                            "nodeParent":14,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":16,
-                            "child":[
-                                ]
+                                {
+                                    "x":60,
+                                    "type":"Label",
+                                    "searchKey":"Label,bonus",
+                                    "props":{"y":12,"x":0,"var":"bonus","text":"---","fontSize":46,"color":"#fff","bold":true},
+                                    "nodeParent":85,
+                                    "label":"bonus",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":15,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":22,"text":"USDT","fontSize":28,"color":"#FFF"},
+                                    "nodeParent":85,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":16,
+                                    "child":[
+                                        ]
+                                }]
                         }]
                 },
                 {

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":14,
+    "selecteID":20,
     "searchKey":"Scene,record,record",
     "props":{"width":750,"var":"record","sceneColor":"#09083c","runtime":"script/Record.ts","name":"record","height":1334},
     "nodeParent":-1,
-    "maxID":25,
+    "maxID":27,
     "label":"record",
     "isOpen":true,
     "isDirectory":true,
@@ -69,14 +69,13 @@
             "props":{"y":250,"x":0,"width":750,"height":85},
             "nodeParent":2,
             "label":"Tab",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":8,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,canyu",
                     "props":{"var":"canyu","skin":"comp/guessing/img_tab_active.png"},
@@ -89,7 +88,6 @@
                     "compId":9,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":25,"x":119,"text":"参与记录","fontSize":34,"color":"#24f7f7"},
@@ -104,7 +102,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,wangqi",
                     "props":{"y":0,"x":375,"var":"wangqi","skin":"comp/guessing/img_tab.png"},
@@ -138,26 +135,29 @@
             "props":{"y":355,"x":0,"width":750,"visible":false,"var":"joinList","vScrollBarSkin":" ","spaceY":15,"repeatY":5,"repeatX":1,"elasticEnabled":true},
             "nodeParent":2,
             "label":"joinList",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":20,
             "child":[
                 {
+                    "x":30,
                     "type":"UIView",
                     "source":"template/joinRecords.scene",
                     "searchKey":"UIView,render",
                     "props":{"renderType":"render","name":"render"},
                     "nodeParent":20,
                     "label":"render",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":false,
                     "hasChild":false,
                     "compId":21,
                     "child":[
                         ]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -185,7 +185,8 @@
                     "compId":19,
                     "child":[
                         ]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -194,14 +195,13 @@
             "props":{"y":688,"x":234.5,"visible":false,"var":"noData","skin":"comp/img_nodata2.png"},
             "nodeParent":2,
             "label":"noData",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":22,
             "child":[
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"y":295,"x":84,"text":"暂无记录","fontSize":28,"color":"#6969bc"},

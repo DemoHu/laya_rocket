@@ -10,7 +10,7 @@ import { GameModel } from '../js/GameModel';
 
 
 const tabbarArr:string[] = ['home.scene','record.scene','assistant.scene'] //tabbar的页面
-const pageArr:string[] = ['guessing.scene','grandPrix.scene','priHistoryScene.scene'] //非tabbar页面
+const pageArr:string[] = ['guessing.scene','grandPrix.scene','priHistoryScene.scene','xctj.scene'] //非tabbar页面
 
 export class Tabbar extends ui.TabbarUI {
     /**页面传递的参数 */

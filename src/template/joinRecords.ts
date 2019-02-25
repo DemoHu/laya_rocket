@@ -18,7 +18,7 @@ export default class joinRecord extends ui.template.joinRecordsUI {
         if (item) {
             this.period.text = item.period;
             this.goodsValue.text = `${+utils.toDecimal(item.goodsValue,2)}`;
-            this.codeList.text = item.codeList;
+            this.codeList.text = item.codeList.length > 38 ? `${item.codeList.substr(0,38)}...` : item.codeList;
 
             if (item.status === '0') {
                 this.noPrize.visible = true;

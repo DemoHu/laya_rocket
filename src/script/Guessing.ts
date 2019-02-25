@@ -71,6 +71,8 @@ export default class Guessing extends ui.guessingUI {
                     }
                 })
             })
+            this.progressSpeed.value = +`${goodsArr.length / this.numberList.array.length}`;
+            this.soldNum_soldNum.text = `${goodsArr.length}/${this.numberList.array.length}`;
             this.numberList.array = this.rawDataArr; //号码列表
         })
     }

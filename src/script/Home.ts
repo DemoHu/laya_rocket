@@ -13,6 +13,7 @@ import api from "../js/api";
 
 import { post } from '../js/http';
 import { Socket } from "../js/socket";
+import { Tabbar } from "../view/Tabbar";
 
 
 export default class Home extends ui.homeUI {
@@ -40,6 +41,7 @@ export default class Home extends ui.homeUI {
         })
         
     }
+    
 
     /**充值 */
     private btnRechargeFunc():void {
@@ -47,6 +49,7 @@ export default class Home extends ui.homeUI {
     }
     /**空投 */
     private putInFunc(){
+        Tabbar.getInstance().openScene('xctj.scene')
         Toast.show('暂未开放，敬请期待')
     }
 

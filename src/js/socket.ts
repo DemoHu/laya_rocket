@@ -10,11 +10,6 @@ import { GameModel } from "./GameModel";
 
 //{"appId":"luckyrocket","event":[{"toggle":0,"type":"type_value","expireTime":0}]}
 
-// setTimeout(() => {
-//     const userInfo:any = GameModel.getInstance().userInfo;
-//     console.log(userInfo);
-// }, 4000);
-
 export class Socket extends Laya.UIComponent {
     
     static WS_URL: string = `wss://t-wss.xyhj.io/ws?appid=luckyrocketApp`
@@ -46,7 +41,7 @@ export class Socket extends Laya.UIComponent {
         Socket.WS.close();
         Socket.createSocket(); //重连
     }
-    /**WS数据接收 */
+    /**WS数据接收统一处理 */
     static onmessageWS(e: any) {
         let redata:any;
         let payload:any;

@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":28,
-    "selecteID":29,
+    "selectedBox":37,
+    "selecteID":71,
     "searchKey":"Scene,home,home",
     "props":{"width":750,"var":"home","sceneColor":"#09083c","runtime":"script/Home.ts","renderType":"render","name":"home","height":1334},
     "nodeParent":-1,
-    "maxID":117,
+    "maxID":118,
     "label":"home",
     "isOpen":true,
     "isDirectory":true,
@@ -358,7 +358,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":0,"x":5,"skin":"comp/home/img_rocket.png"},
+                    "props":{"y":0,"x":0,"skin":"comp/home/img_rocket.png"},
                     "nodeParent":38,
                     "label":"Image",
                     "isOpen":true,
@@ -369,60 +369,58 @@
                     "child":[
                         {
                             "x":45,
+                            "type":"HBox",
+                            "searchKey":"HBox",
+                            "props":{"space":10,"pivotY":20,"pivotX":30,"centerY":0,"centerX":0},
+                            "nodeParent":37,
+                            "label":"HBox",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":117,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label,rocketAmount",
+                                    "props":{"y":11,"x":0,"var":"rocketAmount","valign":"middle","text":"---","fontSize":28,"color":"#feffff","bold":true,"align":"center"},
+                                    "nodeParent":117,
+                                    "label":"rocketAmount",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":30,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":18,"text":"USDT","fontSize":22,"color":"#feffff"},
+                                    "nodeParent":117,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":111,
+                                    "child":[
+                                        ]
+                                }]
+                        },
+                        {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,countDown",
-                            "props":{"y":207,"x":59,"var":"countDown"},
+                            "props":{"y":243,"x":121.6376953125,"var":"countDown","pivotY":30,"pivotX":68},
                             "nodeParent":37,
                             "label":"countDown",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":71,
                             "child":[
-                                {
-                                    "x":60,
-                                    "type":"Sprite",
-                                    "searchKey":"Sprite",
-                                    "props":{"y":11,"x":7},
-                                    "nodeParent":71,
-                                    "label":"Sprite",
-                                    "isOpen":true,
-                                    "isDirectory":true,
-                                    "isAniNode":true,
-                                    "hasChild":true,
-                                    "compId":116,
-                                    "child":[
-                                        {
-                                            "x":75,
-                                            "type":"Label",
-                                            "searchKey":"Label,rocketAmount",
-                                            "props":{"y":14,"x":50,"var":"rocketAmount","valign":"middle","text":"----","pivotY":14,"pivotX":61,"fontSize":28,"color":"#feffff","bold":true,"align":"center"},
-                                            "nodeParent":116,
-                                            "label":"rocketAmount",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":30,
-                                            "child":[
-                                                ]
-                                        },
-                                        {
-                                            "x":75,
-                                            "type":"Label",
-                                            "searchKey":"Label",
-                                            "props":{"y":7,"x":88,"text":"USDT","fontSize":22,"color":"#feffff"},
-                                            "nodeParent":116,
-                                            "label":"Label",
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":111,
-                                            "child":[
-                                                ]
-                                        }]
-                                },
                                 {
                                     "x":60,
                                     "type":"Image",
@@ -474,7 +472,7 @@
                     "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
-                    "props":{"y":401,"x":53,"source":"comp/home/fire/fire0.png,comp/home/fire/fire1.png,comp/home/fire/fire10.png,comp/home/fire/fire2.png,comp/home/fire/fire3.png,comp/home/fire/fire4.png,comp/home/fire/fire5.png,comp/home/fire/fire6.png,comp/home/fire/fire7.png,comp/home/fire/fire8.png,comp/home/fire/fire9.png","autoPlay":true},
+                    "props":{"y":401,"x":48,"source":"comp/home/fire/fire0.png,comp/home/fire/fire1.png,comp/home/fire/fire10.png,comp/home/fire/fire2.png,comp/home/fire/fire3.png,comp/home/fire/fire4.png,comp/home/fire/fire5.png,comp/home/fire/fire6.png,comp/home/fire/fire7.png,comp/home/fire/fire8.png,comp/home/fire/fire9.png","autoPlay":true},
                     "nodeParent":38,
                     "label":"Animation",
                     "isDirectory":false,
@@ -554,14 +552,13 @@
             "props":{"y":179,"x":28,"mouseEnabled":true},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"comp/home/img_parachute_bg.png"},
@@ -574,7 +571,6 @@
                     "compId":26,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":50,"x":109,"width":132,"valign":"middle","text":"敬请期待","pivotY":25,"pivotX":66,"height":50,"fontSize":28,"color":"#1dc7ff","align":"center"},
@@ -589,7 +585,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Text",
                     "searchKey":"Text",
                     "props":{"y":110,"x":56,"width":73,"text":"幸运空投","height":54,"fontSize":24,"color":"#fff"},
@@ -603,7 +598,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,putin",
                     "props":{"y":159,"x":104,"var":"putin","skin":"comp/home/img_parachute.png","rotation":20,"pivotY":40,"pivotX":80,"gray":true,"disabled":false,"alpha":1},

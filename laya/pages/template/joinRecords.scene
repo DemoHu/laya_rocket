@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":12,
-    "selecteID":29,
+    "selectedBox":24,
+    "selecteID":26,
     "searchKey":"View,joinbox",
     "props":{"width":750,"visible":true,"var":"joinbox","sceneColor":"#000000","runtime":"template/joinRecords.ts","height":270},
     "nodeParent":-1,
@@ -282,13 +282,14 @@
                             "props":{"y":90},
                             "nodeParent":28,
                             "label":"Sprite",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":24,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"购买号码：","fontSize":24,"color":"#fff"},
@@ -302,6 +303,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,codeList",
                                     "props":{"x":112,"var":"codeList","text":"---","fontSize":24,"color":"#fff"},

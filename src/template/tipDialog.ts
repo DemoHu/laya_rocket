@@ -35,7 +35,7 @@ export default class TipsDiaLog extends ui.template.TipsDialogUI {
                 count = count + 1;
             }
         });
-        if (count === 20) {
+        if (count === this.AllCodeList.length) {
             Tabbar.getInstance().openScene('home.scene')
         }
     }
