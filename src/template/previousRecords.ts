@@ -28,6 +28,7 @@ export default class previousRecord extends ui.template.previousRecordsUI {
 
     /**查看哈希 */
     seeHash():void {
-        alert(`前往hash地址：${this._dataSource.txHash}`)
+        // "https://ropsten.etherscan.io/tx/" : "https://etherscan.io/tx/"
+        window.location.href = `https://ropsten.etherscan.io/tx/${this._dataSource.txHash}`;
     }
 }

@@ -176,7 +176,6 @@ export default {
         })
     },
 
-
     /**购买
      * @param period 期号
      * @param codeList 所选号码
