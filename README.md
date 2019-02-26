@@ -1,13 +1,8 @@
 #laya-H5
 
-
-
-```
-git clone 
-```
-
+### 实际运行目录
 
 ```
-npm install 
+release/web/
 ```
 
