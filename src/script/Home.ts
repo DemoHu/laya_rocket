@@ -49,7 +49,7 @@ export default class Home extends ui.homeUI {
     }
     /**空投 */
     private putInFunc(){
-        Tabbar.getInstance().openScene('xctj.scene')
+        // Tabbar.getInstance().openScene('xctj.scene')
         Toast.show('暂未开放，敬请期待')
     }
 

@@ -15,8 +15,12 @@ import priHistoryScene from "./script/priHistoryScene"
 import priHistory from "./template/priHistory"
 import Record from "./script/Record"
 import joinRecords from "./template/joinRecords"
+import shortListed from "./script/shortListed"
+import shortListedList from "./template/shortListedList"
 import pswInput from "./template/pswInput"
 import tipDialog from "./template/tipDialog"
+import winningList from "./template/winningList"
+import winning from "./script/winning"
 /*
 * 游戏初始化配置;
 */
@@ -52,8 +56,12 @@ export default class GameConfig{
         reg("template/priHistory.ts",priHistory);
         reg("script/Record.ts",Record);
         reg("template/joinRecords.ts",joinRecords);
+        reg("script/shortListed.ts",shortListed);
+        reg("template/shortListedList.ts",shortListedList);
         reg("template/pswInput.ts",pswInput);
         reg("template/tipDialog.ts",tipDialog);
+        reg("template/winningList.ts",winningList);
+        reg("script/winning.ts",winning);
     }
 }
 GameConfig.init();

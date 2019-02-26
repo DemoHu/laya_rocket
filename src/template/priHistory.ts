@@ -16,8 +16,6 @@ export default class priHistory extends ui.template.priHistoryUI {
     set dataSource(item: any) {
         if (item) {
             this.rankNo.text = item.rank < 10 ? `0${item.rank}` : `${item.rank}`;
-            console.log(this.rankNo.text);
-            
             this.nickName.text = item.nickName;
             this.UID.text = `UID: ${item.userId}`;
             this.Volume.text = `${utils.toDecimal(item.consum,2)} USDT`

@@ -143,6 +143,40 @@ export default {
         })
     },
 
+    /**获取喜从天降中奖名单
+     * @param page [选填] 页码1
+     * @param pageSize  [选填] 分页数 默认20
+     */
+    getXctjList(page:number = 1,pageSize:number = 20){
+        return new Promise((resolve,reject) => {
+            get('/Xctj/bonusLists',{page,pageSize}).then((res:any)=>{
+                if (!res.code) {
+                    resolve(res)
+                } else {
+                    reject(res)
+                }
+            })
+        })
+    },
+    
+    /**获取入围名单
+     * @param page [选填] 页码1
+     * @param pageSize  [选填] 分页数 默认20
+     * @param date [选填] 时间
+     */
+    getShortListed(page:number = 1,pageSize:number = 20,date?:string){
+        return new Promise((resolve,reject) => {
+            get('/Xctj/shortListed',{page,pageSize,date}).then((res:any)=>{
+                if (!res.code) {
+                    resolve(res)
+                } else {
+                    reject(res)
+                }
+            })
+        })
+    },
+
+
     /**购买
      * @param period 期号
      * @param codeList 所选号码

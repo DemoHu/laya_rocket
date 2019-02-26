@@ -133,20 +133,6 @@ export module ui {
             this.loadScene("priHistoryScene");
         }
     }
-    export class prixList1UI extends Laya.Scene {
-		public no1:Laya.Image;
-		public rankNo:Laya.Label;
-		public avatar:Laya.Image;
-		public nickName:Laya.Label;
-		public UID:Laya.Label;
-		public todayVolumeTitle:Laya.Label;
-		public todayVolume:Laya.Label;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("prixList1");
-        }
-    }
     export class recordUI extends Laya.Scene {
 		public canyu:Laya.Image;
 		public wangqi:Laya.Image;
@@ -157,6 +143,15 @@ export module ui {
         createChildren():void {
             super.createChildren();
             this.loadScene("record");
+        }
+    }
+    export class shortListedUI extends Laya.Scene {
+		public shortList:Laya.List;
+		public noData:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("shortListed");
         }
     }
     export class TabbarUI extends Laya.View {
@@ -172,6 +167,11 @@ export module ui {
 		public xctj_shuoming:Laya.Sprite;
 		public amount:Laya.Label;
 		public unit:Laya.Label;
+		public countDown:Laya.Label;
+		public btn_shortlist:Laya.Image;
+		public winning_code:Laya.Label;
+		public winningList:Laya.List;
+		public noData:Laya.Image;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -254,6 +254,16 @@ export module ui.template {
             this.loadScene("template/prixList");
         }
     }
+    export class shortListUI extends Laya.Scene {
+		public number:Laya.Label;
+		public nickName:Laya.Label;
+		public userId:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/shortList");
+        }
+    }
     export class TipsDialogUI extends Laya.Dialog {
 		public title:Laya.Label;
 		public btnViewRecord:Laya.Image;
@@ -274,6 +284,23 @@ export module ui.template {
         createChildren():void {
             super.createChildren();
             this.loadScene("template/trendList");
+        }
+    }
+    export class winningListUI extends Laya.Scene {
+		public periodBox:Laya.Sprite;
+		public period:Laya.Label;
+		public dateBox:Laya.Sprite;
+		public date:Laya.Label;
+		public nameBox:Laya.Sprite;
+		public nickName:Laya.Label;
+		public amountBox:Laya.Sprite;
+		public amount:Laya.Label;
+		public codeBox:Laya.Sprite;
+		public code:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/winningList");
         }
     }
 }
