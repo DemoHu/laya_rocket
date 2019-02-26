@@ -1,1 +1,1 @@
-###laya-demo
+###laya-H5
