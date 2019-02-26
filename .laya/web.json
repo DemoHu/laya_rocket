@@ -1,0 +1,57 @@
+{
+    "copyFilesFilter": [
+        "../bin/**/*.*"
+    ],
+    "openDataZone": false,
+    "compressJson": true,
+    "compressJsonFilter": [
+        "$basePath/**/*.{json,atlas}"
+    ],
+    "compressJsonNoteList": [
+        ""
+    ],
+    "compressImage": true,
+    "compressImageFilter": [
+        "$basePath/**/*.{png,jpg}"
+    ],
+    "compressImageNoteList": [
+        ""
+    ],
+    "compressJs": true,
+    "compressJsFilter": [
+        "$basePath/**/*.js",
+        "!$basePath/js/**/*.js"
+    ],
+    "compressJsNoteList": [
+        "",
+        "不压缩自己的js文件"
+    ],
+    "version": true,
+    "versionFilter": [
+        "$basePath/**/*.*",
+        "!$basePath/*.html",
+        "!$basePath/{version.json,game.js,game.json,project.config.json,weapp-adapter.js,project.swan.json,swan-game-adapter.js,main.js,gameConfig.json}",
+        "!$basePath/layaforqq/**/*.*"
+    ],
+    "versionNoteList": [
+        "",
+        "",
+        "",
+        ""
+    ],
+    "packfile": false,
+    "packfileFilter": [
+        ""
+    ],
+    "packfileFullValue": [
+        "$basePath/**/*.*"
+    ],
+    "packfileTargetValue": "",
+    "packfileNoteList": [
+        ""
+    ],
+    "clearReleaseDir": true,
+    "compile": true,
+    "projectType": "ts",
+    "pubTime": 1551167691842
+}
