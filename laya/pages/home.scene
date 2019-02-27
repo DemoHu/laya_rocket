@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":37,
-    "selecteID":71,
+    "selectedBox":2,
+    "selecteID":127,
     "searchKey":"Scene,home,home",
     "props":{"width":750,"var":"home","sceneColor":"#09083c","runtime":"script/Home.ts","renderType":"render","name":"home","height":1334},
     "nodeParent":-1,
-    "maxID":118,
+    "maxID":136,
     "label":"home",
     "isOpen":true,
     "isDirectory":true,
@@ -27,6 +27,111 @@
             "compId":112,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":0,"x":0,"width":750,"height":1334},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":127,
+            "child":[
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":1135.7798165137615,"x":200,"visible":true,"skin":"comp/home/img_meteor2.png","pivotX":0},
+                    "nodeParent":127,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":128,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":1051.4925373134329,"x":600,"visible":true,"skin":"comp/home/img_meteor1.png"},
+                    "nodeParent":127,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":129,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":667.4876847290641,"x":80,"visible":false,"skin":"comp/home/img_meteor1.png"},
+                    "nodeParent":127,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":130,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":717.1875,"x":450,"visible":false,"skin":"comp/home/img_meteor2.png"},
+                    "nodeParent":127,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":131,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":882.0987654320987,"x":523,"visible":false,"skin":"comp/home/img_star4.png"},
+                    "nodeParent":127,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":133,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":1036.2962962962963,"x":82,"visible":true,"skin":"comp/home/img_star2.png"},
+                    "nodeParent":127,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":134,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":874.627358490566,"x":511.5,"visible":true,"skin":"comp/home/img_star3.png"},
+                    "nodeParent":127,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":135,
+                    "child":[
+                        ]
+                }]
         },
         {
             "x":15,
@@ -96,19 +201,6 @@
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":1186.6456310679612,"x":200,"visible":true,"skin":"comp/home/img_star1.png"},
-                    "nodeParent":94,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":106,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
                     "props":{"y":1500,"x":523,"visible":false,"skin":"comp/home/img_star4.png"},
                     "nodeParent":94,
                     "label":"Image",
@@ -116,19 +208,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":108,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":814.8175675675676,"x":13.5,"visible":true,"skin":"comp/home/img_star2.png"},
-                    "nodeParent":94,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":109,
                     "child":[
                         ]
                 },
@@ -153,14 +232,13 @@
             "props":{"y":0,"x":0,"height":80},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":64,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":0,"x":0,"width":80,"height":80},
@@ -188,20 +266,18 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,AccountBox",
                     "props":{"y":15,"x":180,"width":260,"var":"AccountBox","skin":"comp/home/img_region_bg.png","left":180,"height":50},
                     "nodeParent":64,
                     "label":"AccountBox",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":17,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,avatar",
                             "props":{"y":3,"width":44,"var":"avatar","skin":"comp/home/img_avatar.png","left":15,"height":44},
@@ -214,7 +290,6 @@
                             "compId":89,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":0,"x":0,"width":44,"renderType":"mask","height":44},
@@ -227,7 +302,6 @@
                                     "compId":92,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Circle",
                                             "searchKey":"Circle",
                                             "props":{"y":22,"x":22,"radius":22,"lineWidth":1,"fillColor":"#ff0000"},
@@ -243,7 +317,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,nickName",
                             "props":{"var":"nickName","valign":"middle","text":"请先登录","left":80,"fontSize":24,"color":"#fefeff","centerY":0,"align":"center"},
@@ -258,7 +331,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,rechargeBox",
                     "props":{"y":15,"x":460,"width":260,"var":"rechargeBox","skin":"comp/home/img_region_bg.png","left":460,"height":50},
@@ -271,7 +343,6 @@
                     "compId":19,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"comp/home/img_usdt.png","left":15,"centerY":0},
@@ -285,7 +356,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,btnRecharge",
                             "props":{"var":"btnRecharge","skin":"comp/home/img_plus.png","right":15,"centerY":0},
@@ -299,7 +369,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,myAmount",
                             "props":{"y":14,"var":"myAmount","valign":"middle","text":"---","left":50,"fontSize":24,"color":"#fefeff","align":"center"},
@@ -348,14 +417,13 @@
             "props":{"y":268,"x":246,"var":"rockerBox"},
             "nodeParent":2,
             "label":"rockerBox",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":38,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":0,"x":0,"skin":"comp/home/img_rocket.png"},
@@ -368,7 +436,6 @@
                     "compId":37,
                     "child":[
                         {
-                            "x":45,
                             "type":"HBox",
                             "searchKey":"HBox",
                             "props":{"space":10,"pivotY":20,"pivotX":30,"centerY":0,"centerX":0},
@@ -409,7 +476,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,countDown",
                             "props":{"y":243,"x":121.6376953125,"var":"countDown","pivotY":30,"pivotX":68},
@@ -422,7 +488,6 @@
                             "compId":71,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":72,"x":21,"width":21,"skin":"comp/home/img_count_down.png","pivotY":12,"pivotX":11,"height":23},
@@ -436,7 +501,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,rocketCountDown",
                                     "props":{"y":72,"x":86.5,"width":101,"var":"rocketCountDown","text":" -- : --","pivotY":13,"pivotX":51,"height":26,"fontSize":26,"color":"#feffff"},
@@ -451,7 +515,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Script",
                             "switchAble":true,
                             "source":"src/publicScript/PageNavScript.ts",
@@ -469,7 +532,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"y":401,"x":48,"source":"comp/home/fire/fire0.png,comp/home/fire/fire1.png,comp/home/fire/fire10.png,comp/home/fire/fire2.png,comp/home/fire/fire3.png,comp/home/fire/fire4.png,comp/home/fire/fire5.png,comp/home/fire/fire6.png,comp/home/fire/fire7.png,comp/home/fire/fire8.png,comp/home/fire/fire9.png","autoPlay":true},
@@ -642,7 +704,7 @@
                                 "tween":true,
                                 "target":33,
                                 "key":"rotation",
-                                "index":60
+                                "index":120
                             },
                             {
                                 "value":20,
@@ -650,7 +712,7 @@
                                 "tween":true,
                                 "target":33,
                                 "key":"rotation",
-                                "index":120
+                                "index":240
                             }],
                         "disabled":[
                             {
@@ -667,7 +729,7 @@
                                 "tween":false,
                                 "target":33,
                                 "key":"disabled",
-                                "index":60
+                                "index":120
                             },
                             {
                                 "value":false,
@@ -675,13 +737,13 @@
                                 "tween":false,
                                 "target":33,
                                 "key":"disabled",
-                                "index":120
+                                "index":240
                             }]
                     }
                 }],
             "name":"put_in",
             "id":1,
-            "frameRate":24,
+            "frameRate":60,
             "action":2
         },
         {
@@ -704,13 +766,13 @@
                                 "tween":true,
                                 "target":38,
                                 "key":"y",
-                                "index":25
+                                "index":50
                             }]
                     }
                 }],
             "name":"rocket_show",
             "id":2,
-            "frameRate":24,
+            "frameRate":60,
             "action":1
         },
         {
@@ -733,7 +795,7 @@
                                 "tween":true,
                                 "target":64,
                                 "key":"y",
-                                "index":25
+                                "index":50
                             },
                             {
                                 "value":20,
@@ -741,7 +803,7 @@
                                 "tween":true,
                                 "target":64,
                                 "key":"y",
-                                "index":50
+                                "index":100
                             }],
                         "x":[
                             {
@@ -758,7 +820,7 @@
                                 "tween":true,
                                 "target":64,
                                 "key":"x",
-                                "index":50
+                                "index":100
                             }]
                     }
                 },
@@ -780,7 +842,7 @@
                                 "tween":true,
                                 "target":28,
                                 "key":"x",
-                                "index":25
+                                "index":50
                             },
                             {
                                 "value":28,
@@ -788,7 +850,7 @@
                                 "tween":true,
                                 "target":28,
                                 "key":"x",
-                                "index":50
+                                "index":100
                             }]
                     }
                 },
@@ -810,7 +872,7 @@
                                 "tween":true,
                                 "target":62,
                                 "key":"x",
-                                "index":25
+                                "index":50
                             },
                             {
                                 "value":653,
@@ -818,7 +880,7 @@
                                 "tween":true,
                                 "target":62,
                                 "key":"x",
-                                "index":50
+                                "index":100
                             }]
                     }
                 },
@@ -840,7 +902,7 @@
                                 "tween":true,
                                 "target":59,
                                 "key":"bottom",
-                                "index":25
+                                "index":50
                             },
                             {
                                 "value":100,
@@ -848,13 +910,13 @@
                                 "tween":true,
                                 "target":59,
                                 "key":"bottom",
-                                "index":50
+                                "index":100
                             }]
                     }
                 }],
             "name":"dom_show",
             "id":3,
-            "frameRate":24,
+            "frameRate":60,
             "action":1
         },
         {
@@ -877,7 +939,7 @@
                                 "tween":true,
                                 "target":102,
                                 "key":"y",
-                                "index":152
+                                "index":218
                             },
                             {
                                 "value":1500,
@@ -885,7 +947,7 @@
                                 "tween":true,
                                 "target":102,
                                 "key":"y",
-                                "index":187
+                                "index":280
                             }],
                         "x":[
                             {
@@ -902,7 +964,7 @@
                                 "tween":true,
                                 "target":102,
                                 "key":"x",
-                                "index":152
+                                "index":218
                             }],
                         "visible":[
                             {
@@ -919,7 +981,7 @@
                                 "tween":false,
                                 "target":102,
                                 "key":"visible",
-                                "index":152
+                                "index":218
                             }],
                         "pivotX":[
                             {
@@ -950,7 +1012,7 @@
                                 "tween":true,
                                 "target":103,
                                 "key":"y",
-                                "index":30
+                                "index":49
                             },
                             {
                                 "value":900,
@@ -958,7 +1020,7 @@
                                 "tween":true,
                                 "target":103,
                                 "key":"y",
-                                "index":103
+                                "index":147
                             },
                             {
                                 "value":1500,
@@ -983,7 +1045,7 @@
                                 "tween":true,
                                 "target":103,
                                 "key":"x",
-                                "index":30
+                                "index":49
                             }],
                         "visible":[
                             {
@@ -1000,7 +1062,7 @@
                                 "tween":false,
                                 "target":103,
                                 "key":"visible",
-                                "index":30
+                                "index":49
                             },
                             {
                                 "value":true,
@@ -1008,7 +1070,7 @@
                                 "tween":false,
                                 "target":103,
                                 "key":"visible",
-                                "index":103
+                                "index":147
                             }]
                     }
                 },
@@ -1030,7 +1092,7 @@
                                 "tween":true,
                                 "target":105,
                                 "key":"y",
-                                "index":127
+                                "index":82
                             }],
                         "x":[
                             {
@@ -1047,7 +1109,7 @@
                                 "tween":true,
                                 "target":105,
                                 "key":"x",
-                                "index":127
+                                "index":82
                             }],
                         "visible":[
                             {
@@ -1064,7 +1126,7 @@
                                 "tween":false,
                                 "target":105,
                                 "key":"visible",
-                                "index":127
+                                "index":82
                             }]
                     }
                 },
@@ -1086,7 +1148,7 @@
                                 "tween":true,
                                 "target":104,
                                 "key":"y",
-                                "index":170
+                                "index":203
                             }],
                         "x":[
                             {
@@ -1103,7 +1165,7 @@
                                 "tween":true,
                                 "target":104,
                                 "key":"x",
-                                "index":170
+                                "index":203
                             }],
                         "visible":[
                             {
@@ -1120,55 +1182,7 @@
                                 "tween":false,
                                 "target":104,
                                 "key":"visible",
-                                "index":170
-                            }]
-                    }
-                },
-                {
-                    "target":106,
-                    "keyframes":{
-                        "y":[
-                            {
-                                "value":71,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":106,
-                                "key":"y",
-                                "index":0
-                            },
-                            {
-                                "value":1300,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":106,
-                                "key":"y",
-                                "index":206
-                            }],
-                        "x":[
-                            {
-                                "value":200,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":106,
-                                "key":"x",
-                                "index":0
-                            },
-                            {
-                                "value":200,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":106,
-                                "key":"x",
-                                "index":206
-                            }],
-                        "visible":[
-                            {
-                                "value":true,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":106,
-                                "key":"visible",
-                                "index":0
+                                "index":203
                             }]
                     }
                 },
@@ -1217,62 +1231,6 @@
                                 "target":108,
                                 "key":"visible",
                                 "index":187
-                            }]
-                    }
-                },
-                {
-                    "target":109,
-                    "keyframes":{
-                        "y":[
-                            {
-                                "value":154,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":109,
-                                "key":"y",
-                                "index":0
-                            },
-                            {
-                                "value":1200,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":109,
-                                "key":"y",
-                                "index":296
-                            }],
-                        "x":[
-                            {
-                                "value":13.5,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":109,
-                                "key":"x",
-                                "index":0
-                            },
-                            {
-                                "value":13.5,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":109,
-                                "key":"x",
-                                "index":296
-                            }],
-                        "visible":[
-                            {
-                                "value":true,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":109,
-                                "key":"visible",
-                                "index":0
-                            },
-                            {
-                                "value":false,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":109,
-                                "key":"visible",
-                                "index":296
                             }]
                     }
                 },
@@ -1326,6 +1284,209 @@
                 }],
             "name":"bg_ani",
             "id":4,
+            "frameRate":60,
+            "action":2
+        },
+        {
+            "nodes":[
+                {
+                    "target":128,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":200,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":128,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":1400,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":128,
+                                "key":"y",
+                                "index":109
+                            }]
+                    }
+                },
+                {
+                    "target":129,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":100,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":129,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":1600,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":129,
+                                "key":"y",
+                                "index":134
+                            }],
+                        "x":[
+                            {
+                                "value":600,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":129,
+                                "key":"x",
+                                "index":0
+                            },
+                            {
+                                "value":600,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":129,
+                                "key":"x",
+                                "index":134
+                            }]
+                    }
+                },
+                {
+                    "target":130,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":500,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":130,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":900,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":130,
+                                "key":"y",
+                                "index":203
+                            }],
+                        "x":[
+                            {
+                                "value":80,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":130,
+                                "key":"x",
+                                "index":0
+                            },
+                            {
+                                "value":80,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":130,
+                                "key":"x",
+                                "index":203
+                            }]
+                    }
+                },
+                {
+                    "target":131,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":170,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":131,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":1200,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":131,
+                                "key":"y",
+                                "index":160
+                            }]
+                    }
+                },
+                {
+                    "target":133,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":200,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":133,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":1500,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":133,
+                                "key":"y",
+                                "index":162
+                            }]
+                    }
+                },
+                {
+                    "target":134,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":588,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":1600,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":105
+                            },
+                            {
+                                "value":1400,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":135
+                            }]
+                    }
+                },
+                {
+                    "target":135,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":523,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":135,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":1400,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":135,
+                                "key":"y",
+                                "index":212
+                            }]
+                    }
+                }],
+            "name":"bg_ani2",
+            "id":5,
             "frameRate":24,
             "action":2
         }]

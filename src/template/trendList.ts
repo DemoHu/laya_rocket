@@ -5,7 +5,6 @@
  * @modify date 2019-02-21 16:32:01
  * @desc 走势列表脚本
  */
-
 import { ui } from '../ui/layaMaxUI'
 import utils from '../js/utils';
 import { Tabbar } from '../view/Tabbar';

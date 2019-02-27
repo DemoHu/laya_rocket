@@ -31,7 +31,7 @@ export class GameModel extends Laya.EventDispatcher {
     }
 
     /**保存火箭数据 */
-    rocketData:Object = {};//火箭数据
+    rocketData:Object = {};
     setRocketData(data:object){
         this.rocketData = data;
         this.event('getRocketData',this.rocketData)
@@ -47,4 +47,10 @@ export class GameModel extends Laya.EventDispatcher {
         this.event('getNotice',status)
     }
     
+    /**火箭大奖排行名单 */
+    rocketRanking:object[] = [];
+    setRocketRanking(data:object[]){
+        this.rocketRanking = data;
+        this.event('getRocketRanking',this.rocketRanking)
+    }
 }

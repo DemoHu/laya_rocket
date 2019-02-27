@@ -1,4 +1,5 @@
 import GameConfig from "./GameConfig";
+import RocketDialog from "./view/rocketDialog";
 class Main {
 	constructor() {
 		//根据IDE设置初始化引擎		
@@ -16,6 +17,9 @@ class Main {
 		if (GameConfig.physicsDebug && Laya["PhysicsDebugDraw"]) Laya["PhysicsDebugDraw"].enable();
 		if (GameConfig.stat) Laya.Stat.show();
 		Laya.alertGlobalError = true;
+
+		//自定义事件
+		RocketDialog.init(); //火箭开奖效果
 
 		//激活资源版本控制，version.json由IDE发布功能自动生成，如果没有也不影响后续流程
 		Laya.ResourceVersion.enable("version.json", Laya.Handler.create(this, this.onVersionLoaded), Laya.ResourceVersion.FILENAME_VERSION);

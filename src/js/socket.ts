@@ -1,4 +1,6 @@
 import { GameModel } from "./GameModel";
+import { ui } from "../ui/layaMaxUI";
+
 
 /**
  * @author [Siwen]
@@ -66,6 +68,10 @@ export class Socket extends Laya.UIComponent {
             // 下发中奖名单
             if (payload.type === 'winning') {
                 GameModel.getInstance().noticeFunc(true)
+            }
+            // 下发火箭大奖排行名单
+            if (payload.type === 'ranking') {
+                GameModel.getInstance().setRocketRanking(payload.userInfo)
             }
         }
     }

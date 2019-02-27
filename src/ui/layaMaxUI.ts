@@ -90,6 +90,7 @@ export module ui {
 		public rocket_show:Laya.FrameAnimation;
 		public dom_show:Laya.FrameAnimation;
 		public bg_ani:Laya.FrameAnimation;
+		public bg_ani2:Laya.FrameAnimation;
 		public bg_animation:Laya.Sprite;
 		public tuichu:Laya.Image;
 		public AccountBox:Laya.Image;
@@ -254,6 +255,26 @@ export module ui.template {
             this.loadScene("template/prixList");
         }
     }
+    export class rankingListUI extends Laya.Scene {
+		public ranking:Laya.Label;
+		public nickName:Laya.Label;
+		public uid:Laya.Label;
+		public amount:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/rankingList");
+        }
+    }
+    export class rechargeDialogUI extends Laya.Dialog {
+		public btn_quickRecharge:Laya.Sprite;
+		public btn_withdraw:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/rechargeDialog");
+        }
+    }
     export class shortListUI extends Laya.Scene {
 		public number:Laya.Label;
 		public nickName:Laya.Label;
@@ -262,6 +283,19 @@ export module ui.template {
         createChildren():void {
             super.createChildren();
             this.loadScene("template/shortList");
+        }
+    }
+    export class showRocketUI extends Laya.Dialog {
+		public ani1:Laya.FrameAnimation;
+		public ani2:Laya.FrameAnimation;
+		public showani1:Laya.Animation;
+		public showani2:Laya.Animation;
+		public btn_close:Laya.Sprite;
+		public ranking:Laya.List;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("template/showRocket");
         }
     }
     export class TipsDialogUI extends Laya.Dialog {

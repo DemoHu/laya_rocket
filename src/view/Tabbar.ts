@@ -8,7 +8,6 @@
 import { ui } from '../ui/layaMaxUI'
 import { GameModel } from '../js/GameModel';
 
-
 const tabbarArr:string[] = ['home.scene','record.scene','assistant.scene'] //tabbar的页面
 const pageArr:string[] = [
     'guessing.scene','grandPrix.scene',

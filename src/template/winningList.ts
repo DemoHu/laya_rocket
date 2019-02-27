@@ -1,6 +1,3 @@
-import { ui } from "../ui/layaMaxUI";
-import utils from "../js/utils";
-
 /**
  * @author [Siwen]
  * @email [623746556@qq.com]
@@ -8,6 +5,8 @@ import utils from "../js/utils";
  * @modify date 2019-02-26 10:21:37
  * @desc 喜从天降中奖名单列表脚本
  */
+import { ui } from "../ui/layaMaxUI";
+import utils from "../js/utils";
 
 export default class WinningList extends ui.template.winningListUI {
     constructor() {

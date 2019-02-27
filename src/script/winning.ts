@@ -1,8 +1,3 @@
-import { ui } from "../ui/layaMaxUI";
-import api from "../js/api";
-import { Toast } from "../view/Toast";
-import { Tabbar } from "../view/Tabbar";
-
 /**
  * @author [Siwen]
  * @email [623746556@qq.com]
@@ -10,6 +5,10 @@ import { Tabbar } from "../view/Tabbar";
  * @modify date 2019-02-26 10:20:15
  * @desc 喜从天降中奖名单
  */
+import { ui } from "../ui/layaMaxUI";
+import api from "../js/api";
+import { Toast } from "../view/Toast";
+import { Tabbar } from "../view/Tabbar";
 
 export default class Winning extends ui.xctjUI {
     constructor() {

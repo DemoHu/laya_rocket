@@ -18,6 +18,9 @@ import joinRecords from "./template/joinRecords"
 import shortListed from "./script/shortListed"
 import shortListedList from "./template/shortListedList"
 import pswInput from "./template/pswInput"
+import rankingList from "./template/rankingList"
+import rechargeDialog from "./template/rechargeDialog"
+import rocketDialog from "./view/rocketDialog"
 import tipDialog from "./template/tipDialog"
 import winningList from "./template/winningList"
 import winning from "./script/winning"
@@ -59,6 +62,9 @@ export default class GameConfig{
         reg("script/shortListed.ts",shortListed);
         reg("template/shortListedList.ts",shortListedList);
         reg("template/pswInput.ts",pswInput);
+        reg("template/rankingList.ts",rankingList);
+        reg("template/rechargeDialog.ts",rechargeDialog);
+        reg("view/rocketDialog.ts",rocketDialog);
         reg("template/tipDialog.ts",tipDialog);
         reg("template/winningList.ts",winningList);
         reg("script/winning.ts",winning);

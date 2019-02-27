@@ -5,7 +5,6 @@
  * @modify date 2019-02-26 11:12:09
  * @desc 入围名单列表
  */
-
 import { ui } from "../ui/layaMaxUI";
 
 export default class shortListBox extends ui.template.shortListUI {

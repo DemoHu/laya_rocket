@@ -9,7 +9,6 @@ import { ui } from "../ui/layaMaxUI";
 import { Toast } from "../view/Toast";
 import { GameModel } from "../js/GameModel";
 
-
 export default class numberListDOM extends ui.template.numberListDOMUI {
     private userId:string = '';
 

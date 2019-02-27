@@ -25,6 +25,5 @@ export default class Screen extends Laya.Script {
         _that.width = Laya.stage.width;
         _that.height = Laya.stage.height;
         _that.graphics.drawRect(0,0,Laya.stage.width,Laya.stage.height,this.bgColor);
-       
     }
 }

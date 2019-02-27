@@ -51,6 +51,7 @@ P 4EE00BDC img_jinbi_2.png
 P 0327D305 img_jinbi_20.png
 P 9D8754AA img_jinbi_4.png
 P E7226ABD img_jinbi_twinkle.png
+P 818C748D img_kuaijie_re.png
 P BD4C8AE1 img_meteor1.png
 P 0806F169 img_meteor2.png
 P 70256013 img_parachute.png
@@ -68,7 +69,11 @@ P 1886EB6C img_star4.png
 P 13418A93 img_star5.png
 R 9D77D21E img_star_bg.png
 P 0E122DC5 img_usdt.png
+P 862D2D78 img_usdt_re.png
 P 324690B0 img_zhushou.png
+D comp/rocketRanking
+P 330904DF img_ranking_title.png
+R 2DF7F497 img_rocketRanking_bg.png
 D comp/xctj
 P 235B101C img_ruwei.png
 R 61B16221 img_xctj_bg.png
