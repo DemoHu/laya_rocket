@@ -1,16 +1,14 @@
 <page>
    <item name="home.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="record.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="assistant.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="guessing.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="grandPrix.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Card.scene" props="" ifExport="分离模式" aName=""/>
    <item name="template/Tabbar.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="assistant.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Tabbar.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="record.scene" props="" ifExport="分离模式" aName=""/>
    <item name="dialog/Putin.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="guessing.scene" props="" ifExport="分离模式" aName=""/>
    <item name="template/numberListDOM.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="template/recordList.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="template/dsds.scene" props="" ifExport="分离模式" aName=""/>
    <item name="template/previousRecords.scene" props="" ifExport="分离模式" aName=""/>
    <item name="template/joinRecords.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="grandPrix.scene" props="" ifExport="分离模式" aName=""/>
 </page>

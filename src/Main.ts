@@ -35,9 +35,9 @@ class Main {
 	onConfigLoaded(): void {
 		//预加载
         Laya.loader.load(loadingResList, Laya.Handler.create(this, this.onGameResLoaded));
-		//加载IDE指定的场景
 	}
 	onGameResLoaded():void {
+		//加载IDE指定的场景
 		GameConfig.startScene && Laya.Scene.open(GameConfig.startScene);
 	}
 }
