@@ -6,7 +6,6 @@
    <item name="Tabbar.scene" props="" ifExport="分离模式" aName=""/>
    <item name="record.scene" props="" ifExport="分离模式" aName=""/>
    <item name="dialog/Putin.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="putin_dialog.scene" props="" ifExport="分离模式" aName=""/>
    <item name="guessing.scene" props="" ifExport="分离模式" aName=""/>
    <item name="template/numberListDOM.scene" props="" ifExport="分离模式" aName=""/>
    <item name="template/recordList.scene" props="" ifExport="分离模式" aName=""/>

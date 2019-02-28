@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":23,
-    "selecteID":27,
+    "selectedBox":2,
+    "selecteID":11,
     "searchKey":"Scene,assistant,assistant",
     "props":{"width":750,"var":"assistant","sceneColor":"#0a0635","runtime":"script/Assistant.ts","name":"assistant","height":1334},
     "nodeParent":-1,
@@ -52,7 +52,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"top":0,"skin":"comp/assistant/img_trend_banner.png"},
+            "props":{"top":0,"skin":"comp/img_trend_banner01.png"},
             "nodeParent":2,
             "label":"Image",
             "isDirectory":false,
@@ -69,16 +69,17 @@
             "props":{"y":250,"x":0,"width":750,"skin":" ","height":85},
             "nodeParent":2,
             "label":"Tab",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":12,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,btn_trend",
-                    "props":{"var":"btn_trend","skin":"comp/guessing/img_tab_active.png"},
+                    "props":{"var":"btn_trend","skin":"comp/img_tab_active.png"},
                     "nodeParent":12,
                     "label":"btn_trend",
                     "isOpen":false,
@@ -102,9 +103,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,btn_prebuy",
-                    "props":{"y":0,"x":375,"var":"btn_prebuy","skin":"comp/guessing/img_tab.png"},
+                    "props":{"y":0,"x":375,"var":"btn_prebuy","skin":"comp/img_tab.png"},
                     "nodeParent":12,
                     "label":"btn_prebuy",
                     "isOpen":true,
@@ -114,6 +116,7 @@
                     "compId":14,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":25,"x":153,"text":"预购","fontSize":34,"color":"#24f7f7"},
@@ -159,7 +162,7 @@
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,render",
-                    "props":{"y":3,"x":0,"width":141,"stateNum":"2","skin":"comp/assistant/img_btn_trend.png","renderType":"render","name":"render","labelSize":26,"labelColors":"#6060d6,#fff","height":69},
+                    "props":{"y":3,"x":0,"width":141,"stateNum":"2","skin":"comp/img_btn_trend.png","renderType":"render","name":"render","labelSize":26,"labelColors":"#6060d6,#fff","height":69},
                     "nodeParent":23,
                     "label":"render",
                     "isDirectory":false,

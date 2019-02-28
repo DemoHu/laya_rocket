@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":20,
+    "selectedBox":8,
+    "selecteID":9,
     "searchKey":"Scene,record,record",
     "props":{"width":750,"var":"record","sceneColor":"#09083c","runtime":"script/Record.ts","name":"record","height":1334},
     "nodeParent":-1,
@@ -52,7 +52,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"top":0,"skin":"comp/guessing/img_banner.png"},
+            "props":{"top":0,"skin":"comp/img_banner01.png"},
             "nodeParent":2,
             "label":"Image",
             "isDirectory":false,
@@ -69,16 +69,17 @@
             "props":{"y":250,"x":0,"width":750,"height":85},
             "nodeParent":2,
             "label":"Tab",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":8,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,canyu",
-                    "props":{"var":"canyu","skin":"comp/guessing/img_tab_active.png"},
+                    "props":{"var":"canyu","skin":"comp/img_tab_active.png"},
                     "nodeParent":8,
                     "label":"canyu",
                     "isOpen":true,
@@ -88,6 +89,7 @@
                     "compId":9,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":25,"x":119,"text":"参与记录","fontSize":34,"color":"#24f7f7"},
@@ -102,9 +104,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,wangqi",
-                    "props":{"y":0,"x":375,"var":"wangqi","skin":"comp/guessing/img_tab.png"},
+                    "props":{"y":0,"x":375,"var":"wangqi","skin":"comp/img_tab.png"},
                     "nodeParent":8,
                     "label":"wangqi",
                     "isOpen":false,

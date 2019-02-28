@@ -1,5 +1,7 @@
 import GameConfig from "./GameConfig";
 import RocketDialog from "./view/rocketDialog";
+import loadingResList from "./loadingResList";
+
 class Main {
 	constructor() {
 		//根据IDE设置初始化引擎		
@@ -31,7 +33,11 @@ class Main {
 	}
 
 	onConfigLoaded(): void {
+		//预加载
+        Laya.loader.load(loadingResList, Laya.Handler.create(this, this.onGameResLoaded));
 		//加载IDE指定的场景
+	}
+	onGameResLoaded():void {
 		GameConfig.startScene && Laya.Scene.open(GameConfig.startScene);
 	}
 }

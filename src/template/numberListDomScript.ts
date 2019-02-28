@@ -56,13 +56,13 @@ export default class numberListDOM extends ui.template.numberListDOMUI {
     */
     private returnStatusImg(buyerId:string){
         if (buyerId === this.userId) {
-            return 'comp/guessing/img_yixuan_select20.png'
+            return 'comp/img_yixuan_select20.png'
         }else if(+buyerId > 10){ //用户id必大于10，作为判断依据
-            return 'comp/guessing/img_no_select20.png'
+            return 'comp/img_no_select20.png'
         }else if(buyerId === '2') {
-            return 'comp/guessing/img_ok_select20.png'
+            return 'comp/img_ok_select20.png'
         }else {
-            return 'comp/guessing/img_kexuan_select20.png'
+            return 'comp/img_kexuan_select20.png'
         }
     }
 
