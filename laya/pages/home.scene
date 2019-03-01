@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":59,
+    "selectedBox":64,
+    "selecteID":114,
     "searchKey":"Scene,home,home",
     "props":{"width":750,"var":"home","sceneColor":"#09083c","runtime":"script/Home.ts","renderType":"render","name":"home","height":1334},
     "nodeParent":-1,
@@ -232,18 +232,19 @@
             "props":{"y":0,"x":0,"height":80},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":64,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":0,"x":0,"width":80,"height":80},
+                    "searchKey":"Sprite,go_center",
+                    "props":{"y":0,"x":0,"width":80,"var":"go_center","height":80},
                     "nodeParent":64,
-                    "label":"Sprite",
+                    "label":"go_center",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -266,6 +267,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,AccountBox",
                     "props":{"y":15,"x":180,"width":260,"var":"AccountBox","skin":"comp/home/img_region_bg.png","left":180,"height":50},
@@ -331,6 +333,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,rechargeBox",
                     "props":{"y":15,"x":460,"width":260,"var":"rechargeBox","skin":"comp/home/img_region_bg.png","left":460,"height":50},
@@ -343,6 +346,7 @@
                     "compId":19,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"comp/home/img_usdt.png","left":15,"centerY":0},
@@ -356,6 +360,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,btnRecharge",
                             "props":{"var":"btnRecharge","skin":"comp/home/img_plus.png","right":15,"centerY":0},
@@ -369,6 +374,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,myAmount",
                             "props":{"y":14,"var":"myAmount","valign":"middle","text":"---","left":50,"fontSize":24,"color":"#fefeff","align":"center"},

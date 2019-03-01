@@ -26,6 +26,7 @@ export default class Home extends ui.homeUI {
         this.btnRecharge.on(Laya.Event.CLICK, this, this.btnRechargeFunc);
         this.buyHelp.on(Laya.Event.CLICK, this, this.openBuyHelp)
         this.putin.on(Laya.Event.CLICK, this, this.putInFunc)
+        this.go_center.on(Laya.Event.CLICK, this, this.goCenter)
     }
     onEnable(): void {
         this.getUserInfo()
@@ -53,7 +54,7 @@ export default class Home extends ui.homeUI {
         this.rechargeDialog = new rechargeDialog();
         this.rechargeDialog.y = Laya.stage.height - this.rechargeDialog.height;
         this.rechargeDialog.popupEffect = Laya.Handler.create(this, this.rechargeDialogPopupFun);
-        this.rechargeDialog.closeEffect = Laya.Handler.create(this,this.rechargeDialogCloseFun);
+        this.rechargeDialog.closeEffect = Laya.Handler.create(this, this.rechargeDialogCloseFun);
         this.rechargeDialog.popup();
     }
     /**空投 */
@@ -64,29 +65,22 @@ export default class Home extends ui.homeUI {
 
     /**获取个人信息 */
     private getUserInfo() {
-        return new Promise((resolve, reject) => {
-            post('/user/login', {
-                orgId: 1,
-                account: '18900000003'
-            }).then((res: any) => {
-                api.getUserInfo().then((res: any) => {
-                    this.nickName.text = res.userInfo.nickName
-                    this.myAmount.text = `${utils.toDecimal(res.userInfo.money, 2)}`
-                    this.avatar.skin = res.userInfo.avatar;
-                    // 保存用户信息
-                    GameModel.getInstance().setUserInfo(res.userInfo)
-                    // 连接websocket
-                    Socket.createSocket()
-                }).catch((err: any) => {
-                    console.log(err.message);
-                    // 获取信息失败更新信息
-                    GameModel.getInstance().setUserInfo({
-                        userInfo: {}
-                    })
-                    // 连接websocket
-                    Socket.createSocket()
-                })
+        api.getUserInfo().then((res: any) => {
+            this.nickName.text = res.userInfo.nickName
+            this.myAmount.text = `${utils.toDecimal(res.userInfo.money, 2)}`
+            this.avatar.skin = res.userInfo.avatar;
+            // 保存用户信息
+            GameModel.getInstance().setUserInfo(res.userInfo)
+            // 连接websocket
+            Socket.createSocket()
+        }).catch((err: any) => {
+            console.log(err.message);
+            // 获取信息失败更新信息
+            GameModel.getInstance().setUserInfo({
+                userInfo: {}
             })
+            // 连接websocket
+            Socket.createSocket()
         })
     }
 
@@ -117,21 +111,25 @@ export default class Home extends ui.homeUI {
         window.location.href = 'https://m.xyhj.io/buyHelp.html';
     }
 
+    private goCenter() {
+        window.location.href = 'https://t-center.xyhj.io/';
+    }
+
     /**弹出充值的效果 */
     rechargeDialogPopupFun(dialog: Laya.Dialog) {
         dialog.scale(1, 1);
         dialog._effectTween = Laya.Tween.from(dialog,
-            { x: 0, y: Laya.stage.height + dialog.height},
+            { x: 0, y: Laya.stage.height + dialog.height },
             300,
             Laya.Ease.linearNone,
             Laya.Handler.create(Laya.Dialog.manager, Laya.Dialog.manager.doOpen, [dialog]), 0, false, false);
     }
     /**关闭充值的效果 */
-    rechargeDialogCloseFun (dialog: Laya.Dialog) {
+    rechargeDialogCloseFun(dialog: Laya.Dialog) {
         dialog._effectTween = Laya.Tween.to(dialog,
-            { x: 0, y: Laya.stage.height + dialog.height},
+            { x: 0, y: Laya.stage.height + dialog.height },
             300,
-            Laya.Ease.linearNone, 
+            Laya.Ease.linearNone,
             Laya.Handler.create(Laya.Dialog.manager, Laya.Dialog.manager.doClose, [dialog]), 0, false, false);
     }
 }

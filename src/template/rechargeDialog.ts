@@ -19,11 +19,11 @@ export default class RechargeDialog extends ui.template.rechargeDialogUI {
 
     /**快捷充值 */
     private quickRechargeFunc(){
-        alert('快捷充值')
+        window.location.href = 'https://t-center.xyhj.io/#/chargeKuaiBi';
     }
     /**USDT钱包提币 */
     withdrawFunc(){
-        alert('USDT钱包提币')
+        window.location.href = 'https://t-center.xyhj.io/#/walletCharge';
     }
 }
 

@@ -92,6 +92,7 @@ export module ui {
 		public bg_ani:Laya.FrameAnimation;
 		public bg_ani2:Laya.FrameAnimation;
 		public bg_animation:Laya.Sprite;
+		public go_center:Laya.Sprite;
 		public tuichu:Laya.Image;
 		public AccountBox:Laya.Image;
 		public avatar:Laya.Image;
