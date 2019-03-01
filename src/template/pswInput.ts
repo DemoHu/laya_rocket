@@ -67,6 +67,7 @@ export default class IptPswDom extends ui.template.InputPwdDialogUI {
     /**关闭密码框 */
     private closeFunc(){
         this.close();
+        this.IptPsw.text = '';
     }
     /**输入框获得焦点 */
     private onFocus(){
