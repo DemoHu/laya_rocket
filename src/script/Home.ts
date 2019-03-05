@@ -112,7 +112,8 @@ export default class Home extends ui.homeUI {
     }
 
     private goCenter() {
-        window.location.href = 'https://t-center.xyhj.io/';
+        const domain = document.domain;
+        window.location.href = `https://${domain}/#/main_Page`
     }
 
     /**弹出充值的效果 */

@@ -312,7 +312,7 @@ export module ui.template {
     export class trendListUI extends Laya.Scene {
 		public period:Laya.Label;
 		public hitCode:Laya.Label;
-		public btnBuy:Laya.Image;
+		public btn_buy:Laya.Image;
 		public odd_even:Laya.Label;
 		public isBig:Laya.Label;
         constructor(){ super()}

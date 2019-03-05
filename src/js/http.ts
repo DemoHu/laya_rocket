@@ -11,10 +11,13 @@ axios.defaults.timeout = 10000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.withCredentials = true;  //请求携带cookie
 // axios.defaults.crossDomain = true;  //请求携带额外数据(不包含cookie)
-axios.defaults.baseURL = 'https://t-api.xyhj.io/v1/w/zh/'
 
-
-
+const domain = document.domain;
+if (domain.indexOf('t-center') >= 0 || domain === 'localhost') {
+  axios.defaults.baseURL = 'https://t-api.xyhj.io/v1/w/zh/'
+} else {
+  axios.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh'
+}
 
 /**将post数据转为formData格式 */
 function formDataFunc(params:Object) {

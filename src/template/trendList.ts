@@ -13,7 +13,7 @@ export default class trendList extends ui.template.trendListUI {
     private _item:any;
     constructor() {
         super()
-        this.btnBuy.on(Laya.Event.CLICK,this,this.btnBuyFunc)
+        this.btn_buy.on(Laya.Event.CLICK,this,this.btnBuyFunc)
     }
     set dataSource(item:any){
         this._item = item;
@@ -24,10 +24,10 @@ export default class trendList extends ui.template.trendListUI {
             this.isBig.text = item.is === 0 ? '-' : item.isBig ? '大' : '小';
 
             if (item.is === 0) {
-                this.btnBuy.visible = true;
+                this.btn_buy.visible = true;
                 this.hitCode.visible = false;
             }else{
-                this.btnBuy.visible = false;
+                this.btn_buy.visible = false;
                 this.hitCode.visible = true;
             }
             // 奇偶文字颜色

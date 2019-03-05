@@ -59,10 +59,10 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,btnBuy",
-            "props":{"y":22,"x":232,"visible":false,"var":"btnBuy","skin":"comp/img_buy.png"},
+            "searchKey":"Image,btn_buy",
+            "props":{"y":22,"x":232,"visible":false,"var":"btn_buy","skin":"comp/img_buy.png"},
             "nodeParent":2,
-            "label":"btnBuy",
+            "label":"btn_buy",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
