@@ -87,7 +87,11 @@ export default class Guessing extends ui.guessingUI {
 
     /**购买 */
     private buyFunc():void {
-        if (this.getSelectNumber() <= 0) {
+        let userInfo = Object.keys(GameModel.getInstance().userInfo);
+        if (userInfo.length === 0) {
+            console.log('未登录跳转登录');
+            window.location.href = `https://${document.domain}/#/sign_one`
+        }else if (this.getSelectNumber() <= 0) {
             Toast.show('请选择购买号码')
         }else if(this.totalPrice > this.myAmount){
             Toast.show('余额不足')

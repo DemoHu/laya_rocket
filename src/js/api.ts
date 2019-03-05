@@ -19,6 +19,7 @@ export default {
                     GameModel.getInstance().setUserInfo(res.userInfo)
                     resolve(res)
                 } else {
+                    GameModel.getInstance().setUserInfo({})
                     reject(res)
                 }
             })

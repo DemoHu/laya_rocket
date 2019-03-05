@@ -3,7 +3,6 @@ import Assistant from "./script/Assistant"
 import PageScript from "./publicScript/PageScript"
 import Screen from "./publicScript/Screen"
 import trendList from "./template/trendList"
-import previousRecords from "./template/previousRecords"
 import Card from "./script/Card"
 import grandPrix from "./script/grandPrix"
 import PageNavScript from "./publicScript/PageNavScript"
@@ -15,6 +14,7 @@ import priHistoryScene from "./script/priHistoryScene"
 import priHistory from "./template/priHistory"
 import Record from "./script/Record"
 import joinRecords from "./template/joinRecords"
+import previousRecords from "./template/previousRecords"
 import shortListed from "./script/shortListed"
 import shortListedList from "./template/shortListedList"
 import pswInput from "./template/pswInput"
@@ -47,7 +47,6 @@ export default class GameConfig{
         reg("publicScript/PageScript.ts",PageScript);
         reg("publicScript/Screen.ts",Screen);
         reg("template/trendList.ts",trendList);
-        reg("template/previousRecords.ts",previousRecords);
         reg("script/Card.ts",Card);
         reg("script/grandPrix.ts",grandPrix);
         reg("publicScript/PageNavScript.ts",PageNavScript);
@@ -59,6 +58,7 @@ export default class GameConfig{
         reg("template/priHistory.ts",priHistory);
         reg("script/Record.ts",Record);
         reg("template/joinRecords.ts",joinRecords);
+        reg("template/previousRecords.ts",previousRecords);
         reg("script/shortListed.ts",shortListed);
         reg("template/shortListedList.ts",shortListedList);
         reg("template/pswInput.ts",pswInput);

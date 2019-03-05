@@ -9,6 +9,11 @@ import { ui } from '../ui/layaMaxUI'
 import api from '../js/api';
 
 export default class Record extends ui.recordUI {
+
+    static readonly HALF_SCROLL_ELASTIC_DISTANCE: number = 100;
+    private _isScrollOverElasticDistance: boolean;
+    private page:number = 1;
+
     constructor(){
         super()
 
@@ -19,15 +24,29 @@ export default class Record extends ui.recordUI {
 
     onEnable():void{
         this.getMyOrders();
-        this.getGoodsHistory();
+        // this.getGoodsHistory();
+
+        //参与记录滚动加载更多
+        this.joinList.scrollBar.changeHandler = Laya.Handler.create(this,this.onJoinListScrollChange,null,false)
+        this.joinList.scrollBar.on(Laya.Event.END, this, this.onJoinListScrollEnd)
+        //往期记录滚动加载更多
+        this.previoousList.scrollBar.changeHandler = Laya.Handler.create(this,this.onPrevioousListScrollChange,null,false)
+        this.previoousList.scrollBar.on(Laya.Event.END, this, this.onPrevioousListScrollEnd)
     }
 
     /**获取参与记录 */
-    private getMyOrders(page?:number){
+    private getMyOrders(page = 1){
         api.getMyOrders(page).then((res:any)=>{
-            this.joinList.repeatY = res.length;
-            this.joinList.array = res;
-            this.joinList.visible = true;
+            if (this.joinList.array !== null) {
+                this.joinList.array = [...this.joinList.array,...res]
+            }else{
+                this.joinList.array = res;
+            }
+            if (this.joinList.array.length > 0) {
+                this.joinList.visible = true;
+            }else{
+                this.noData.visible = true;
+            }
         }).catch((err:any)=>{
             this.noData.visible = true;
             console.log(err.message);
@@ -36,9 +55,18 @@ export default class Record extends ui.recordUI {
     /**获取往期记录 */
     private getGoodsHistory(page?:number){
         api.getGoodsHistory(page).then((res:any)=>{
-            this.previoousList.repeatY = res.length;
-            this.previoousList.array = res;
+            if (this.previoousList.array !== null) {
+                this.previoousList.array = [...this.previoousList.array,...res]
+            }else{
+                this.previoousList.array = res;
+            }
+            if (this.previoousList.array.length > 0) {
+                this.previoousList.visible = true;
+            }else{
+                this.noData.visible = true;
+            }
         }).catch((err:any)=>{
+            this.noData.visible = true;
             console.log(err.message);
         })
     }
@@ -48,30 +76,21 @@ export default class Record extends ui.recordUI {
      * @param type 1:参与记录  2：往期记录
      */
     private tabSwitch(type:number){
+        this.page = 1;
         if (type === 1) {
-            this.canyu.skin = 'comp/guessing/img_tab_active.png';
-            this.wangqi.skin = 'comp/guessing/img_tab.png';
+            this.canyu.skin = 'comp/img_tab_active.png';
+            this.wangqi.skin = 'comp/img_tab.png';
             this.getMyOrders()
-            if (this.joinList.array === null || this.joinList.array.length === 0) {
-                this.noData.visible = true;
-            }else {
-                this.noData.visible = false;
-                this.joinList.visible = true;
-            }
             this.previoousList.scrollTo(0)
             this.previoousList.visible = false;
+            this.previoousList.array = [];
         }else{
-            this.wangqi.skin = 'comp/guessing/img_tab_active.png';
-            this.canyu.skin = 'comp/guessing/img_tab.png';
+            this.wangqi.skin = 'comp/img_tab_active.png';
+            this.canyu.skin = 'comp/img_tab.png';
             this.getGoodsHistory();
-            if (this.previoousList.array === null || this.previoousList.array.length === 0) {
-                this.noData.visible = true;
-            }else {
-                this.noData.visible = false;
-                this.previoousList.visible = true;
-            }
             this.joinList.scrollTo(0);
             this.joinList.visible = false;
+            this.joinList.array = [];
         }
     }
 
@@ -80,5 +99,36 @@ export default class Record extends ui.recordUI {
         //列表高度适配 = 屏幕高度 - (banner + tabbar)
         this.joinList.height = this.height - 430;
         this.previoousList.height = this.height - 430;
+    }
+
+    /**参与记录列表滚动 */
+    private onJoinListScrollChange(v:any) {
+        if (v > this.joinList.scrollBar.max + Record.HALF_SCROLL_ELASTIC_DISTANCE) {
+            this._isScrollOverElasticDistance = true;
+        }
+    }
+    private onJoinListScrollEnd(){
+        if (this._isScrollOverElasticDistance) {
+            this._isScrollOverElasticDistance = false;
+            // this.event(GameEvent.NEXT_PAGE);
+            this.page = this.page + 1;
+            this.getMyOrders(this.page)
+            // console.log(LogFlag.get(LogFlag.UI), "next page");
+            
+        }
+    }
+
+    /**参与记录列表滚动 */
+    private onPrevioousListScrollChange(v:any) {
+        if (v > this.previoousList.scrollBar.max + Record.HALF_SCROLL_ELASTIC_DISTANCE) {
+            this._isScrollOverElasticDistance = true;
+        }
+    }
+    private onPrevioousListScrollEnd(){
+        if (this._isScrollOverElasticDistance) {
+            this._isScrollOverElasticDistance = false;
+            this.page = this.page + 1;
+            this.getGoodsHistory(this.page)
+        }
     }
 }

@@ -1,6 +1,6 @@
 import GameConfig from "./GameConfig";
 import RocketDialog from "./view/rocketDialog";
-import loadingResList from "./loadingResList";
+import { loadingResList , loadingResList1 } from './loadingResList'
 
 class Main {
 	constructor() {
@@ -38,7 +38,9 @@ class Main {
 	}
 	onGameResLoaded():void {
 		//加载IDE指定的场景
-		GameConfig.startScene && Laya.Scene.open(GameConfig.startScene);
+		GameConfig.startScene && Laya.Scene.open(GameConfig.startScene,true,null,Laya.Handler.create(this,(()=>{
+			Laya.loader.load(loadingResList1);
+		})));
 	}
 }
 //激活启动类

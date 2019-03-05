@@ -69,16 +69,9 @@ export default class Home extends ui.homeUI {
             this.nickName.text = res.userInfo.nickName
             this.myAmount.text = `${utils.toDecimal(res.userInfo.money, 2)}`
             this.avatar.skin = res.userInfo.avatar;
-            // 保存用户信息
-            GameModel.getInstance().setUserInfo(res.userInfo)
             // 连接websocket
             Socket.createSocket()
         }).catch((err: any) => {
-            console.log(err.message);
-            // 获取信息失败更新信息
-            GameModel.getInstance().setUserInfo({
-                userInfo: {}
-            })
             // 连接websocket
             Socket.createSocket()
         })
@@ -112,8 +105,7 @@ export default class Home extends ui.homeUI {
     }
 
     private goCenter() {
-        const domain = document.domain;
-        window.location.href = `https://${domain}/#/main_Page`
+        window.location.href = `https://${document.domain}/#/main_Page`
     }
 
     /**弹出充值的效果 */

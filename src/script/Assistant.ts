@@ -15,6 +15,10 @@ export default class Assistant extends ui.assistantUI {
     private cateListArr:any = [];
     private selectGoodsType:string = '';
     private tabType:number = 1;
+
+    static readonly HALF_SCROLL_ELASTIC_DISTANCE: number = 100;
+    private _isScrollOverElasticDistance: boolean;
+    private page:number = 1;
     constructor(){
         super()
         this.btn_trend.on(Laya.Event.CLICK,this,this.tabSwitch,[1])
@@ -25,6 +29,10 @@ export default class Assistant extends ui.assistantUI {
     onEnable():void{  
         this.getGoodsCateList()
         this.cateSwitch()
+
+        //走势分析滚动加载更多
+        this.trendList.scrollBar.changeHandler = Laya.Handler.create(this,this.onTrendListScrollChange,null,false)
+        this.trendList.scrollBar.on(Laya.Event.END, this, this.onTrendListScrollEnd)
     }
     
     /**获取商品类型 */
@@ -45,10 +53,18 @@ export default class Assistant extends ui.assistantUI {
 
 
     /**获取走势列表 */
-    private getGoodsTrend(goodsType:string){
-        api.getGoodsTrend(goodsType).then((res:any)=>{
-            this.trendList.array = res;
-            this.trendList.visible = true;
+    private getGoodsTrend(goodsType:string,page = 1){
+        api.getGoodsTrend(goodsType,page).then((res:any)=>{
+            if (this.trendList.array !== null) {
+                this.trendList.array = [...this.trendList.array,...res]
+            }else{
+                this.trendList.array = res;
+            }
+            if (this.trendList.array.length > 0) {
+                this.trendList.visible = true;
+            }else{
+                this.noData.visible = true;
+            }
         }).catch((err:any)=>{
             this.noData.visible = true;
             console.log(err.message);
@@ -97,7 +113,9 @@ export default class Assistant extends ui.assistantUI {
         this.cateTabList.selectHandler = new Laya.Handler(this, (selectedIndex: any)=> {
             this.selectGoodsType = this.cateListArr[selectedIndex].goodsType;
             if (this.tabType === 1) {
-                this.getGoodsTrend(this.selectGoodsType)
+                this.trendList.array = [];
+                this.page = 1;
+                this.getGoodsTrend(this.selectGoodsType,this.page)
             }else {
                 console.log('暂未开放',this.selectGoodsType);
             }
@@ -119,6 +137,21 @@ export default class Assistant extends ui.assistantUI {
         this.prebuy.height = this.height - 600;
         const prebuyNumber = this.prebuy.height / 100;
         this.trendList.repeatY = Math.ceil(prebuyNumber)
+    }
+
+    /**参与记录列表滚动 */
+    private onTrendListScrollChange(v:any) {
+        if (v > this.trendList.scrollBar.max + Assistant.HALF_SCROLL_ELASTIC_DISTANCE) {
+            this._isScrollOverElasticDistance = true;
+        }
+    }
+    private onTrendListScrollEnd(){
+        if (this._isScrollOverElasticDistance) {
+            this._isScrollOverElasticDistance = false;
+            this.page = this.page + 1;
+            this.getGoodsTrend(this.selectGoodsType,this.page)
+            
+        }
     }
    
 }

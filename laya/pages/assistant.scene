@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":11,
+    "selectedBox":18,
+    "selecteID":20,
     "searchKey":"Scene,assistant,assistant",
     "props":{"width":750,"var":"assistant","sceneColor":"#0a0635","runtime":"script/Assistant.ts","name":"assistant","height":1334},
     "nodeParent":-1,
@@ -293,14 +293,13 @@
             "props":{"y":506,"x":0,"width":750,"visible":false,"var":"trendList","vScrollBarSkin":" ","spaceY":1,"repeatY":10,"repeatX":1,"elasticEnabled":true},
             "nodeParent":2,
             "label":"trendList",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":17,
             "child":[
                 {
-                    "x":30,
                     "type":"UIView",
                     "source":"template/trendList.scene",
                     "searchKey":"UIView,render",
@@ -323,27 +322,12 @@
             "nodeParent":2,
             "label":"prebuy",
             "isOpen":true,
-            "isDirectory":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":18,
             "child":[
-                {
-                    "x":30,
-                    "type":"UIView",
-                    "source":"template/previousRecords.scene",
-                    "searchKey":"UIView,render",
-                    "props":{"visible":false,"renderType":"render","name":"render"},
-                    "nodeParent":18,
-                    "label":"render",
-                    "isDirectory":false,
-                    "isAniNode":false,
-                    "hasChild":false,
-                    "compId":20,
-                    "child":[
-                        ],
-                    "$HIDDEN":true
-                }],
+                ],
             "$HIDDEN":true
         },
         {

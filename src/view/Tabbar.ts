@@ -67,27 +67,30 @@ export class Tabbar extends ui.TabbarUI {
 
     /**点击tabbar事件 */
     onClickTab() {
-        let scene:string = Tabbar.SCENES[this.tab.selectedIndex]
-        Laya.Scene.open(scene, true, this._openSceneParam);
-        this._openSceneParam = null;
-
-        this.tab.items.forEach(item=>{
-            const tabBtn: Laya.Button = item as Laya.Button;
-            const imgBtn: Laya.Button = tabBtn.getChildAt(0) as Laya.Button;
-            imgBtn.selected = false;
-        })
-        tabbarArr.forEach(item=>{
-            if (item === scene) {
-                const tabBtn: Laya.Button = this.tab.selection as Laya.Button;
+        let userInfo = Object.keys(GameModel.getInstance().userInfo);
+        let scene:string = Tabbar.SCENES[this.tab.selectedIndex];
+        if (userInfo.length === 0 && (scene === 'record.scene' || scene === 'assistant.scene')) {
+            console.log('未登录跳转登录');
+            window.location.href = `https://${document.domain}/#/sign_one`
+        }else {
+            Laya.Scene.open(scene, true, this._openSceneParam);
+            this._openSceneParam = null;
+            this.tab.items.forEach(item=>{
+                const tabBtn: Laya.Button = item as Laya.Button;
                 const imgBtn: Laya.Button = tabBtn.getChildAt(0) as Laya.Button;
-                imgBtn.selected = true;
+                imgBtn.selected = false;
+            })
+            tabbarArr.forEach(item=>{
+                if (item === scene) {
+                    const tabBtn: Laya.Button = this.tab.selection as Laya.Button;
+                    const imgBtn: Laya.Button = tabBtn.getChildAt(0) as Laya.Button;
+                    imgBtn.selected = true;
+                }
+            })
+            //关闭小红点
+            if (scene === 'record.scene') {
+                GameModel.getInstance().noticeFunc(false)
             }
-        })
-
-        //关闭小红点
-        if (scene === 'record.scene') {
-            GameModel.getInstance().noticeFunc(false)
         }
-        
     }
 }
