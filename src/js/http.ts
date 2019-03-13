@@ -14,8 +14,8 @@ axios.defaults.withCredentials = true;  //请求携带cookie
 
 const domain = document.domain;
 if (domain.indexOf('t-center') >= 0 || domain === 'localhost') {
-  // axios.defaults.baseURL = 'https://t-api.xyhj.io/v1/w/zh/'
-  axios.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh'
+  axios.defaults.baseURL = 'https://t-api.xyhj.io/v1/w/zh/'
+  // axios.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh'
 } else {
   axios.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh'
 }
