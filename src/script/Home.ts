@@ -23,7 +23,7 @@ export default class Home extends ui.homeUI {
 
     constructor() {
         super()
-        this.btnRecharge.on(Laya.Event.CLICK, this, this.btnRechargeFunc);
+        this.rechargeBox.on(Laya.Event.CLICK, this, this.btnRechargeFunc);
         this.buyHelp.on(Laya.Event.CLICK, this, this.openBuyHelp)
         this.putin.on(Laya.Event.CLICK, this, this.putInFunc)
         this.go_center.on(Laya.Event.CLICK, this, this.goCenter)

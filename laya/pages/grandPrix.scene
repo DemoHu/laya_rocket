@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":28,
+    "selecteID":23,
     "searchKey":"Scene",
     "props":{"width":750,"sceneColor":"#fff","runtime":"script/grandPrix.ts","height":1334},
     "nodeParent":-1,
-    "maxID":86,
+    "maxID":87,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -55,14 +55,13 @@
             "props":{"y":0,"x":0,"skin":"comp/img_rank01.png"},
             "nodeParent":2,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":9,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":173,"x":137,"width":162,"skin":"comp/img_rocket_prix_title.png","pivotY":18,"pivotX":81,"height":36},
@@ -76,7 +75,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":173,"x":267,"width":48,"pivotY":13,"pivotX":24,"height":25},
@@ -89,7 +87,6 @@
                     "compId":11,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":13,"x":12,"width":23,"skin":"comp/img_rocket_time.png","pivotY":13,"pivotX":12,"height":25},
@@ -103,7 +100,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,CountDown",
                             "props":{"y":12,"x":90,"width":125,"var":"CountDown","text":"--:--:--","pivotY":16,"pivotX":62,"height":32,"fontSize":32,"color":"#ff871d"},
@@ -118,7 +114,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":224,"x":58,"skin":"comp/img_rocket_bg.png"},
@@ -131,7 +126,6 @@
                     "compId":14,
                     "child":[
                         {
-                            "x":45,
                             "type":"HBox",
                             "searchKey":"HBox",
                             "props":{"y":19,"x":58,"space":10},
@@ -144,7 +138,6 @@
                             "compId":85,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,bonus",
                                     "props":{"y":12,"x":0,"var":"bonus","text":"---","fontSize":46,"color":"#fff","bold":true},
@@ -158,7 +151,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":22,"text":"USDT","fontSize":28,"color":"#FFF"},
@@ -174,7 +166,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,btn_history",
                     "props":{"y":367,"x":58,"width":200,"var":"btn_history","height":50},
@@ -187,7 +178,6 @@
                     "compId":18,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":11,"x":44,"text":"历史记录","fontSize":28,"color":"#cdccee"},
@@ -201,7 +191,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Rect",
                             "searchKey":"Rect",
                             "props":{"width":200,"lineWidth":1,"height":50,"fillColor":"#241f7b"},
@@ -318,214 +307,228 @@
                 {
                     "x":30,
                     "type":"Panel",
-                    "searchKey":"Panel",
-                    "props":{"x":30.5,"width":650,"vScrollBarSkin":" ","top":107,"elasticEnabled":true,"bottom":100},
+                    "searchKey":"Panel,listBox",
+                    "props":{"x":30.5,"width":650,"var":"listBox","vScrollBarSkin":" ","top":107,"height":600,"elasticEnabled":true},
                     "nodeParent":23,
-                    "label":"Panel",
-                    "isOpen":false,
+                    "label":"listBox",
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":81,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
-                            "searchKey":"Sprite,box1",
-                            "props":{"y":0,"x":0,"width":650,"visible":false,"var":"box1"},
+                            "searchKey":"Sprite",
+                            "props":{"y":0,"x":0,"height":1711},
                             "nodeParent":81,
-                            "label":"box1",
-                            "isOpen":false,
+                            "label":"Sprite",
+                            "isOpen":null,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
-                            "compId":82,
+                            "compId":86,
                             "child":[
                                 {
-                                    "type":"Label",
-                                    "searchKey":"Label,alone1",
-                                    "props":{"y":0,"x":0,"var":"alone1","fontSize":30,"color":"#ff871d"},
-                                    "nodeParent":82,
-                                    "label":"alone1",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":41,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "searchKey":"Label,Proportion1",
-                                    "props":{"y":0,"x":519.9619140625,"var":"Proportion1","fontSize":26,"color":"#2f288a","align":"right"},
-                                    "nodeParent":82,
-                                    "label":"Proportion1",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":42,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"List",
-                                    "searchKey":"List,prixList1",
-                                    "props":{"y":52,"x":0,"width":650,"var":"prixList1","repeatY":1,"repeatX":1},
-                                    "nodeParent":82,
-                                    "label":"prixList1",
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite,box1",
+                                    "props":{"y":0,"x":0,"width":650,"visible":false,"var":"box1"},
+                                    "nodeParent":86,
+                                    "label":"box1",
                                     "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
-                                    "compId":40,
+                                    "compId":82,
                                     "child":[
                                         {
-                                            "type":"UIView",
-                                            "source":"template/prixList.scene",
-                                            "searchKey":"UIView,render",
-                                            "props":{"renderType":"render","name":"render"},
-                                            "nodeParent":40,
-                                            "label":"render",
+                                            "type":"Label",
+                                            "searchKey":"Label,alone1",
+                                            "props":{"y":0,"x":0,"var":"alone1","fontSize":30,"color":"#ff871d"},
+                                            "nodeParent":82,
+                                            "label":"alone1",
+                                            "isOpen":true,
                                             "isDirectory":false,
-                                            "isAniNode":false,
+                                            "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":44,
+                                            "compId":41,
                                             "child":[
                                                 ]
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "searchKey":"Label,Proportion1",
+                                            "props":{"y":0,"x":519.9619140625,"var":"Proportion1","fontSize":26,"color":"#2f288a","align":"right"},
+                                            "nodeParent":82,
+                                            "label":"Proportion1",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":42,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"List",
+                                            "searchKey":"List,prixList1",
+                                            "props":{"y":52,"x":0,"width":650,"var":"prixList1","repeatY":1,"repeatX":1},
+                                            "nodeParent":82,
+                                            "label":"prixList1",
+                                            "isOpen":false,
+                                            "isDirectory":true,
+                                            "isAniNode":true,
+                                            "hasChild":true,
+                                            "compId":40,
+                                            "child":[
+                                                {
+                                                    "type":"UIView",
+                                                    "source":"template/prixList.scene",
+                                                    "searchKey":"UIView,render",
+                                                    "props":{"renderType":"render","name":"render"},
+                                                    "nodeParent":40,
+                                                    "label":"render",
+                                                    "isDirectory":false,
+                                                    "isAniNode":false,
+                                                    "hasChild":false,
+                                                    "compId":44,
+                                                    "child":[
+                                                        ]
+                                                }]
                                         }]
-                                }]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite,box2",
-                            "props":{"y":175,"x":0,"width":650,"visible":false,"var":"box2"},
-                            "nodeParent":81,
-                            "label":"box2",
-                            "isOpen":false,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":83,
-                            "child":[
-                                {
-                                    "type":"Label",
-                                    "searchKey":"Label,alone2",
-                                    "props":{"var":"alone2","text":"独得 2323 USDT","fontSize":30,"color":"#ff871d"},
-                                    "nodeParent":83,
-                                    "label":"alone2",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":45,
-                                    "child":[
-                                        ]
                                 },
                                 {
-                                    "type":"Label",
-                                    "searchKey":"Label,Proportion2",
-                                    "props":{"x":519,"var":"Proportion2","text":"占奖池25%","fontSize":26,"color":"#2f288a","align":"right"},
-                                    "nodeParent":83,
-                                    "label":"Proportion2",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":46,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"List",
-                                    "searchKey":"List,prixList2",
-                                    "props":{"y":54,"width":650,"var":"prixList2","repeatY":4,"repeatX":1},
-                                    "nodeParent":83,
-                                    "label":"prixList2",
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite,box2",
+                                    "props":{"y":175,"x":0,"width":650,"visible":false,"var":"box2"},
+                                    "nodeParent":86,
+                                    "label":"box2",
                                     "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
-                                    "compId":47,
+                                    "compId":83,
                                     "child":[
                                         {
-                                            "type":"UIView",
-                                            "source":"template/prixList.scene",
-                                            "searchKey":"UIView,render",
-                                            "props":{"renderType":"render","name":"render"},
-                                            "nodeParent":47,
-                                            "label":"render",
+                                            "type":"Label",
+                                            "searchKey":"Label,alone2",
+                                            "props":{"var":"alone2","text":"独得 2323 USDT","fontSize":30,"color":"#ff871d"},
+                                            "nodeParent":83,
+                                            "label":"alone2",
+                                            "isOpen":true,
                                             "isDirectory":false,
-                                            "isAniNode":false,
+                                            "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":48,
+                                            "compId":45,
                                             "child":[
                                                 ]
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "searchKey":"Label,Proportion2",
+                                            "props":{"x":519,"var":"Proportion2","text":"占奖池25%","fontSize":26,"color":"#2f288a","align":"right"},
+                                            "nodeParent":83,
+                                            "label":"Proportion2",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":46,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"List",
+                                            "searchKey":"List,prixList2",
+                                            "props":{"y":54,"width":650,"var":"prixList2","repeatY":4,"repeatX":1},
+                                            "nodeParent":83,
+                                            "label":"prixList2",
+                                            "isOpen":false,
+                                            "isDirectory":true,
+                                            "isAniNode":true,
+                                            "hasChild":true,
+                                            "compId":47,
+                                            "child":[
+                                                {
+                                                    "type":"UIView",
+                                                    "source":"template/prixList.scene",
+                                                    "searchKey":"UIView,render",
+                                                    "props":{"renderType":"render","name":"render"},
+                                                    "nodeParent":47,
+                                                    "label":"render",
+                                                    "isDirectory":false,
+                                                    "isAniNode":false,
+                                                    "hasChild":false,
+                                                    "compId":48,
+                                                    "child":[
+                                                        ]
+                                                }]
                                         }]
-                                }]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite,box3",
-                            "props":{"y":657,"x":0,"width":650,"visible":false,"var":"box3"},
-                            "nodeParent":81,
-                            "label":"box3",
-                            "isOpen":false,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":84,
-                            "child":[
-                                {
-                                    "type":"Label",
-                                    "searchKey":"Label,alone3",
-                                    "props":{"var":"alone3","text":"独得 2323 USDT","fontSize":30,"color":"#ff871d"},
-                                    "nodeParent":84,
-                                    "label":"alone3",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":49,
-                                    "child":[
-                                        ]
                                 },
                                 {
-                                    "type":"Label",
-                                    "searchKey":"Label,Proportion3",
-                                    "props":{"y":4,"x":509,"var":"Proportion3","text":"占奖池25%","fontSize":26,"color":"#2f288a","align":"right"},
-                                    "nodeParent":84,
-                                    "label":"Proportion3",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":50,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"List",
-                                    "searchKey":"List,prixList3",
-                                    "props":{"y":55,"width":650,"var":"prixList3","repeatY":10,"repeatX":1},
-                                    "nodeParent":84,
-                                    "label":"prixList3",
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite,box3",
+                                    "props":{"y":657,"x":0,"width":650,"visible":false,"var":"box3"},
+                                    "nodeParent":86,
+                                    "label":"box3",
                                     "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
-                                    "compId":51,
+                                    "compId":84,
                                     "child":[
                                         {
-                                            "type":"UIView",
-                                            "source":"template/prixList.scene",
-                                            "searchKey":"UIView,render",
-                                            "props":{"renderType":"render","name":"render"},
-                                            "nodeParent":51,
-                                            "label":"render",
+                                            "type":"Label",
+                                            "searchKey":"Label,alone3",
+                                            "props":{"var":"alone3","text":"独得 2323 USDT","fontSize":30,"color":"#ff871d"},
+                                            "nodeParent":84,
+                                            "label":"alone3",
+                                            "isOpen":true,
                                             "isDirectory":false,
-                                            "isAniNode":false,
+                                            "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":52,
+                                            "compId":49,
                                             "child":[
                                                 ]
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "searchKey":"Label,Proportion3",
+                                            "props":{"y":4,"x":509,"var":"Proportion3","text":"占奖池25%","fontSize":26,"color":"#2f288a","align":"right"},
+                                            "nodeParent":84,
+                                            "label":"Proportion3",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":50,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"List",
+                                            "searchKey":"List,prixList3",
+                                            "props":{"y":55,"width":650,"var":"prixList3","repeatY":10,"repeatX":1},
+                                            "nodeParent":84,
+                                            "label":"prixList3",
+                                            "isOpen":false,
+                                            "isDirectory":true,
+                                            "isAniNode":true,
+                                            "hasChild":true,
+                                            "compId":51,
+                                            "child":[
+                                                {
+                                                    "type":"UIView",
+                                                    "source":"template/prixList.scene",
+                                                    "searchKey":"UIView,render",
+                                                    "props":{"renderType":"render","name":"render"},
+                                                    "nodeParent":51,
+                                                    "label":"render",
+                                                    "isDirectory":false,
+                                                    "isAniNode":false,
+                                                    "hasChild":false,
+                                                    "compId":52,
+                                                    "child":[
+                                                        ]
+                                                }]
                                         }]
                                 }]
                         }]

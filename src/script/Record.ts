@@ -43,6 +43,7 @@ export default class Record extends ui.recordUI {
                 this.joinList.array = res;
             }
             if (this.joinList.array.length > 0) {
+                this.noData.visible = false;
                 this.joinList.visible = true;
             }else{
                 this.noData.visible = true;
@@ -61,6 +62,7 @@ export default class Record extends ui.recordUI {
                 this.previoousList.array = res;
             }
             if (this.previoousList.array.length > 0) {
+                this.noData.visible = false;
                 this.previoousList.visible = true;
             }else{
                 this.noData.visible = true;

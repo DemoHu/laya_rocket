@@ -36,6 +36,7 @@ export module ui {
 		public bonus:Laya.Label;
 		public btn_history:Laya.Sprite;
 		public rankPrizeHelp:Laya.Sprite;
+		public listBox:Laya.Panel;
 		public box1:Laya.Sprite;
 		public alone1:Laya.Label;
 		public Proportion1:Laya.Label;

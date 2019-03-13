@@ -21,6 +21,8 @@ import { GameModel } from "../js/GameModel";
 
      onEnable(){
         this.getRankToday()
+        Laya.stage.on(Laya.Event.RESIZE,this,this.onResize)
+        this.onResize()
         // 监视火箭数据变动
         GameModel.getInstance().on('getRocketData',this,(res:any) => {
             this.bonus.text = `${utils.toDecimal(res.potMoney,2)}` 
@@ -29,6 +31,9 @@ import { GameModel } from "../js/GameModel";
             }))
         })
      }
+     onDisable():void {
+        Laya.stage.off(Laya.Event.RESIZE,this,this.onResize)
+    }
 
      /**获取大奖信息 */
     private getRankToday(){
@@ -82,5 +87,8 @@ import { GameModel } from "../js/GameModel";
     /**说明 */
     private openRankPrizeHelp(){
         window.location.href = 'https://m.xyhj.io/rankPrizeHelp.html';
+    }
+    private onResize():void {
+        this.listBox.height = Laya.stage.height - 700;
     }
  } 

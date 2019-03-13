@@ -12,12 +12,17 @@ import { Tabbar } from "../view/Tabbar";
 
  export default class grandPrix extends ui.priHistorySceneUI {
      constructor(){
-         super()
+        super()
      }
 
      onEnable(){
         this.getRankHistory()
+        Laya.stage.on(Laya.Event.RESIZE,this,this.onResize)
+        this.onResize()
      }
+    onDisable():void {
+        Laya.stage.off(Laya.Event.RESIZE,this,this.onResize)
+    }
 
      /**获取大奖信息 */
     private getRankHistory(){
@@ -54,5 +59,8 @@ import { Tabbar } from "../view/Tabbar";
         }).catch((err:any)=>{
             console.log(err.message);
         })
+    }
+    private onResize():void {
+        this.listBox.height = Laya.stage.height - 200;
     }
  } 
