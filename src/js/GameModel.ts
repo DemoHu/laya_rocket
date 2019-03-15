@@ -51,6 +51,6 @@ export class GameModel extends Laya.EventDispatcher {
     rocketRanking:object[] = [];
     setRocketRanking(data:object[]){
         this.rocketRanking = data;
-        this.event('getRocketRanking',this.rocketRanking)
+        this.event('getRocketRanking',[this.rocketRanking])
     }
 }

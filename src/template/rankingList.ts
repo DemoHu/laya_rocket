@@ -15,9 +15,9 @@ export default class prixList extends ui.template.rankingListUI {
     }
     set dataSource(item: any) {
         if (item) {
-            this.ranking.text = item.ranking;
-            this.nickName.text = item.nickName;
-            this.uid.text = item.uid;
+            this.ranking.text = item.rank;
+            this.nickName.text = item.nickName.length > 4 ? `${item.nickName.substr(0,4)}...` : item.nickName;
+            this.uid.text = item.userId;
             this.amount.text = item.amount;
         }
     }
