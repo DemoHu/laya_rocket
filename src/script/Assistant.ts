@@ -9,6 +9,7 @@
 import { ui } from "../ui/layaMaxUI";
 import api from "../js/api";
 import { Toast } from "../view/Toast";
+import screenUtils from "../js/screenUtils";
 
 
 export default class Assistant extends ui.assistantUI {
@@ -76,10 +77,13 @@ export default class Assistant extends ui.assistantUI {
      * @param type 1:走势分析  2：预购
      */
     private tabSwitch(type:number){
+        if (screenUtils.getScreen().name === 'record' && this.tabType === type) {
+            return;
+        }
+        this.tabType = type;
         if (type === 2) {
             Toast.show('暂未开放，敬请期待')
         }
-        // this.tabType = type;
         // this.cateTabList.selectedIndex = 0;
         // if (this.tabType === 1) {
         //     this.btn_trend.skin = 'comp/guessing/img_tab_active.png';

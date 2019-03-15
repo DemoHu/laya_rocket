@@ -7,12 +7,14 @@
  */
 import { ui } from '../ui/layaMaxUI'
 import api from '../js/api';
+import screenUtils from '../js/screenUtils';
 
 export default class Record extends ui.recordUI {
 
     static readonly HALF_SCROLL_ELASTIC_DISTANCE: number = 100;
     private _isScrollOverElasticDistance: boolean;
     private page:number = 1;
+    private screenType:number = 1;
 
     constructor(){
         super()
@@ -78,6 +80,10 @@ export default class Record extends ui.recordUI {
      * @param type 1:参与记录  2：往期记录
      */
     private tabSwitch(type:number){
+        if (screenUtils.getScreen().name === 'record' && this.screenType === type) {
+            return;
+        }
+        this.screenType = type;
         this.page = 1;
         if (type === 1) {
             this.canyu.skin = 'comp/img_tab_active.png';

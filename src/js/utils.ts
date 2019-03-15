@@ -6,7 +6,6 @@
  * @desc 工具函数集合
  */
 export default {
-
     /**
      * 千分位格式化
      * @param {number | string} num 格式化数字
