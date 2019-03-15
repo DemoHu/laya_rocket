@@ -15,6 +15,7 @@ import { post } from '../js/http';
 import { Socket } from "../js/socket";
 import { Tabbar } from "../view/Tabbar";
 import rechargeDialog from '../template/rechargeDialog';
+import screenUtils from "../js/screenUtils";
 
 
 export default class Home extends ui.homeUI {
@@ -42,7 +43,9 @@ export default class Home extends ui.homeUI {
         })
         // 是否开奖了，开奖刷新商品列表
         GameModel.getInstance().on('isToggle', this, (res: any) => {
-            this.getGoodsList()
+            if (screenUtils.getScreen().name  === 'home') {
+                this.getGoodsList()
+            }
         })
 
     }
