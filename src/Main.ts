@@ -1,6 +1,7 @@
 import GameConfig from "./GameConfig";
 import RocketDialog from "./view/rocketDialog";
 import { loadingResList , loadingResList1 } from './loadingResList'
+import { Socket } from "./js/socket";
 
 class Main {
 	constructor() {
@@ -33,6 +34,8 @@ class Main {
 	}
 
 	onConfigLoaded(): void {
+		// 连接websocket
+		Socket.createSocket()
 		//预加载
         Laya.loader.load(loadingResList, Laya.Handler.create(this, this.onGameResLoaded),Laya.Handler.create(this,(progress:number)=>{
 			console.log(progress);

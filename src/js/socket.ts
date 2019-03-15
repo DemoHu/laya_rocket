@@ -77,21 +77,25 @@ export class Socket extends Laya.UIComponent {
     }
     /**发送数据 */
     static sendWSPush(type?: any,toggle:any = 1) {
+        let obj = {
+            "appId": "luckyrocketApp", 
+            "event": [
+                {
+                    "type": type, 
+                    "toggle": toggle, 
+                    "expireTime": 1800
+                }
+            ]
+        }
         if (Socket.WS !== null && Socket.WS.readyState === 3) {
             Socket.WS.close();
             Socket.createSocket();//重连
-        } else {
-            let obj = {
-                "appId": "luckyrocketApp", 
-                "event": [
-                    {
-                        "type": type, 
-                        "toggle": toggle, 
-                        "expireTime": 1800
-                    }
-                ]
-            }
+        } else if(Socket.WS.readyState === 1) {
             Socket.WS.send(JSON.stringify(obj))
+        }else if(Socket.WS.readyState === 0){
+            setTimeout(() => {
+                Socket.WS.send(JSON.stringify(obj))
+            }, 2000);
         }
     }
     /**关闭WS */

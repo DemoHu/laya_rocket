@@ -69,11 +69,8 @@ export default class Home extends ui.homeUI {
             this.nickName.text = res.userInfo.nickName
             this.myAmount.text = `${utils.toDecimal(res.userInfo.money, 2)}`
             this.avatar.skin = res.userInfo.avatar;
-            // 连接websocket
-            Socket.createSocket()
         }).catch((err: any) => {
-            // 连接websocket
-            Socket.createSocket()
+           
         })
     }
 

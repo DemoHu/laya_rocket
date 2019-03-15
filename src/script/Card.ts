@@ -35,6 +35,8 @@ export default class Card extends ui.CardUI {
     }
 
     private clickItem():void {
-        Tabbar.getInstance().openScene('guessing.scene',this._dataSource.goodsId)
+        if (this._dataSource !== null) {
+            Tabbar.getInstance().openScene('guessing.scene',this._dataSource.goodsId)
+        }
     }
 }

@@ -47,7 +47,8 @@ export default class trendList extends ui.template.trendListUI {
 
     /**立即购买 */
     private btnBuyFunc(){
-        console.log(this._item.period);
-        Tabbar.getInstance().openScene('guessing.scene',this._item.goodsId)
+        if (this._item !== null) {
+            Tabbar.getInstance().openScene('guessing.scene',this._item.goodsId)
+        }
     }
 }
