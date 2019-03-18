@@ -10,6 +10,7 @@ import prixList from "./template/prixList"
 import Guessing from "./script/Guessing"
 import numberListDomScript from "./template/numberListDomScript"
 import Home from "./script/Home"
+import loadingScene from "./script/loadingScene"
 import priHistoryScene from "./script/priHistoryScene"
 import priHistory from "./template/priHistory"
 import Record from "./script/Record"
@@ -34,7 +35,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="home.scene";
+    static startScene:any="loadingScene.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -54,6 +55,7 @@ export default class GameConfig{
         reg("script/Guessing.ts",Guessing);
         reg("template/numberListDomScript.ts",numberListDomScript);
         reg("script/Home.ts",Home);
+        reg("script/loadingScene.ts",loadingScene);
         reg("script/priHistoryScene.ts",priHistoryScene);
         reg("template/priHistory.ts",priHistory);
         reg("script/Record.ts",Record);

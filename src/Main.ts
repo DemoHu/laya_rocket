@@ -2,6 +2,7 @@ import GameConfig from "./GameConfig";
 import RocketDialog from "./view/rocketDialog";
 import { loadingResList , loadingResList1 } from './loadingResList'
 import { Socket } from "./js/socket";
+import LoadingScene from "./script/loadingScene";
 
 class Main {
 	constructor() {
@@ -12,6 +13,7 @@ class Main {
 		Laya["DebugPanel"] && Laya["DebugPanel"].enable();
 		Laya.stage.scaleMode = GameConfig.scaleMode;
 		Laya.stage.screenMode = GameConfig.screenMode;
+		Laya.stage.bgColor = '#4955dd';
 		//兼容微信不支持加载scene后缀场景
 		Laya.URL.exportSceneToJson = GameConfig.exportSceneToJson;
 
@@ -36,14 +38,24 @@ class Main {
 	onConfigLoaded(): void {
 		// 连接websocket
 		Socket.createSocket()
-		//预加载
-        Laya.loader.load(loadingResList, Laya.Handler.create(this, this.onGameResLoaded),Laya.Handler.create(this,(progress:number)=>{
-			console.log(progress);
-		}));
+		Laya.Scene.open(GameConfig.startScene,true,null,Laya.Handler.create(this,this.onLoadingSceneOpened))
 	}
+	onLoadingSceneOpened(loadingScene:LoadingScene): void {
+		//预加载
+        Laya.loader.load(loadingResList, 
+			Laya.Handler.create(this, this.onGameResLoaded),
+			Laya.Handler.create(this,this.onGameResLoadProgress,[loadingScene],false));
+	}
+
+	onGameResLoadProgress(loadingScene:LoadingScene,progress:number){
+		console.log(loadingScene);
+		
+		loadingScene.setProgress(progress)
+	}
+
 	onGameResLoaded():void {
 		//加载IDE指定的场景
-		GameConfig.startScene && Laya.Scene.open(GameConfig.startScene,true,null,Laya.Handler.create(this,(()=>{
+		Laya.Scene.open('home.scene',true,null,Laya.Handler.create(this,(()=>{
 			Laya.loader.load(loadingResList1);
 		})));
 	}

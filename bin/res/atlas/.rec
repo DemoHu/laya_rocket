@@ -26,6 +26,7 @@ P 2B554A86 img_ranking_title.png
 R ED202777 img_ranklist_bg01.png
 P E4B70C0C img_return.png
 P F9033F2E img_rocket_bg.png
+P D4656245 img_rocket_loading.png
 P 255EB733 img_rocket_prix_title.png
 P 258608B2 img_rocket_time.png
 R DCA8A0CE img_rocketRanking_bg01.png
@@ -44,6 +45,8 @@ P 79ACE726 img_yixuan_select20.png
 P 852CA2B0 img_zhongjiang.png
 P C2DF3147 progress$bar.png
 P 9C6DF160 progress.png
+P D3C2968E progressloading$bar.png
+P 3E237EFC progressloading.png
 D comp/home
 P 3E7DF310 img_avatar.png
 P 36E91B78 img_card.png

@@ -114,6 +114,17 @@ export module ui {
             this.loadScene("home");
         }
     }
+    export class loadingSceneUI extends Laya.Scene {
+		public ani1:Laya.FrameAnimation;
+		public loadingProgress:Laya.ProgressBar;
+		public progress:Laya.Label;
+		public rocketloading:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("loadingScene");
+        }
+    }
     export class priHistorySceneUI extends Laya.Scene {
 		public total:Laya.Label;
 		public listBox:Laya.Panel;
