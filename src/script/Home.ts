@@ -14,13 +14,13 @@ import api from "../js/api";
 import { post } from '../js/http';
 import { Socket } from "../js/socket";
 import { Tabbar } from "../view/Tabbar";
-import rechargeDialog from '../template/rechargeDialog';
+// import rechargeDialog from '../template/rechargeDialog';
 import screenUtils from "../js/screenUtils";
 
 
 export default class Home extends ui.homeUI {
 
-    private rechargeDialog: rechargeDialog;//充值弹出
+    // private rechargeDialog: rechargeDialog;//充值弹出
 
     constructor() {
         super()
@@ -53,12 +53,13 @@ export default class Home extends ui.homeUI {
 
     /**充值 */
     private btnRechargeFunc(): void {
+        window.location.href = `https://${document.domain}/#/main_Page?show=recharge`
         // Toast.show('点击充值')
-        this.rechargeDialog = new rechargeDialog();
-        this.rechargeDialog.y = Laya.stage.height - this.rechargeDialog.height;
-        this.rechargeDialog.popupEffect = Laya.Handler.create(this, this.rechargeDialogPopupFun);
-        this.rechargeDialog.closeEffect = Laya.Handler.create(this, this.rechargeDialogCloseFun);
-        this.rechargeDialog.popup();
+        // this.rechargeDialog = new rechargeDialog();
+        // this.rechargeDialog.y = Laya.stage.height - this.rechargeDialog.height;
+        // this.rechargeDialog.popupEffect = Laya.Handler.create(this, this.rechargeDialogPopupFun);
+        // this.rechargeDialog.closeEffect = Laya.Handler.create(this, this.rechargeDialogCloseFun);
+        // this.rechargeDialog.popup();
     }
     /**空投 */
     private putInFunc() {
@@ -109,20 +110,20 @@ export default class Home extends ui.homeUI {
     }
 
     /**弹出充值的效果 */
-    rechargeDialogPopupFun(dialog: Laya.Dialog) {
-        dialog.scale(1, 1);
-        dialog._effectTween = Laya.Tween.from(dialog,
-            { x: 0, y: Laya.stage.height + dialog.height },
-            300,
-            Laya.Ease.linearNone,
-            Laya.Handler.create(Laya.Dialog.manager, Laya.Dialog.manager.doOpen, [dialog]), 0, false, false);
-    }
+    // rechargeDialogPopupFun(dialog: Laya.Dialog) {
+    //     dialog.scale(1, 1);
+    //     dialog._effectTween = Laya.Tween.from(dialog,
+    //         { x: 0, y: Laya.stage.height + dialog.height },
+    //         300,
+    //         Laya.Ease.linearNone,
+    //         Laya.Handler.create(Laya.Dialog.manager, Laya.Dialog.manager.doOpen, [dialog]), 0, false, false);
+    // }
     /**关闭充值的效果 */
-    rechargeDialogCloseFun(dialog: Laya.Dialog) {
-        dialog._effectTween = Laya.Tween.to(dialog,
-            { x: 0, y: Laya.stage.height + dialog.height },
-            300,
-            Laya.Ease.linearNone,
-            Laya.Handler.create(Laya.Dialog.manager, Laya.Dialog.manager.doClose, [dialog]), 0, false, false);
-    }
+    // rechargeDialogCloseFun(dialog: Laya.Dialog) {
+    //     dialog._effectTween = Laya.Tween.to(dialog,
+    //         { x: 0, y: Laya.stage.height + dialog.height },
+    //         300,
+    //         Laya.Ease.linearNone,
+    //         Laya.Handler.create(Laya.Dialog.manager, Laya.Dialog.manager.doClose, [dialog]), 0, false, false);
+    // }
 }

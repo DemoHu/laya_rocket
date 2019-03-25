@@ -43,7 +43,7 @@ const scene1 = [
     { url: "template/numberListDOM.json", type: "json" },
     { url: "template/InputPwdDialog.json", type: "json" },
     { url: "template/TipsDialog.json", type: "json" },
-    { url: "template/rechargeDialog.json", type: "json" },
+    // { url: "template/rechargeDialog.json", type: "json" },
     { url: "template/joinRecords.json", type: "json" },
     { url: "template/previousRecords.json", type: "json" },
     { url: "template/prixList.json", type: "json" },
