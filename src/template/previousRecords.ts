@@ -17,7 +17,6 @@ export default class previousRecord extends ui.template.previousRecordsUI {
         this._dataSource = item;
         if (item) {
             this.period.text = item.period;
-            this.requestType.text = item.requestType;
             this.goodsName.text = item.goodsName;
             this.txHash.text = item.txHash;
             this.hitCode.text = item.hitCode;

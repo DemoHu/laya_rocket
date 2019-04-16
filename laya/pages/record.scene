@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":8,
-    "selecteID":9,
+    "selectedBox":2,
+    "selecteID":14,
     "searchKey":"Scene,record,record",
     "props":{"width":750,"var":"record","sceneColor":"#09083c","runtime":"script/Record.ts","name":"record","height":1334},
     "nodeParent":-1,

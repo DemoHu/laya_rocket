@@ -231,7 +231,6 @@ export module ui.template {
     }
     export class previousRecordsUI extends Laya.View {
 		public period:Laya.Label;
-		public requestType:Laya.Label;
 		public goodsName:Laya.Label;
 		public txHash:Laya.Label;
 		public hitCode:Laya.Label;
