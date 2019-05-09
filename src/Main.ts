@@ -6,6 +6,10 @@ import LoadingScene from "./script/loadingScene";
 
 class Main {
 	constructor() {
+		 // 在微信中，如果跳转到游戏之前页面修改了innerWdth和innerHeight，会导致宽高计算错误
+        const win: any = window;
+        win.innerWidth = win.outerWidth;
+        win.innerHeight = win.outerHeight;
 		//根据IDE设置初始化引擎		
 		if (window["Laya3D"]) Laya3D.init(GameConfig.width, GameConfig.height);
 		else Laya.init(GameConfig.width, GameConfig.height, Laya["WebGL"]);
