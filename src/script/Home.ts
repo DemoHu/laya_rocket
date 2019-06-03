@@ -102,7 +102,7 @@ export default class Home extends ui.homeUI {
 
     /**玩法介绍 */
     private openBuyHelp() {
-        window.location.href = 'https://m.xyhj.io/buyHelp.html';
+        window.location.href = 'https://m.xyhj.io/#/origin/zh/buyHelp';
     }
 
     private goCenter() {

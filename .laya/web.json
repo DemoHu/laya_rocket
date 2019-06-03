@@ -53,5 +53,9 @@
     "clearReleaseDir": true,
     "compile": true,
     "projectType": "ts",
+<<<<<<< HEAD
     "pubTime": 1559527313286
+=======
+    "pubTime": 1559527251911
+>>>>>>> 1.0.x
 }
