@@ -2336,11 +2336,11 @@ axios_1.default.defaults.withCredentials = true; //请求携带cookie
 // axios.defaults.crossDomain = true;  //请求携带额外数据(不包含cookie)
 var domain = document.domain;
 if (domain.indexOf('t-center') >= 0 || domain === 'localhost') {
-    axios_1.default.defaults.baseURL = 'https://t-api.xyhj.io/v1/w/zh/';
-    // axios.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh'
+    axios_1.default.defaults.baseURL = 'https://t-api.xye009.com/v1/w/zh/';
+    // axios.defaults.baseURL = 'https://game.xye009.com/v1/w/zh'
 }
 else {
-    axios_1.default.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh';
+    axios_1.default.defaults.baseURL = 'https://game.xye009.com/v1/w/zh';
 }
 /**将post数据转为formData格式 */
 function formDataFunc(params) {
@@ -2558,7 +2558,7 @@ var Socket = /** @class */ (function (_super) {
             Socket.WS.send('ping');
         }, 30000);
     };
-    Socket.WS_URL = "wss://t-wss.xyhj.io/ws?appid=luckyrocketApp";
+    Socket.WS_URL = "wss://t-wss.xye009.com/ws?appid=luckyrocketApp";
     Socket.WS = '';
     /**30秒一次心跳 */
     Socket.setIntervalWesocketPush = null;
@@ -3466,7 +3466,7 @@ var Home = /** @class */ (function (_super) {
     };
     /**玩法介绍 */
     Home.prototype.openBuyHelp = function () {
-        window.location.href = 'https://m.xyhj.io/#/origin/zh/buyHelp';
+        window.location.href = location.origin + '/#/origin/zh/buyHelp';
     };
     Home.prototype.goCenter = function () {
         window.location.href = "https://" + document.domain + "/#/main_Page";
@@ -3711,7 +3711,7 @@ var grandPrix = /** @class */ (function (_super) {
     };
     /**说明 */
     grandPrix.prototype.openRankPrizeHelp = function () {
-        window.location.href = 'https://m.xyhj.io/#/origin/zh/rankPrizeHelp';
+        window.location.href = location.origin + '/#/origin/zh/rankPrizeHelp';
     };
     grandPrix.prototype.onResize = function () {
         this.listBox.height = Laya.stage.height - 700;
