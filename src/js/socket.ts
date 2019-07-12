@@ -14,7 +14,7 @@ import { ui } from "../ui/layaMaxUI";
 
 export class Socket extends Laya.UIComponent {
     
-    static WS_URL: string = `wss://t-wss.xyhj.io/ws?appid=luckyrocketApp`
+    static WS_URL: string = `wss://t-wss.xye009.com/ws?appid=luckyrocketApp`
     static WS: any = '';
     /**30秒一次心跳 */
     static setIntervalWesocketPush:any = null; 

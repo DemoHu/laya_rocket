@@ -14,10 +14,10 @@ axios.defaults.withCredentials = true;  //请求携带cookie
 
 const domain = document.domain;
 if (domain.indexOf('t-center') >= 0 || domain === 'localhost') {
-  axios.defaults.baseURL = 'https://t-api.xyhj.io/v1/w/zh/'
-  // axios.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh'
+  axios.defaults.baseURL = 'https://t-api.xye009.com/v1/w/zh/'
+  // axios.defaults.baseURL = 'https://game.xye009.com/v1/w/zh'
 } else {
-  axios.defaults.baseURL = 'https://game.xyhj.io/v1/w/zh'
+  axios.defaults.baseURL = 'https://game.xye009.com/v1/w/zh'
 }
 
 /**将post数据转为formData格式 */
