@@ -70,8 +70,7 @@ export class Tabbar extends ui.TabbarUI {
         let userInfo = Object.keys(GameModel.getInstance().userInfo);
         let scene:string = Tabbar.SCENES[this.tab.selectedIndex];
         if (userInfo.length === 0 && (scene === 'record.scene' || scene === 'assistant.scene')) {
-            console.log('未登录跳转登录');
-            window.location.href = `https://${document.domain}/#/sign_one`
+            window.location.href = `https://${document.domain}/#/account_sign`
         }else {
             Laya.Scene.open(scene, true, this._openSceneParam);
             this._openSceneParam = null;
