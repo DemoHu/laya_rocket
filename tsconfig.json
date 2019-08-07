@@ -1,15 +1,9 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "noEmitHelpers": true,
-    "importHelpers": true,
-    "sourceMap": false,
-    "lib": [
-      "es5",
-      "dom",
-      "es2015.promise"
-    ]
+    "sourceMap": false
   },
   "exclude": [
     "node_modules"
