@@ -29,7 +29,7 @@ gulp.task("compile", prevTasks, function () {
 	return browserify({
 		basedir: workSpaceDir,
 		//是否开启调试，开启后会生成jsmap，方便调试ts源码，但会影响编译速度
-		debug: true,
+		debug: false,
 		entries: ['src/Main.ts'],
 		cache: {},
 		packageCache: {}
