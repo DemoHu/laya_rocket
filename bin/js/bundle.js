@@ -2731,7 +2731,7 @@ class Guessing extends layaMaxUI_1.ui.guessingUI {
         let userInfo = Object.keys(GameModel_1.GameModel.getInstance().userInfo);
         if (userInfo.length === 0) {
             console.log('未登录跳转登录');
-            window.location.href = `https://${document.domain}/#/account_sign`;
+            window.location.href = `https://${document.domain}/#/sign_in`;
         }
         else if (this.getSelectNumber() <= 0) {
             Toast_1.Toast.show('请选择购买号码');
@@ -4216,7 +4216,7 @@ class Tabbar extends layaMaxUI_1.ui.TabbarUI {
         let userInfo = Object.keys(GameModel_1.GameModel.getInstance().userInfo);
         let scene = Tabbar.SCENES[this.tab.selectedIndex];
         if (userInfo.length === 0 && (scene === 'record.scene' || scene === 'assistant.scene')) {
-            window.location.href = `https://${document.domain}/#/account_sign`;
+            window.location.href = `https://${document.domain}/#/sign_in`;
         }
         else {
             Laya.Scene.open(scene, true, this._openSceneParam);
