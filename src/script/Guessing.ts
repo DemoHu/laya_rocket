@@ -90,7 +90,7 @@ export default class Guessing extends ui.guessingUI {
         let userInfo = Object.keys(GameModel.getInstance().userInfo);
         if (userInfo.length === 0) {
             console.log('未登录跳转登录');
-            window.location.href = `https://${document.domain}/#/sign_one`
+            window.location.href = `https://${document.domain}/#/sign_in`
         }else if (this.getSelectNumber() <= 0) {
             Toast.show('请选择购买号码')
         }else if(this.totalPrice > this.myAmount){
