@@ -86,7 +86,7 @@ import { GameModel } from "../js/GameModel";
 
     /**说明 */
     private openRankPrizeHelp(){
-        window.location.href = location.origin + '/#/origin/zh/rankPrizeHelp';
+        window.location.href = 'https://m.xyhj.io/#/origin/zh/rankPrizeHelp'
     }
     private onResize():void {
         this.listBox.height = Laya.stage.height - 700;

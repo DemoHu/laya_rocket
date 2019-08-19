@@ -2956,7 +2956,7 @@ class Home extends layaMaxUI_1.ui.homeUI {
     }
     /**玩法介绍 */
     openBuyHelp() {
-        window.location.href = location.origin + '/#/origin/zh/buyHelp';
+        window.location.href = 'https://m.xyhj.io/#/origin/zh/buyHelp';
     }
     goCenter() {
         window.location.href = `https://${document.domain}/#/main_Page`;
@@ -3188,7 +3188,7 @@ class grandPrix extends layaMaxUI_1.ui.grandPrixUI {
     }
     /**说明 */
     openRankPrizeHelp() {
-        window.location.href = location.origin + '/#/origin/zh/rankPrizeHelp';
+        window.location.href = 'https://m.xyhj.io/#/origin/zh/rankPrizeHelp';
     }
     onResize() {
         this.listBox.height = Laya.stage.height - 700;
